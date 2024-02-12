@@ -1,0 +1,1 @@
+This is a website project for an ecuadorian DOP. This will be her portfolio. Hope this could show and convey her sensibility, artistic perspective, and ambition.
