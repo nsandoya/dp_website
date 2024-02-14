@@ -18,6 +18,9 @@ html {
     box-sizing: inherit !important;
   }
 
+body{
+    background-color: black !important;
+}
 
 main{
     width: 100%; 
@@ -30,8 +33,13 @@ main{
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-
+    
 }
+
+.img-container:hover{
+    cursor: pointer;
+}
+
 .img-1{
     background-image: url(./src/img/nuria.png) ;
 }
@@ -72,6 +80,70 @@ main{
     align-self: center;
     justify-self: center;
 }
+.video-container:hover{
+    cursor: pointer;
+}
+
+/* galería */
+.video-proyecto{
+    margin: 0 auto;
+}
+
+
+.modal-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noModal{
+    display: none;
+}
+
+.modal-container img{
+    z-index: 1;
+    width: 550px;
+    height: 350px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-top: 3rem;
+}
+
+.img-gallery{
+    width: 350px;
+    height: 250px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-container.active::after{
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.56);
+    z-index: -1;
+    
+}
+
+/* Puesta en escena */
+.img-general{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 350px;
+}
 
 @media (max-width: 1200px){
     .video-container{
@@ -85,6 +157,7 @@ main{
     }
     
 }
+
 /* @media (max-width: 720px){
     .video-container{
         width: 120%;

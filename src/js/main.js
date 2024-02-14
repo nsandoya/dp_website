@@ -1,7 +1,6 @@
 const video = document.querySelector(".video-container video")
 const videoC = document.querySelector(".video-container")
 const videoContainer = document.querySelector(".video-container")
-/* const img = document.querySelector("#img-cover") */
 const c = document.querySelector(".imgContainer")
 
 
@@ -26,3 +25,9 @@ c.addEventListener('mouseout', ()=>{
     video.currentTime = 0;
 
 })
+
+c.addEventListener('click', ()=>{
+    window.location.href = "./html/categoria.html"
+})
+
+
