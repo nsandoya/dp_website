@@ -1,3 +1,9 @@
+// HTML elements
+const galleryContainer = document.querySelector(".gallery-gen")
+const galeriaGen = document.querySelector(".gallery-gen img")
+const modal = document.querySelector(".modal-container")
+const imgSlidewhow = document.querySelector(".modal-container img")
+
 class Foto{
     constructor({id, name, year="", place= "", url}){
         this.id = id,
@@ -23,7 +29,7 @@ class Galeria{
     }
 
     renderFotos(listaParaRender = this.fotos){
-        const galleryContainer = document.querySelector(".gallery-gen")
+        /* const galleryContainer = document.querySelector(".gallery-gen") */
         galleryContainer.innerHTML = ""
         listaParaRender.forEach(
             (foto)=>{
@@ -102,16 +108,84 @@ galeria.aggFotos(...fotosLista)
 console.log(galeria.fotos)
 galeria.renderFotos()
 
+let current_img = ""
+let imgModal = ""
+
+modal.addEventListener('click', (e)=>{
+    let prevBtn = modal.querySelector("#prevButton")
+    let nextBtn = modal.querySelector("#nextButton")
+    let img = modal.querySelector("img")
+    let tgt = e.target
+    const closeBtn = modal.querySelector("#closeButton")
+
+    closeBtn.addEventListener('click', function(){
+        if(modal.classList.contains("active")){
+            modal.classList.remove("active") 
+            modal.classList.add("noModal") 
+        }
+    })
+    
+
+    // Agregar funcionalidad a los botones
+    prevBtn.addEventListener('click', function() {
+        current_img = parseInt(current_img) > 1 ? parseInt(current_img) - 1 : galeria.fotos.length;
+        console.log(current_img)
+        let foto = galeria.fotos.filter(foto => foto.id == current_img);
+        console.log(...foto)
+        let fotoUsar = foto[0]
+
+        imgSlidewhow.src = fotoUsar.url
+    });
+
+    nextBtn.addEventListener('click', function() {
+        current_img = parseInt(current_img) < galeria.fotos.length ? parseInt(current_img) + 1 : 1;
+        console.log(current_img)
+        let foto = galeria.fotos.filter(foto => foto.id == current_img);
+        console.log(...foto)
+        let fotoUsar = foto[0]
+        
+        imgSlidewhow.src = fotoUsar.url
+    });
+})
+
+
+let g = document.querySelectorAll(".gallery-gen div")
+console.log("divs generados", g)
+
+g.forEach(imgDiv => {
+    imgDiv.addEventListener('click', (event) =>{
+        if(!modal.classList.contains("active")){
+            modal.classList.remove("noModal")
+            modal.classList.add("active")
+            
+        }
+
+        current_img = event.target.id
+        console.log("Current id", current_img)
+
+        let r = galeria.fotos.filter(
+            foto => current_img == foto.id
+        )
+
+        let img = r[0] 
+        let imgModal = modal.querySelector("img")
+        imgModal.src = img.url
+    })
+
+    
+})
+
+
 
 // Modal para c/foto seleccionada
-document.querySelectorAll(".m").forEach(function(e){
+/* document.querySelectorAll(".m").forEach(function(e){
     e.addEventListener('click', function(sEvent){
         let master = this
         console.log("master element", master.innerHTML)
         let idFoto = this.id
         console.log("Foto seleccionada",idFoto)
         sEvent.stopPropagation();
-        /* let this = this.parentElement; */
+        
         if(!this.classList.contains("active")){
             this.classList.add("modal-container");
             this.classList.add("active");
@@ -136,7 +210,7 @@ document.querySelectorAll(".m").forEach(function(e){
                 console.log("Foto presente", document.getElementsByClassName(`${idFoto}` ))
                 document.getElementsByClassName(`${idFoto}`).src = fotoUsar.url;
                 console.log(fotoUsar.url)
-                /* this.id = fotoUsar.id */
+                
             });
 
             document.getElementById("nextButton").addEventListener('click', function() {
@@ -145,12 +219,9 @@ document.querySelectorAll(".m").forEach(function(e){
                 let foto = galeria.fotos.filter(foto => foto.id == idFoto);
                 console.log(...foto)
                 let fotoUsar = foto[0]
-                /* console.log("Foto presente", document.getElementByClass(`${idFoto}`)) */
+                
                 document.getElementsByClassName(`${idFoto}`).src = fotoUsar.url;
                 console.log(fotoUsar.url)
-
-                /* this.id = fotoUsar.id */
-
             });
 
             document.querySelector(".imgGallery").addEventListener('click', function(e) {
@@ -162,12 +233,8 @@ document.querySelectorAll(".m").forEach(function(e){
                         })
                     }
                 });
-            /* else{
-            this.classList.remove("active");
-            this.classList.remove("modal-container");
-            this.innerHTML = ""
-        } */
-})
+            
+}) */
 
 
 
