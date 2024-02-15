@@ -1,8 +1,9 @@
 // HTML elements
 const galleryContainer = document.querySelector(".gallery-gen")
 const galeriaGen = document.querySelector(".gallery-gen img")
-const modal = document.querySelector(".modal-container")
 const imgSlidewhow = document.querySelector(".modal-container img")
+let x = window.matchMedia("(min-width: 1000px)")
+const modal = document.querySelector(".modal-container")
 
 class Foto{
     constructor({id, name, year="", place= "", url}){
@@ -110,6 +111,19 @@ galeria.renderFotos()
 let current_img = ""
 let imgModal = ""
 
+// Para activar o no el modal de galería, según el tamaño de pantalla
+const mediaQ = function (x) {
+    if (x.matches) { // If media query matches
+        modal.classList.add("noModal")
+    }else{
+        modal.classList.remove("noModal")
+        
+    }
+  }
+
+
+x.addEventListener('change', mediaQ)
+mediaQ(x)
 
 let prevBtn = modal.querySelector("#prevButton")
     let nextBtn = modal.querySelector("#nextButton")
@@ -136,6 +150,7 @@ let prevBtn = modal.querySelector("#prevButton")
         
         imgSlidewhow.src = fotoUsar.url
     });
+
 
 let g = document.querySelectorAll(".gallery-gen div")
 console.log("divs generados", g)
