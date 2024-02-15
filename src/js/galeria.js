@@ -106,6 +106,8 @@ galeria.renderFotos()
 // Modal para c/foto seleccionada
 document.querySelectorAll(".m").forEach(function(e){
     e.addEventListener('click', function(sEvent){
+        let master = this
+        console.log("master element", master.innerHTML)
         let idFoto = this.id
         console.log("Foto seleccionada",idFoto)
         sEvent.stopPropagation();
@@ -120,9 +122,9 @@ document.querySelectorAll(".m").forEach(function(e){
 
             console.log("resultado", ...r)
             let fotoParaModal = r[0]
-            this.innerHTML = `<div class="img-modal" style="width: 100vw; height: 100vh"><button id="prevButton"><</button>
-            <img src="${fotoParaModal.url}" class="imgGallery img-gallery" alt="">
-            <button id="nextButton">></button></div>`    
+            this.innerHTML = `<button id="prevButton"><</button>
+            <img src="${fotoParaModal.url}" class="${idFoto} imgGallery img-gallery" alt="">
+            <button id="nextButton">></button>`    
 
             // Agregar funcionalidad a los botones
             document.getElementById("prevButton").addEventListener('click', function() {
@@ -131,7 +133,8 @@ document.querySelectorAll(".m").forEach(function(e){
                 let foto = galeria.fotos.filter(foto => foto.id == idFoto);
                 console.log(...foto)
                 let fotoUsar = foto[0]
-                document.querySelector(".imgGallery").src = fotoUsar.url;
+                console.log("Foto presente", document.getElementsByClassName(`${idFoto}` ))
+                document.getElementsByClassName(`${idFoto}`).src = fotoUsar.url;
                 console.log(fotoUsar.url)
                 /* this.id = fotoUsar.id */
             });
@@ -142,17 +145,18 @@ document.querySelectorAll(".m").forEach(function(e){
                 let foto = galeria.fotos.filter(foto => foto.id == idFoto);
                 console.log(...foto)
                 let fotoUsar = foto[0]
-                document.querySelector(".imgGallery").src = fotoUsar.url;
+                /* console.log("Foto presente", document.getElementByClass(`${idFoto}`)) */
+                document.getElementsByClassName(`${idFoto}`).src = fotoUsar.url;
                 console.log(fotoUsar.url)
 
                 /* this.id = fotoUsar.id */
 
             });
 
-            document.querySelector(".img-modal").addEventListener('click', function(e) {
+            document.querySelector(".imgGallery").addEventListener('click', function(e) {
                 if (!e.target === this) {
                     this.classList.remove("active");
-                    this.classList.remove("img-modal");
+                    this.classList.remove("imgGallery");
                     this.innerHTML = ""
                     }
                         })
