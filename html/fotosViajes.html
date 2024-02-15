@@ -19,10 +19,21 @@
 
         <section class="container-fluid">
             <div id="modal1" class="modal modal-container noModal">
-                <button id="closeButton" style="margin-bottom: 5rem">x</button>
-                <button id="prevButton"><</button>
-                <img src="..." class="imgGallery img-gallery" alt="">
-                <button id="nextButton">></button>
+                <div class="modal-dialog modal-dialog-centered" style="max-width: 80%;">
+                    <div class="modal-content container-fluid  justify-content-center" style="background-color: transparent; border: none">
+                        <div class="modal-body">
+                            <div class="container-fluid justify-content-center">
+                                <div class="row" style="display: grid; grid-template-columns: 1fr auto 1fr;">
+                                    <button id="prevButton" class="col-1 btn-g-izq col-1"> Prev </button>
+                                    <img src="..." class="img-fluid col-10 imgGallery img-gallery" alt="">
+                                    <button id="nextButton" class="col-1 btn-g-der col-1"> Next </button>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
             <div class="gallery-gen row justify-content-center mt-lg-3">
                 <!-- Imagen en galería -->

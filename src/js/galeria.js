@@ -29,7 +29,6 @@ class Galeria{
     }
 
     renderFotos(listaParaRender = this.fotos){
-        /* const galleryContainer = document.querySelector(".gallery-gen") */
         galleryContainer.innerHTML = ""
         listaParaRender.forEach(
             (foto)=>{
@@ -111,28 +110,11 @@ galeria.renderFotos()
 let current_img = ""
 let imgModal = ""
 
-/* let closeArea = modal.querySelector(".modal::after")
-closeArea.addEventListener('click', function(){
-    if(modal.classList.contains("active")){
-        modal.classList.remove("active") 
-        modal.classList.add("noModal") 
-    }
-}) */
 
-/* modal.addEventListener('click', (e)=>{
-    let prevBtn = modal.querySelector("#prevButton")
+let prevBtn = modal.querySelector("#prevButton")
     let nextBtn = modal.querySelector("#nextButton")
     let img = modal.querySelector("img")
-    let tgt = e.target
-    const closeBtn = modal.querySelector("#closeButton")
-
-    closeBtn.addEventListener('click', function(){
-        if(modal.classList.contains("active")){
-            modal.classList.remove("active") 
-            modal.classList.add("noModal") 
-        }
-    })
-    
+    /* let tgt = e.target */
 
     // Agregar funcionalidad a los botones
     prevBtn.addEventListener('click', function() {
@@ -154,20 +136,12 @@ closeArea.addEventListener('click', function(){
         
         imgSlidewhow.src = fotoUsar.url
     });
-})
-
 
 let g = document.querySelectorAll(".gallery-gen div")
 console.log("divs generados", g)
 
 g.forEach(imgDiv => {
     imgDiv.addEventListener('click', (event) =>{
-        if(!modal.classList.contains("active")){
-            modal.classList.remove("noModal")
-            modal.classList.add("active")
-            
-        }
-
         current_img = event.target.id
         console.log("Current id", current_img)
 
@@ -181,82 +155,4 @@ g.forEach(imgDiv => {
     })
 
     
-}) */
-
-
-
-// Modal para c/foto seleccionada
-/* document.querySelectorAll(".m").forEach(function(e){
-    e.addEventListener('click', function(sEvent){
-        let master = this
-        console.log("master element", master.innerHTML)
-        let idFoto = this.id
-        console.log("Foto seleccionada",idFoto)
-        sEvent.stopPropagation();
-        
-        if(!this.classList.contains("active")){
-            this.classList.add("modal-container");
-            this.classList.add("active");
-
-            let r = galeria.fotos.filter(
-                foto => idFoto == foto.id
-            )
-
-            console.log("resultado", ...r)
-            let fotoParaModal = r[0]
-            this.innerHTML = `<button id="prevButton"><</button>
-            <img src="${fotoParaModal.url}" class="${idFoto} imgGallery img-gallery" alt="">
-            <button id="nextButton">></button>`    
-
-            // Agregar funcionalidad a los botones
-            document.getElementById("prevButton").addEventListener('click', function() {
-                idFoto = parseInt(idFoto) > 1 ? parseInt(idFoto) - 1 : galeria.fotos.length;
-                console.log(idFoto)
-                let foto = galeria.fotos.filter(foto => foto.id == idFoto);
-                console.log(...foto)
-                let fotoUsar = foto[0]
-                console.log("Foto presente", document.getElementsByClassName(`${idFoto}` ))
-                document.getElementsByClassName(`${idFoto}`).src = fotoUsar.url;
-                console.log(fotoUsar.url)
-                
-            });
-
-            document.getElementById("nextButton").addEventListener('click', function() {
-                idFoto = parseInt(idFoto) < galeria.fotos.length ? parseInt(idFoto) + 1 : 1;
-                console.log(idFoto)
-                let foto = galeria.fotos.filter(foto => foto.id == idFoto);
-                console.log(...foto)
-                let fotoUsar = foto[0]
-                
-                document.getElementsByClassName(`${idFoto}`).src = fotoUsar.url;
-                console.log(fotoUsar.url)
-            });
-
-            document.querySelector(".imgGallery").addEventListener('click', function(e) {
-                if (!e.target === this) {
-                    this.classList.remove("active");
-                    this.classList.remove("imgGallery");
-                    this.innerHTML = ""
-                    }
-                        })
-                    }
-                });
-            
-}) */
-
-
-
-/* const prevBtn = document.querySelector("#prevButton");
-            prevBtn.addEventListener('click', ()=>{
-                console.log("index original", idFoto)
-                idFoto = parseInt(this.id)
-                idFoto -= 1
-                console.log("nuevo index", idFoto) 
-            })
-const nextBtn = document.querySelector("#prevButton");
-nextBtn.addEventListener('click', ()=>{
-    console.log("index original", idFoto)
-    idFoto = parseInt(this.id)
-    idFoto += 1
-    console.log("nuevo index", idFoto) 
-}) */
+})
