@@ -103,11 +103,11 @@ console.log(galeria.fotos)
 galeria.renderFotos()
 
 
-
+// Modal para c/foto seleccionada
 document.querySelectorAll(".m").forEach(function(e){
     e.addEventListener('click', function(sEvent){
         let idFoto = this.id
-        console.log(idFoto)
+        console.log("Foto seleccionada",idFoto)
         sEvent.stopPropagation();
         /* let this = this.parentElement; */
         if(!this.classList.contains("active")){
@@ -120,12 +120,64 @@ document.querySelectorAll(".m").forEach(function(e){
 
             console.log("resultado", ...r)
             let fotoParaModal = r[0]
-            this.innerHTML = `<img src="${fotoParaModal.url}" class="imgGallery img-gallery" alt="">`
-        
-        }else{
+            this.innerHTML = `<div class="img-modal" style="width: 100vw; height: 100vh"><button id="prevButton"><</button>
+            <img src="${fotoParaModal.url}" class="imgGallery img-gallery" alt="">
+            <button id="nextButton">></button></div>`    
+
+            // Agregar funcionalidad a los botones
+            document.getElementById("prevButton").addEventListener('click', function() {
+                idFoto = parseInt(idFoto) > 1 ? parseInt(idFoto) - 1 : galeria.fotos.length;
+                console.log(idFoto)
+                let foto = galeria.fotos.filter(foto => foto.id == idFoto);
+                console.log(...foto)
+                let fotoUsar = foto[0]
+                document.querySelector(".imgGallery").src = fotoUsar.url;
+                console.log(fotoUsar.url)
+                /* this.id = fotoUsar.id */
+            });
+
+            document.getElementById("nextButton").addEventListener('click', function() {
+                idFoto = parseInt(idFoto) < galeria.fotos.length ? parseInt(idFoto) + 1 : 1;
+                console.log(idFoto)
+                let foto = galeria.fotos.filter(foto => foto.id == idFoto);
+                console.log(...foto)
+                let fotoUsar = foto[0]
+                document.querySelector(".imgGallery").src = fotoUsar.url;
+                console.log(fotoUsar.url)
+
+                /* this.id = fotoUsar.id */
+
+            });
+
+            document.querySelector(".img-modal").addEventListener('click', function(e) {
+                if (!e.target === this) {
+                    this.classList.remove("active");
+                    this.classList.remove("img-modal");
+                    this.innerHTML = ""
+                    }
+                        })
+                    }
+                });
+            /* else{
             this.classList.remove("active");
             this.classList.remove("modal-container");
             this.innerHTML = ""
-        }
-    })
+        } */
 })
+
+
+
+/* const prevBtn = document.querySelector("#prevButton");
+            prevBtn.addEventListener('click', ()=>{
+                console.log("index original", idFoto)
+                idFoto = parseInt(this.id)
+                idFoto -= 1
+                console.log("nuevo index", idFoto) 
+            })
+const nextBtn = document.querySelector("#prevButton");
+nextBtn.addEventListener('click', ()=>{
+    console.log("index original", idFoto)
+    idFoto = parseInt(this.id)
+    idFoto += 1
+    console.log("nuevo index", idFoto) 
+}) */
