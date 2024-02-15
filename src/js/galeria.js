@@ -35,7 +35,7 @@ class Galeria{
             (foto)=>{
                 console.log(foto.id) 
                 let fUrl = foto.url
-                galleryContainer.innerHTML += `<div id=${foto.id} class="m col-sm-6 col-md-4 mt-2  img-gallery" style="background-image: url(${fUrl});">
+                galleryContainer.innerHTML += `<div id=${foto.id} class="m col-sm-6 col-md-4 mt-2  img-gallery" style="background-image: url(${fUrl});" data-bs-toggle="modal" data-bs-target="#modal1" aria-hidden="true">
                 <img src=${fUrl} class="noModal imgGallery" alt="">
                 </div>`
         })
@@ -111,7 +111,15 @@ galeria.renderFotos()
 let current_img = ""
 let imgModal = ""
 
-modal.addEventListener('click', (e)=>{
+/* let closeArea = modal.querySelector(".modal::after")
+closeArea.addEventListener('click', function(){
+    if(modal.classList.contains("active")){
+        modal.classList.remove("active") 
+        modal.classList.add("noModal") 
+    }
+}) */
+
+/* modal.addEventListener('click', (e)=>{
     let prevBtn = modal.querySelector("#prevButton")
     let nextBtn = modal.querySelector("#nextButton")
     let img = modal.querySelector("img")
@@ -173,7 +181,7 @@ g.forEach(imgDiv => {
     })
 
     
-})
+}) */
 
 
 
