@@ -34,9 +34,9 @@ class Galeria{
         listaParaRender.forEach(
             (foto)=>{
                 console.log(foto.id) 
-                let fUrl = foto.url
+                let fotoUrl = foto.url
                 galleryContainer.innerHTML += `<div id=${foto.id} class="m col-sm-6 col-md-4 mt-2  img-gallery" style="background-image: url(${fUrl});" data-bs-toggle="modal" data-bs-target="#modal1" aria-hidden="true">
-                <img src=${fUrl} class="noModal imgGallery" alt="">
+                <img src=${fotoUrl} class="noModal imgGallery" alt="">
                 </div>`
         })
     }
@@ -112,7 +112,7 @@ let current_img = ""
 let imgModal = ""
 
 // Para activar o no el modal de galería, según el tamaño de pantalla
-const mediaQ = function (x) {
+/* const mediaQ = function (x) {
     if (x.matches) { // If media query matches
         modal.classList.add("noModal")
     }else{
@@ -123,7 +123,7 @@ const mediaQ = function (x) {
 
 
 x.addEventListener('change', mediaQ)
-mediaQ(x)
+mediaQ(x) */
 
 let prevBtn = modal.querySelector("#prevButton")
     let nextBtn = modal.querySelector("#nextButton")
