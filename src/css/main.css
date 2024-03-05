@@ -206,6 +206,10 @@ a{
     height: 350px;
 }
 
+footer{
+    background-color: var(--main-color-yellow);
+}
+
 @media (max-width: 1200px){
     .video-container{
         height: 100%;
