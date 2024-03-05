@@ -1,0 +1,56 @@
+Features a futuro:
+- Press (artículos, entrevistas) - $20
+- Reproductor de Spotify
+
+
+Galería (en general):
+- Hover sobre c/foto: info sobre la foto
+- Abrir fotos tipo modal
+
+Galería: Fotos de viaje:
+- Quiere dos galerías: Mirada en pausa, y Exposición
+Esto requiere tener un submenu en el menú flotante
+
+Certificado SSL
+- Procurar que la página salga como sitio seguro
+
+Diseño web
+1. Sarah Mishara: Panel amarillo del inicio, y luego el home
+2. BG amarillo (se nota en el footer y el menú lateral)
+3. IG, IMDB (fixed, en la parte de abajo, como en Samuel Rojo website)
+4. La sección de contacto debe incluir un link para que se pueda descargar el cv de Dominique 
+***Debe incluir un still con espacio llano, suficiente para poner texto
+5. "Puesta en escena" no existe en realidad XD
+6. Página de proyectos: Antón y Sara no tienen texto ni stills, solo un video por cada proyecto
+** Por lo pronto, solo se va a mostrar el video. La info extra estará en el vimeo
+** Dentro de esto, Dominique desea que siempre se pueda volver a la sección a la que pertenece c/proyecto (es decir, que el menú flotante se mantenga)
+
+7. Concepto que se nota en el menú flotante
+8. Footer: debe permitir que las rrss flotantes se implementen alli (se coloca al final de cada sección de proyectos)
+9. Home sería la sección Narrative (empezar por una categoría es útil cuando alguien tiene mucho que mostrar y destacar)
+(de todas formas, ella contempla añadir un Home más adelante - $35)
+*** Tener cuidado de no hacer de esto una reminiscencia de las páginas feas que vimos (evitar lo del Antón)
+
+***Sara Mishara: Frame grande, letras grandes, todo grande, todo toscote/rudo
+Elemento diferencial / Dar la impresión de no ser parte del estándar
+
+Tipografía
+- A Dominique le gusta mucho la tipografía de la Sara Mishara. Sin embargo, expresa algo diferente a la esencia del trabajo de Dominique
+- Pero, algo a destacar de esa tipografía de la Sara es que es medio cuadrada: contundente, tiene presencia, no es tímida
+***Lo que sí se va a implementar es cómo se muestra el título de los proyectos, y tal vez lo del ícono de menú en versión mobile 
+
+***Referentes en este respecto: Samuel Rojo y Antón Fresco
+
+Background
+- Dominique siente rechazo al fondo negro XD Le recuerdan a las plantillas de Wix
+- Las páginas de fotos tendrán fondo visible, y este será blanco. El reto de páginas no tendrán el fondo visible
+-En cuanto al footer, sí tendría un bg con color (tomar en cuenta los colores que me dijo)
+
+Lenguaje
+- Dominique va a enviarme todo en inglés (ese es el idioma de su público objetivo)
+
+Comentarios
+- Sobre Samuel Rojo (página intro): dije que las páginas deben ser diseñadas más que nada para el usuario. El enter inicial tal vez resulte contraproducente
+- Sobre el hover de clips: Dominique dijo que de todas formas se puede ver el video, se pueden ver los stills.. 
+Dijo que tal vez se puede omitir
+- 
