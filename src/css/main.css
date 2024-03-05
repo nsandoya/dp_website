@@ -8,6 +8,10 @@
     src: url(../fonts/Roboto-Light.ttf);
 }
 @font-face{
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face{
     font-family: 'Syne';
     src: url(../fonts/Syne-VariableFont_wght.ttf);
 }

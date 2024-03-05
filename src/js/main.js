@@ -4,8 +4,7 @@ const videoContainer = document.querySelector(".video-container")
 const c = document.querySelector(".imgContainer")
 
 
-c.addEventListener('mouseover', ()=>{
-    /* img.classList.add("nodisplay") */
+/* c.addEventListener('mouseover', ()=>{
     c.classList.remove("displayImg")
     c.classList.add("nodisplayImg")
     videoC.classList.add("displayVideo")
@@ -15,7 +14,6 @@ c.addEventListener('mouseover', ()=>{
 
 })
 c.addEventListener('mouseout', ()=>{
-    /* img.classList.remove("nodisplay") */
     c.classList.add("displayImg")
     c.classList.remove("nodisplayImg")
     videoC.classList.remove("displayVideo")
@@ -24,7 +22,7 @@ c.addEventListener('mouseout', ()=>{
     video.pause();
     video.currentTime = 0;
 
-})
+}) */
 
 c.addEventListener('click', ()=>{
     window.location.href = "./html/categoria.html"
