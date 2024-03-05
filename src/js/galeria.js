@@ -5,7 +5,7 @@ const imgSlidewhow = document.querySelector(".modal-container img")
 let x = window.matchMedia("(min-width: 1000px)")
 const modal = document.querySelector(".modal-container")
 
-class Foto{
+export class Foto{
     constructor({id, name, year="", place= "", url}){
         this.id = id,
         this.name = name,
@@ -18,8 +18,55 @@ class Foto{
         this.url = `../src/img/${this.name}.png`
     }
 }
+export class Project{
+    constructor({id, name, title, year="", producer= "", role= "Director of Photography",url=""}){
+        this.id = id,
+        this.name = name,
+        this.title = title,
+        this.year = year,
+        this.producer = producer,
+        this.role = role,
+        this.url = url
+    }
 
-class Galeria{
+    addUrl(){
+        this.url = `../src/img/${this.name}.png`
+    }
+}
+
+export class ProjectGallery{
+    constructor({projects=[], category}){
+        this.projects = projects,
+        this.category = category
+    }
+
+    addProjects(...projects){
+        this.projects.push(...projects)
+    }
+
+    renderProjects(lista = this.projects){
+        const contenedor = document.querySelector("main");
+        
+        contenedor.innerHTML = "";
+        lista[0].forEach(
+            (project)=>{
+                console.log(project)
+                contenedor.innerHTML += `
+                    <div class="img-fluid p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh">
+                        <div class="project-title-gallery container-fluid justify-content-center align-items-center" style="display: flex; height: 100%">
+                            <h2 class="no-display-title row mb-3 ms-3 text-light text-uppercase display-1" style="font-family: 'BDSans-Black';">
+                                ${project.title}
+                            </h2>
+                        </div>
+                    </div>
+                `
+                
+            }
+        )
+    }
+}
+
+export class Galeria{
     constructor({fotos=[], categoria=""}){
         this.fotos = fotos,
         this.categoria = categoria
@@ -30,7 +77,7 @@ class Galeria{
     }
 
     renderFotos(listaParaRender = this.fotos){
-        galleryContainer.innerHTML = ""
+        galleryContainer.innerHTML = "";
         listaParaRender.forEach(
             (foto)=>{
                 console.log(foto.id) 
@@ -40,7 +87,11 @@ class Galeria{
                 </div>`
         })
     }
+
+    
 }
+
+/* export default [Foto, Project, Galeria, ProjectGallery]; */
 
 // Crear lista de fotos
 const fotosLista = [
@@ -105,8 +156,8 @@ const galeria = new Galeria({
 // Añadir fotos a galería
 galeria.aggFotos(...fotosLista)
 
-console.log(galeria.fotos)
-galeria.renderFotos()
+/* console.log(galeria.fotos) */
+/* galeria.renderFotos() */
 
 let current_img = ""
 let imgModal = ""
@@ -125,10 +176,9 @@ let imgModal = ""
 x.addEventListener('change', mediaQ)
 mediaQ(x) */
 
-let prevBtn = modal.querySelector("#prevButton")
+/* let prevBtn = modal.querySelector("#prevButton")
     let nextBtn = modal.querySelector("#nextButton")
     let img = modal.querySelector("img")
-    /* let tgt = e.target */
 
     // Agregar funcionalidad a los botones
     prevBtn.addEventListener('click', function() {
@@ -170,4 +220,4 @@ g.forEach(imgDiv => {
     })
 
     
-})
+}) */
