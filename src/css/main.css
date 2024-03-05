@@ -50,13 +50,13 @@ ul{
 }
 
 a{
-    color: grey;
+    color: whitesmoke;
     text-decoration: none !important;
 }
 
 .img-container{
     max-width: 100%;
-    height: 450px;
+    height: 100%;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -92,6 +92,10 @@ a{
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
+}
+
+.no-display-title{
+    display:none;
 }
 
 .nodisplayImg{
