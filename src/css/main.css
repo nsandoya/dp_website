@@ -16,6 +16,12 @@
     src: url(../fonts/Syne-VariableFont_wght.ttf);
 }
 
+/* Variables */
+:root {
+    --main-color-yellow: #F6B947;
+    --main-color-white: #F8F6ED;
+  }
+
 /* Estilos para el web portfolio */
 
 *{

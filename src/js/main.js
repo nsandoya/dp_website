@@ -47,7 +47,6 @@ const projectsList = [
 ]
 
 narrative.addProjects(projectsList);
-console.log(narrative.projects)
 
 // Añadir ids y urls a los proyectos creados
 function addID(){
