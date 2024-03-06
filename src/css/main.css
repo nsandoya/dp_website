@@ -89,6 +89,21 @@ dialog{
     min-height: 100%;
 }
 
+.prev, .next{
+    background-color: transparent;
+    position: fixed;
+    align-self: center;
+}
+
+.prev{
+    justify-self: start;
+    left: 15%
+}
+.next{
+    justify-self: end;
+    right: 15%
+}
+
 #prev, #next{
     background-color: transparent;
     text-transform: uppercase;

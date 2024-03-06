@@ -84,13 +84,13 @@ openModal.forEach(item=>{
             <button id="closeModal"  style="width: 100px; height: 50px;"><i class="bi bi-x-lg"></i></button>
             <img id="img-modal" src=${url} alt="" style="width: 70%; max-width: 60%; justify-self: center; align-self: center; border-radius: 10px">
             
-            <button id="prev"><i class="bi bi-caret-left-fill icon-size"></i></button>
-            <button id="next"><i class="bi bi-caret-right-fill icon-size"></i></button>
+            <button class="prev" id="prev"><i class="bi bi-caret-left-fill icon-size"></i></button>
+            <button class="next" id="next"><i class="bi bi-caret-right-fill icon-size"></i></button>
 
         `
 
-        const prev = document.querySelector("#prev")
-        const next = document.querySelector("#next")
+        const prev = document.querySelector(".prev")
+        const next = document.querySelector(".next")
         const imgModal = document.querySelector("#img-modal")
 
         let itemID = item.id; 
