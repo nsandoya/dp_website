@@ -2,6 +2,7 @@
 import { Galeria } from "./galeria.js"
 import { Project } from "./galeria.js"
 import { ProjectGallery } from "./galeria.js"
+
 /* const video = document.querySelector(".video-container video")
 const videoC = document.querySelector(".video-container")
 const videoContainer = document.querySelector(".video-container") */
@@ -21,28 +22,29 @@ const narrative = new ProjectGallery(
 const projectsList = [
     new Project({
         name: "por_un_momento",
-        title: "Por un momento"
+        title: "por un momento",
+        urlvideo: '<iframe src="https://player.vimeo.com/video/410875955?h=3e56b19d9d" width="1080" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
     }),
     new Project({
         name: "junior",
-        title: "Junior"
+        title: "junior",
+        urlvideo: '<iframe src="https://player.vimeo.com/video/544380025?h=aa97d4f317" width="1080" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
     }),
     new Project({
         name: "nada_bello",
-        title: "Nada bello"
+        title: "nada bello"
     }),
     new Project({
         name: "las_maravillas",
-        title: "Las maravillas"
+        title: "las maravillas"
     }),
     new Project({
         name: "nuria",
-        title: "Nuria"
+        title: "nuria"
     }),
 
 ]
 
-narrative.addProjects(...projectsList);
 
 // Añadir ids y urls a los proyectos creados
 function addID(){
@@ -53,6 +55,9 @@ function addID(){
     })
 }
 addID()
+
+narrative.addProjects(...projectsList);
+
 
 projectsList.forEach((project)=>{
     project.addUrl()
@@ -73,9 +78,45 @@ projectTitle.forEach(item => {
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title")
     })
 
+    
+    item.addEventListener('click', ()=>{
+        let titleProject = item.querySelector(".project-title-gallery h2")
+        /* let project = projectsList.filter(project => titleProject.innerText == project.title)*/
+        
+        localStorage.setItem('project', titleProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
+        localStorage.setItem('projectID', titleProject.dataset.idproject)
+
+        let projectURL = projectsList.filter((project) => parseInt(titleProject.dataset.idproject) == project.id)
+        let lista = JSON.stringify(projectsList)
+        localStorage.setItem('projectURL', projectURL[0].urlvideo)
+        localStorage.setItem('projectsList', lista)
+    })
+
 })
 
 
+
+/* const c = document.querySelectorAll(".project")
+c.forEach(
+    (item)=>{
+        item.addEventListener('click')
+    }
+) */
+const projects = document.querySelectorAll(".project")
+
+projects.forEach(
+    (project) => {
+        project.addEventListener('click', ()=>{
+            window.location.href = "./project.html"
+        })
+    }
+)
+/* if(user){
+    console.log(user);
+    localStorage.setItem('isLogged', true) // Se crea una variable en el local storage, y se le asigna 'true' como valor
+    localStorage.setItem('userName', userInput.value) // Se crea una variable en el local storage, y se le asigna el usuario como valor
+    window.location.href = "./reproductor.html"
+}else alert("Usuario/Contraseña incorrecto(s)") */
 
 
 

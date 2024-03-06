@@ -12,6 +12,8 @@ const closeModal = document.querySelector("#closeModal-dialog") */
 let x = window.matchMedia("(min-width: 1000px)")
 /* const modal = document.querySelector(".modal-container") */
 
+
+
 export class Foto{
     constructor({id, name, year="", place= "", url}){
         this.id = id,
@@ -26,14 +28,15 @@ export class Foto{
     }
 }
 export class Project{
-    constructor({id, name, title, year="", producer= "", role= "Director of Photography",url=""}){
+    constructor({id, name, title, year="", producer= "", role= "Director of Photography",url="", urlvideo=""}){
         this.id = id,
         this.name = name,
         this.title = title,
         this.year = year,
         this.producer = producer,
         this.role = role,
-        this.url = url
+        this.url = url,
+        this.urlvideo = urlvideo
     }
 
     addUrl(){
@@ -51,17 +54,20 @@ export class ProjectGallery{
         this.projects.push(...projects)
     }
 
+    
     renderProjects(lista = this.projects){
         const contenedor = document.querySelector("main");
+        
         
         contenedor.innerHTML = "";
         lista.forEach(
             (project)=>{
                 console.log(project)
+                let id = project.id
                 contenedor.innerHTML += `
-                    <div class="img-fluid p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh">
+                    <div id=${project.id} class="project img-fluid p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh">
                         <div class="project-title-gallery container-fluid justify-content-center align-items-center" style="display: flex; height: 100%">
-                            <h2 class="no-display-title row mb-3 ms-3 text-light text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; color: var(--main-color-white)">
+                            <h2 class="no-display-title project-title row mb-3 ms-3 text-light text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; color: var(--main-color-white)" data-idProject='${project.id}'>
                                 ${project.title}
                             </h2>
                         </div>
@@ -72,6 +78,8 @@ export class ProjectGallery{
         )
     }
 }
+
+
 
 export class Galeria{
     constructor({fotos=[], categoria=""}){
