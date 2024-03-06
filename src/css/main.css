@@ -89,11 +89,10 @@ dialog{
     min-height: 100%;
 }
 
-/* #prev, #next{
+#prev, #next{
     background-color: transparent;
-    position: fixed;
-    align-self: center;
-} */
+    text-transform: uppercase;
+}
 
 .icon-size{
     font-size: 2.5rem;
@@ -121,6 +120,16 @@ dialog{
     font-size: 1.8rem;
     
 }
+
+/* .gallery-gen-video{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+} */
 
 .img-container{
     max-width: 100%;

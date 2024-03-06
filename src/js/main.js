@@ -23,12 +23,13 @@ const projectsList = [
     new Project({
         name: "por_un_momento",
         title: "por un momento",
-        urlvideo: '<iframe src="https://player.vimeo.com/video/410875955?h=3e56b19d9d" width="1080" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
+        urlvideo: "https://player.vimeo.com/video/410875955?h=3e56b19d9d"
     }),
     new Project({
         name: "junior",
         title: "junior",
-        urlvideo: '<iframe src="https://player.vimeo.com/video/544380025?h=aa97d4f317" width="1080" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
+        urlvideo: "https://player.vimeo.com/video/544380025?h=aa97d4f317"
+        
     }),
     new Project({
         name: "nada_bello",
@@ -107,7 +108,7 @@ const projects = document.querySelectorAll(".project")
 projects.forEach(
     (project) => {
         project.addEventListener('click', ()=>{
-            window.location.href = "./project.html"
+            window.location.href = "./projects.html"
         })
     }
 )

@@ -18,11 +18,6 @@ projectsList.forEach((pr)=>{
 let itemID = localStorage.getItem('projectID'); 
 console.log(parseInt(itemID))
 
-/* itemID = parseInt(itemID) > 0 ? parseInt(itemID) - 1 : prLista.length-1 ;
-console.log("Retrocede desde",itemID)
-let project = prLista[parseInt(itemID)]
-prev.innerText = prLista[parseInt(itemID) -1].title
-next.innerText = prLista[parseInt(itemID) +1].title */
 
 function saveProjectTitle(){
     item.addEventListener('click', ()=>{
@@ -45,15 +40,38 @@ function goToProject(){
     )
 }
 
-const videoContainer = document.querySelector(".gallery-gen")
+const videoContainer = document.querySelector("iframe")
 function renderVideo(){
     let project = localStorage.getItem('project')
     titleProject.innerText = project
-    //prev.innerText = prLista[parseInt(itemID)-1].titulo
+    
+    // Obtén los proyectos anterior y siguiente
+    let idPrev = parseInt(itemID) > 0 ? parseInt(itemID) - 1 : prLista.length-1 ;
+    let idNext = parseInt(itemID) < prLista.length ? parseInt(itemID) + 1 : 1;
+    let prevProject = prLista[parseInt(idPrev)]
+    let nextProject = prLista[parseInt(idNext)]
+
+    // Cambia el texto de los botones con los títulos de los proyectos
+    if (prevProject) {
+        prev.innerHTML = `<i class="bi bi-caret-left-fill a-stills"></i> ${prevProject.title}`
+    } else {
+        prev.innerText = "No hay proyecto anterior"
+    }
+
+    if (nextProject) {
+        next.innerHTML = `${nextProject.title} <i class="bi bi-caret-right-fill a-stills"></i>`
+    } else {
+        next.innerHTML = `${prLista[0].title} <i class="bi bi-caret-right-fill a-stills"></i>` // Esto es provisional, creo :v
+        //next.innerText = "No hay proyecto siguiente"
+    }
+
 
     let videoURL = localStorage.getItem('projectURL')
-    videoContainer.innerHTML = ""
-    videoContainer.innerHTML += videoURL /* + `<button id="prev" class="mt-5">Prev</button> <button>Next</button>` */
+    console.log(videoContainer, "link a cargar", videoURL)
+    videoContainer.src = videoURL
+    //videoContainer.innerHTML = ""
+    //videoContainer.insertAdjacentHTML("beforeend", videoURL)
+    //videoContainer.innerHTML += videoURL /* + `<button id="prev" class="mt-5">Prev</button> <button>Next</button>` */
 
 }
 
@@ -74,19 +92,25 @@ prev.addEventListener('click', ()=>{
         console.log('No hay proyecto en el índice', itemID);
     }
 })
- //let project = prLista.filter((pr)=> pr.id == parseInt(itemID))
-    //let projectToUse = project[0]
-    /* console.log(itemID)
-    console.log(prLista[parseInt(itemID)])
-    console.log(project[0].urlvideo)
-*/  
 
-/* next.addEventListener('click', ()=>{
-    itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
-    console.log(itemID)
+next.addEventListener('click', ()=>{
+    itemID = parseInt(itemID) < prLista.length - 1 ? parseInt(itemID) + 1 : 0;
+
+    console.log("Avanza desde",itemID)
+    let project = prLista[parseInt(itemID)] // Aquí cambiamos itemID - 1 por itemID
+    /* console.log("proyecto signt", project.title) */
+    if (project !== undefined) {
+        localStorage.setItem('projectID',project.id)
+        localStorage.setItem('project',project.title)
+        localStorage.setItem('projectURL',project.urlvideo)
+        renderVideo()
+    } else {
+        console.log('No hay proyecto en el índice', itemID);
+    }
+    /* console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
     let fotoUsar = foto[0]
     console.log(fotoUsar.url)
     imgModal.src = fotoUsar.url
-    
-}) */
+     */
+})
