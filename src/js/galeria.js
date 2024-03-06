@@ -82,7 +82,7 @@ export class Galeria{
             (foto)=>{
                 console.log(foto.id) 
                 let fotoUrl = foto.url
-                galleryContainer.innerHTML += `<div id=${foto.id} class="m col-sm-6 col-md-4 mt-2  img-gallery" style="background-image: url(${fUrl});" data-bs-toggle="modal" data-bs-target="#modal1" aria-hidden="true">
+                galleryContainer.innerHTML += `<div id=${foto.id} class="col-sm-6 col-md-4 mt-2 mx-1  img-gallery" style="background-image: url(${foto.url});" data-bs-toggle="modal" data-bs-target="#modal1" aria-hidden="true">
                 <img src=${fotoUrl} class="noModal imgGallery" alt="">
                 </div>`
         })
@@ -91,7 +91,6 @@ export class Galeria{
     
 }
 
-/* export default [Foto, Project, Galeria, ProjectGallery]; */
 
 // Crear lista de fotos
 const fotosLista = [
@@ -151,7 +150,7 @@ fotosLista.forEach((f)=>{
 })
 // Crear galería
 const galeria = new Galeria({
-    categoria: "Mirada en Pausa"
+    categoria: "Journey"
 })
 // Añadir fotos a galería
 galeria.aggFotos(...fotosLista)

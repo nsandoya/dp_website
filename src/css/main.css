@@ -20,6 +20,7 @@
 :root {
     --main-color-yellow: #F6B947;
     --main-color-white: #F8F6ED;
+    --main-color-golden: #A4997E;
   }
 
 /* Estilos para el web portfolio */
@@ -42,9 +43,9 @@ html {
     box-sizing: inherit !important;
   }
 
-body{
+/* body{
     background-color: black !important;
-}
+} */
 
 main{
     width: 100%; 
@@ -60,9 +61,15 @@ a{
     text-decoration: none !important;
 }
 
+.a-stills{
+    color: var(--main-color-golden);
+    a:hover{
+        cursor: pointer;
+    }
+}
+
 a:hover{
-    color: var(--main-color-yellow) !important
-    
+    color: var(--main-color-yellow) !important;    
 }
 
 .n-active{
@@ -171,7 +178,7 @@ a:hover{
 
 .img-gallery{
     width: 350px;
-    height: 250px;
+    height: 180px;
 
     background-size: cover;
     background-position: center;
