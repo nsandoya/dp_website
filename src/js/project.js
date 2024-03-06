@@ -1,5 +1,28 @@
 
+/* let prAnt = prLista[parseInt(itemID)-1]
+let prSig = prLista[parseInt(itemID)+1]
+
+console.log("Pr ant", prAnt, "Pr sig", prSig) */
+
 const titleProject = document.querySelector(".projectTitle")
+const prev = document.querySelector("#prev")
+const next = document.querySelector("#next")
+
+let projectsList = localStorage.getItem('projectsList')
+projectsList = JSON.parse(projectsList)
+let prLista = []
+projectsList.forEach((pr)=>{
+    prLista.push(pr)
+})
+
+let itemID = localStorage.getItem('projectID'); 
+console.log(parseInt(itemID))
+
+/* itemID = parseInt(itemID) > 0 ? parseInt(itemID) - 1 : prLista.length-1 ;
+console.log("Retrocede desde",itemID)
+let project = prLista[parseInt(itemID)]
+prev.innerText = prLista[parseInt(itemID) -1].title
+next.innerText = prLista[parseInt(itemID) +1].title */
 
 function saveProjectTitle(){
     item.addEventListener('click', ()=>{
@@ -26,52 +49,38 @@ const videoContainer = document.querySelector(".gallery-gen")
 function renderVideo(){
     let project = localStorage.getItem('project')
     titleProject.innerText = project
-    
+    //prev.innerText = prLista[parseInt(itemID)-1].titulo
+
     let videoURL = localStorage.getItem('projectURL')
     videoContainer.innerHTML = ""
     videoContainer.innerHTML += videoURL /* + `<button id="prev" class="mt-5">Prev</button> <button>Next</button>` */
 
 }
 
-
 renderVideo()
 
 
-
-let projectsList = localStorage.getItem('projectsList')
-/* console.log("proyectos", projectsList) */
-projectsList = JSON.parse(projectsList)
-let prLista = []
-projectsList.forEach((pr)=>{
-    prLista.push(pr)
-})
-
-const prev = document.querySelector("#prev")
-let itemID = localStorage.getItem('projectID'); 
-console.log(parseInt(itemID))
-
-
 prev.addEventListener('click', ()=>{
-    itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : prLista.length ;
-    console.log("Retrocede",itemID)
-    console.log("Proyecto anterior", prLista[parseInt(itemID)-1])
-    let project = prLista[parseInt(itemID)-1]
-    //let project = prLista.filter((pr)=> pr.id == parseInt(itemID))
+    itemID = parseInt(itemID) > 0 ? parseInt(itemID) - 1 : prLista.length-1 ;
+    console.log("Retrocede desde",itemID)
+    let project = prLista[parseInt(itemID)] // Aquí cambiamos itemID - 1 por itemID
+   
+    if (project !== undefined) {
+        localStorage.setItem('projectID',project.id)
+        localStorage.setItem('project',project.title)
+        localStorage.setItem('projectURL',project.urlvideo)
+        renderVideo()
+    } else {
+        console.log('No hay proyecto en el índice', itemID);
+    }
+})
+ //let project = prLista.filter((pr)=> pr.id == parseInt(itemID))
     //let projectToUse = project[0]
     /* console.log(itemID)
     console.log(prLista[parseInt(itemID)])
     console.log(project[0].urlvideo)
-*/
-    localStorage.setItem('projectID',project.id)
-    localStorage.setItem('project',project.title)
-    localStorage.setItem('projectURL',project.urlvideo) 
-    renderVideo()
-    //loadVideoPlayer()
-    //window.location.href = "./project.html"
-    //console.log("url",projectToUse.urlvideo)
-   /*  imgModal.src = fotoUsar.url */
-    
-})
+*/  
+
 /* next.addEventListener('click', ()=>{
     itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
     console.log(itemID)

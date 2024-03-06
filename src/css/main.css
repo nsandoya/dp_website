@@ -89,11 +89,11 @@ dialog{
     min-height: 100%;
 }
 
-#prev, #next{
+/* #prev, #next{
     background-color: transparent;
     position: fixed;
     align-self: center;
-}
+} */
 
 .icon-size{
     font-size: 2.5rem;
