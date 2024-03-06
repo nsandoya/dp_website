@@ -1,6 +1,8 @@
 import { Foto } from "./galeria.js"
 import { Galeria } from "./galeria.js"
 
+
+
 // Crear lista de fotos
 const fotosLista = [
     new Foto({
@@ -64,6 +66,63 @@ const galeria = new Galeria({
 // Añadir fotos a galería
 galeria.aggFotos(...fotosLista)
 
-console.log(galeria.fotos)
 const galleryContainer = document.querySelector(".gallery-gen")
 galeria.renderFotos()
+
+// Modales
+const modalDialog = document.querySelector("#modal-dialog");
+const openModal = document.querySelectorAll(".openModal");
+
+/* console.log(openModal) */
+openModal.forEach(item=>{
+    item.addEventListener('click', ()=>{
+        let url = getComputedStyle(item).backgroundImage.slice(4, -1).replace(/"/g, "")
+        modalDialog.classList.remove("nodisplay")
+        modalDialog.showModal()
+
+        modalDialog.innerHTML = `
+            <button id="closeModal"  style="width: 100px; height: 50px;"><i class="bi bi-x-lg"></i></button>
+            <img id="img-modal" src=${url} alt="" style="width: 70%; max-width: 60%; justify-self: center; align-self: center; border-radius: 10px">
+            
+            <button id="prev"><i class="bi bi-caret-left-fill icon-size"></i></button>
+            <button id="next"><i class="bi bi-caret-right-fill icon-size"></i></button>
+
+        `
+
+        const prev = document.querySelector("#prev")
+        const next = document.querySelector("#next")
+        const imgModal = document.querySelector("#img-modal")
+
+        let itemID = item.id; 
+        prev.addEventListener('click', ()=>{
+            itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
+            console.log(itemID)
+            let foto = galeria.fotos.filter(foto => foto.id == itemID);
+            let fotoUsar = foto[0]
+            console.log(fotoUsar.url)
+            imgModal.src = fotoUsar.url
+            
+        })
+        next.addEventListener('click', ()=>{
+            itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
+            console.log(itemID)
+            let foto = galeria.fotos.filter(foto => foto.id == itemID);
+            let fotoUsar = foto[0]
+            console.log(fotoUsar.url)
+            imgModal.src = fotoUsar.url
+            
+        })
+        
+        const closeModal = document.querySelector("#closeModal")
+        closeModal.addEventListener('click', (event)=>{
+            modalDialog.close()
+            modalDialog.innerHTML = ""
+            modalDialog.classList.add("nodisplay")
+
+        
+
+        
+        })
+    })
+})
+

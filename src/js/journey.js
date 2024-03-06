@@ -81,11 +81,11 @@ openModal.forEach(item=>{
         modalDialog.showModal()
 
         modalDialog.innerHTML = `
-            <button id="closeModal"  style="width: 100px; height: 50px;">X</button>
+            <button id="closeModal"  style="width: 100px; height: 50px;"><i class="bi bi-x-lg"></i></button>
             <img id="img-modal" src=${url} alt="" style="width: 70%; max-width: 60%; justify-self: center; align-self: center; border-radius: 10px">
-            <p style="color: white; justify-self:center;">Quito, 2022</p>
-            <button id="prev">prev</button>
-            <button id="next">next</button>
+            
+            <button id="prev"><i class="bi bi-caret-left-fill icon-size"></i></button>
+            <button id="next"><i class="bi bi-caret-right-fill icon-size"></i></button>
 
         `
 
@@ -126,19 +126,3 @@ openModal.forEach(item=>{
     })
 })
 
-/* modalDialog.addEventListener('showModal', ()=>{
-    const closeModal = document.querySelector("#closeModal")
-        console.log("close",closeModal)
-        closeModal.addEventListener('click', (event)=>{
-            modalDialog.close()
-        })
-}) */
-
-/* export function clModal(){
-    modalDialog.close()
-} */
-/* const closeModal = document.querySelector("#closeModal")
-console.log(closeModal)
-closeModal.addEventListener('click', (event)=>{
-    modalDialog.close()
-}) */

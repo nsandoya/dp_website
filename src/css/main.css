@@ -89,6 +89,26 @@ dialog{
     min-height: 100%;
 }
 
+#prev, #next{
+    background-color: transparent;
+    position: fixed;
+    align-self: center;
+}
+
+.icon-size{
+    font-size: 2.5rem;
+    color: var(--main-color-white);
+}
+
+#prev{
+    justify-self: start;
+    left: 15%
+}
+#next{
+    justify-self: end;
+    right: 15%
+}
+
 #closeModal{
     position: fixed;
     justify-self: end;
