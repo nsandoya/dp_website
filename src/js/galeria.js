@@ -48,7 +48,7 @@ export class ProjectGallery{
         const contenedor = document.querySelector("main");
         
         contenedor.innerHTML = "";
-        lista[0].forEach(
+        lista.forEach(
             (project)=>{
                 console.log(project)
                 contenedor.innerHTML += `

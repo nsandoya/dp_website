@@ -1,7 +1,7 @@
 
-import {Galeria} from "./galeria.js"
-import {Project} from "./galeria.js"
-import {ProjectGallery} from "./galeria.js"
+import { Galeria } from "./galeria.js"
+import { Project } from "./galeria.js"
+import { ProjectGallery } from "./galeria.js"
 /* const video = document.querySelector(".video-container video")
 const videoC = document.querySelector(".video-container")
 const videoContainer = document.querySelector(".video-container") */
@@ -15,11 +15,7 @@ const narrative = new ProjectGallery(
         category: "Narrative"
     }
 )
-const commercial = new ProjectGallery(
-    {
-        categoria: "Commercial"
-    }
-)
+
 
 // Añadir listas de proyectos a cada galeria
 const projectsList = [
@@ -46,7 +42,7 @@ const projectsList = [
 
 ]
 
-narrative.addProjects(projectsList);
+narrative.addProjects(...projectsList);
 
 // Añadir ids y urls a los proyectos creados
 function addID(){
