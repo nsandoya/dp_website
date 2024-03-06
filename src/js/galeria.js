@@ -1,9 +1,16 @@
+/* import { oModal } from "./journey.js" */
+
 // HTML elements
 const galleryContainer = document.querySelector(".gallery-gen")
 const galeriaGen = document.querySelector(".gallery-gen img")
 const imgSlidewhow = document.querySelector(".modal-container img")
+
+/* const modalDialog = document.querySelector("#modal-dialog");
+const openModal = document.querySelectorAll(".openModal-dialog");
+const closeModal = document.querySelector("#closeModal-dialog") */
+
 let x = window.matchMedia("(min-width: 1000px)")
-const modal = document.querySelector(".modal-container")
+/* const modal = document.querySelector(".modal-container") */
 
 export class Foto{
     constructor({id, name, year="", place= "", url}){
@@ -75,15 +82,19 @@ export class Galeria{
     aggFotos(...foto){
         this.fotos.push(...foto);
     }
+    
+    /* oModal(){
+        modalDialog.showModal();
+    } */
 
     renderFotos(listaParaRender = this.fotos){
         galleryContainer.innerHTML = "";
         listaParaRender.forEach(
             (foto)=>{
                 console.log(foto.id) 
-                let fotoUrl = foto.url
-                galleryContainer.innerHTML += `<div id=${foto.id} class="col-sm-6 col-md-4 mt-2 mx-1  img-gallery" style="background-image: url(${foto.url});" data-bs-toggle="modal" data-bs-target="#modal1" aria-hidden="true">
-                <img src=${fotoUrl} class="noModal imgGallery" alt="">
+                
+                galleryContainer.innerHTML += `<div id=${foto.id} class="openModal col-sm-1 col-md-4 mt-2 mx-1 img-gallery"  style="background-image: url(${foto.url});" >
+                    
                 </div>`
         })
     }

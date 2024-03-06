@@ -1,6 +1,8 @@
 import { Foto } from "./galeria.js"
 import { Galeria } from "./galeria.js"
 
+
+
 // Crear lista de fotos
 const fotosLista = [
     new Foto({
@@ -64,6 +66,45 @@ const galeria = new Galeria({
 // Añadir fotos a galería
 galeria.aggFotos(...fotosLista)
 
-console.log(galeria.fotos)
 const galleryContainer = document.querySelector(".gallery-gen")
 galeria.renderFotos()
+
+// Modales
+const modalDialog = document.querySelector("#modal-dialog");
+const openModal = document.querySelectorAll(".openModal");
+
+/* console.log(openModal) */
+openModal.forEach(item=>{
+    item.addEventListener('click', ()=>{
+        console.log("item", item)
+        let url = getComputedStyle(item).backgroundImage.slice(4, -1).replace(/"/g, "")
+        console.log(url)
+        modalDialog.innerHTML = `
+            <img src=${url} alt="" style="width: 80vw; justify-self: center; align-self: center;">
+            <button id="closeModal"  style="width: 100px; height: 50px;">Close</button>
+        `
+        modalDialog.showModal()
+        
+        const closeModal = document.querySelector("#closeModal")
+        closeModal.addEventListener('click', (event)=>{
+            modalDialog.close()
+        })
+    })
+})
+
+/* modalDialog.addEventListener('showModal', ()=>{
+    const closeModal = document.querySelector("#closeModal")
+        console.log("close",closeModal)
+        closeModal.addEventListener('click', (event)=>{
+            modalDialog.close()
+        })
+}) */
+
+/* export function clModal(){
+    modalDialog.close()
+} */
+/* const closeModal = document.querySelector("#closeModal")
+console.log(closeModal)
+closeModal.addEventListener('click', (event)=>{
+    modalDialog.close()
+}) */
