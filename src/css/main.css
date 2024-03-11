@@ -21,6 +21,7 @@
     --main-color-yellow: #F6B947;
     --main-color-white: #F8F6ED;
     --main-color-golden: #A4997E;
+    --main-color-black: #31271D;
   }
 
 /* Estilos para el web portfolio */
@@ -78,6 +79,25 @@ a:hover{
 
 .openModal:hover{
     cursor: pointer !important;
+}
+
+.init_banner{
+    z-index: 3;
+    min-width: 100%;
+    max-width:100%; 
+    height: 100%;
+    overflow-y: hidden;
+    transform: translateY(0);
+
+    /* transition: all .4s ease-in; */
+
+}
+
+.init_banner_close{
+    height: 50%;
+    transform: translateY(-100%);
+
+    transition: all .4s ease-in-out;
 }
 
 dialog{
@@ -278,6 +298,20 @@ dialog{
 
 footer{
     background-color: var(--main-color-yellow);
+    position:fixed;
+    left:0px;
+    bottom:0px;
+}
+
+.footer-text-initial{
+    color: var(--main-color-white)
+}
+
+.footer-hide-text{
+    color: transparent;
+}
+.footer-hide-bg{
+    background-color: transparent;
 }
 
 @media (max-width: 1200px){
