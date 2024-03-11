@@ -1,51 +1,11 @@
-import { Project } from "./galeria.js"
-import { ProjectGallery } from "./galeria.js"
+import { getProjectGallery } from "./allProjects.js";
+import { init_banner, dynamicFooter } from "./layoutElements.js"
+
+dynamicFooter()
+
 
 // Generar galería de proyectos
-const commercial = new ProjectGallery(
-    {
-        categoria: "Commercial"
-    }
-)
-
-// Añadir listas de proyectos a cada galeria
-const projectsList = [
-    new Project({
-        name: "nada_bello",
-        title: "Nada bello"
-    }),
-    new Project({
-        name: "junior",
-        title: "Junior"
-    }),
-    new Project({
-        name: "por_un_momento",
-        title: "Por un momento"
-    }),
-    new Project({
-        name: "las_maravillas",
-        title: "Las maravillas"
-    }),
-
-]
-
-commercial.addProjects(...projectsList);
-
-
-function addID(){
-    let id = 0;
-    projectsList.forEach((project)=>{
-        project.id = id;
-        id += 1;
-    })
-}
-addID()
-
-projectsList.forEach((project)=>{
-    project.addUrl()
-})
-
-// Generar galería de proyectos
+let commercial = getProjectGallery("commercial")
 commercial.renderProjects()
 
 // Mostrar u ocultar título de proyecto
@@ -62,7 +22,6 @@ projectTitle.forEach(item => {
 
     item.addEventListener('click', ()=>{
         let titleProject = item.querySelector(".project-title-gallery h2")
-        /* let project = projectsList.filter(project => titleProject.innerText == project.title)*/
         
         localStorage.setItem('project', titleProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
         localStorage.setItem('projectID', titleProject.dataset.idproject)

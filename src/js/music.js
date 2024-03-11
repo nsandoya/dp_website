@@ -1,48 +1,12 @@
-import { Project } from "./galeria.js"
-import { ProjectGallery } from "./galeria.js"
+import { getProjectGallery } from "./allProjects.js"
+import { init_banner, dynamicFooter } from "./layoutElements.js"
+
+dynamicFooter()
 
 // Generar galería de proyectos
-const music = new ProjectGallery(
-    {
-        categoria: "Commercial"
-    }
-)
+let music = getProjectGallery("music")
+music.renderProjects();
 
-// Añadir listas de proyectos a cada galeria
-const projectsList = [
-    new Project({
-        name: "las_maravillas",
-        title: "Las maravillas"
-    }),
-    new Project({
-        name: "nada_bello",
-        title: "Nada bello"
-    }),
-    new Project({
-        name: "por_un_momento",
-        title: "Por un momento"
-    }),
-    
-]
-
-music.addProjects(...projectsList);
-
-
-function addID(){
-    let id = 0;
-    projectsList.forEach((project)=>{
-        project.id = id;
-        id += 1;
-    })
-}
-addID()
-
-projectsList.forEach((project)=>{
-    project.addUrl()
-})
-
-// Generar galería de proyectos
-music.renderProjects()
 
 // Mostrar u ocultar título de proyecto
 const projectTitle = document.querySelectorAll(".project-title-gallery")

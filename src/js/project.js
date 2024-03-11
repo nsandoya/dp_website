@@ -1,15 +1,14 @@
 
-/* let prAnt = prLista[parseInt(itemID)-1]
-let prSig = prLista[parseInt(itemID)+1]
+import { getProjectsList } from "./allProjects.js"
 
-console.log("Pr ant", prAnt, "Pr sig", prSig) */
 
 const titleProject = document.querySelector(".projectTitle")
 const prev = document.querySelector("#prev")
 const next = document.querySelector("#next")
 
-let projectsList = localStorage.getItem('projectsList')
-projectsList = JSON.parse(projectsList)
+let projectsListName = document.title;
+console.log("titulo de la pag", projectsListName)
+let projectsList = getProjectsList(projectsListName)
 let prLista = []
 projectsList.forEach((pr)=>{
     prLista.push(pr)
@@ -17,6 +16,7 @@ projectsList.forEach((pr)=>{
 
 let itemID = localStorage.getItem('projectID'); 
 console.log(parseInt(itemID))
+console.log("Lista de proyectos", projectsList)
 
 
 function saveProjectTitle(){
@@ -65,13 +65,10 @@ function renderVideo(){
         //next.innerText = "No hay proyecto siguiente"
     }
 
-
-    let videoURL = localStorage.getItem('projectURL')
-    console.log(videoContainer, "link a cargar", videoURL)
+    let currentProject = prLista.find((item)=>item.id == itemID)
+    let videoURL = currentProject.urlvideo
+    console.log("projecto vista",currentProject,"url", videoURL)
     videoContainer.src = videoURL
-    //videoContainer.innerHTML = ""
-    //videoContainer.insertAdjacentHTML("beforeend", videoURL)
-    //videoContainer.innerHTML += videoURL /* + `<button id="prev" class="mt-5">Prev</button> <button>Next</button>` */
 
 }
 
@@ -98,7 +95,6 @@ next.addEventListener('click', ()=>{
 
     console.log("Avanza desde",itemID)
     let project = prLista[parseInt(itemID)] // Aquí cambiamos itemID - 1 por itemID
-    /* console.log("proyecto signt", project.title) */
     if (project !== undefined) {
         localStorage.setItem('projectID',project.id)
         localStorage.setItem('project',project.title)
@@ -107,10 +103,5 @@ next.addEventListener('click', ()=>{
     } else {
         console.log('No hay proyecto en el índice', itemID);
     }
-    /* console.log(itemID)
-    let foto = galeria.fotos.filter(foto => foto.id == itemID);
-    let fotoUsar = foto[0]
-    console.log(fotoUsar.url)
-    imgModal.src = fotoUsar.url
-     */
+    
 })

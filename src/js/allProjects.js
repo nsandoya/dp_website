@@ -14,6 +14,12 @@ const commercial = new ProjectGallery(
         categoria: "Commercial"
     }
 )
+// Generar galería de proyectos
+const music = new ProjectGallery(
+    {
+        categoria: "Commercial"
+    }
+)
 
 // Añadir listas de proyectos a cada galeria
 const narrativeProjectsList = [
@@ -69,6 +75,24 @@ const commercialProjectsList = [
 ]
 commercial.addProjects(...commercialProjectsList)
 
+// Añadir listas de proyectos a cada galeria
+const musicProjectsList = [
+    new Project({
+        name: "las_maravillas",
+        title: "Las maravillas"
+    }),
+    new Project({
+        name: "nada_bello",
+        title: "Nada bello"
+    }),
+    new Project({
+        name: "por_un_momento",
+        title: "Por un momento"
+    }),
+    
+]
+music.addProjects(...musicProjectsList)
+
 
 function addID(projectsList){
     let id = 0;
@@ -79,6 +103,7 @@ function addID(projectsList){
 }
 addID(narrativeProjectsList)
 addID(commercialProjectsList)
+addID(musicProjectsList)
 
 
 narrativeProjectsList.forEach((project)=>{
@@ -87,9 +112,50 @@ narrativeProjectsList.forEach((project)=>{
 commercialProjectsList.forEach((project)=>{
     project.addUrl()
 })
+musicProjectsList.forEach((project)=>{
+    project.addUrl()
+})
 
 
 console.log(narrative.projects)
 console.log(commercial.projects)
-// Generar galería de proyectos
-//narrative.renderProjects()
+console.log(music.projects)
+
+
+export function getProjectsList(projectsListName){
+    projectsListName = projectsListName.toLowerCase()
+    console.log("titulo en la fx",projectsListName)
+    let projectsList 
+    switch (projectsListName) {
+        case "narrative":
+            projectsList = narrative.projects
+            break;
+        case "commercial":
+            projectsList = commercial.projects
+            break;
+        case "music":
+            projectsList = music.projects
+            break;
+    };
+    console.log("Lista obtenida",projectsList)
+    return projectsList
+}
+
+export function getProjectGallery(projectName){
+    projectName = projectName.toLowerCase()
+    console.log("titulo de la galería",projectName)
+    let projectGallery 
+    switch (projectName) {
+        case "narrative":
+            projectGallery = narrative
+            break;
+        case "commercial":
+            projectGallery = commercial
+            break;
+        case "music":
+            projectGallery = music
+            break;
+    };
+    console.log("Galería obtenida",projectGallery)
+    return projectGallery
+}
