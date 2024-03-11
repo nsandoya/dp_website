@@ -296,6 +296,17 @@ dialog{
     height: 350px;
 }
 
+.contact-grid{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-items{
+    margin: auto 0;
+    padding-inline: 4.5rem;
+}
+
 footer{
     background-color: var(--main-color-yellow);
     position:fixed;
