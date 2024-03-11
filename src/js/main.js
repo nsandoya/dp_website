@@ -51,7 +51,7 @@ const projectsList = [
     new Project({
         name: "por_un_momento",
         title: "por un momento",
-        urlvideo: "https://player.vimeo.com/video/410875955?h=3e56b19d9d"
+        urlvideo: "https://www.youtube.com/embed/1qnTlIzQ_DI?si=rebqJVINFN6uhHam"
     }),
     new Project({
         name: "junior",
@@ -61,15 +61,18 @@ const projectsList = [
     }),
     new Project({
         name: "nada_bello",
-        title: "nada bello"
+        title: "nada bello",
+        urlvideo: "https://www.youtube.com/embed/qWlLdZ3_6aQ?si=ekPxTuapgRrYBMIk"
     }),
     new Project({
         name: "las_maravillas",
-        title: "las maravillas"
+        title: "las maravillas",
+        urlvideo: "https://player.vimeo.com/video/410875955?h=3e56b19d9d"
     }),
     new Project({
         name: "nuria",
-        title: "nuria"
+        title: "nuria",
+        urlvideo: "https://player.vimeo.com/video/327855828?h=fef8973628"
     }),
 
 ]
