@@ -9,6 +9,20 @@ export function init_banner(){
     
 }
 
+// Submenu responsive
+export function ddMenuMobile(){
+    const ddmBtn = document.querySelector(".ddm-click");
+    const ddmSubMenu = document.querySelector(".ddm-mobile");
+
+    ddmBtn.addEventListener('click', ()=>{
+        if (ddmSubMenu.classList.contains("ddm-mobile-d-none")){
+            ddmSubMenu.classList.remove("ddm-mobile-d-none")
+        }else{
+            ddmSubMenu.classList.add("ddm-mobile-d-none")
+
+        }
+    })
+}
 
 // Footer dinámico
 export function dynamicFooter(){

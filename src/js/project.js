@@ -14,11 +14,14 @@ projectsList.forEach((pr)=>{
     prLista.push(pr)
 })
 
-let itemID = localStorage.getItem('projectID'); 
+let itemID = 0
+if (localStorage.getItem('projectID')){
+    itemID = localStorage.getItem('projectID'); 
+}
 console.log(parseInt(itemID))
 console.log("Lista de proyectos", projectsList)
 
-
+// No usar estas dos fx
 function saveProjectTitle(){
     item.addEventListener('click', ()=>{
         let idProject = item.querySelector(".project-title-gallery h2")

@@ -62,6 +62,7 @@ a{
     text-decoration: none !important;
 }
 
+
 .a-stills{
     color: var(--main-color-golden);
     a:hover{
@@ -72,6 +73,13 @@ a{
 a:hover{
     color: var(--main-color-yellow) !important;    
 }
+
+.offcanvas-body{
+    a:hover{
+        color: var(--main-color-black) !important;    
+    }
+}
+
 
 .n-active{
     color: var(--main-color-yellow) !important
@@ -196,6 +204,10 @@ dialog{
 
 .nodisplayImg{
     background-image: url(../img/black_bg.png)
+}
+
+.ddm-mobile-d-none{
+    display: none
 }
 
 .displayVideo{

@@ -24,12 +24,8 @@ projectTitle.forEach(item => {
         let titleProject = item.querySelector(".project-title-gallery h2")
         
         localStorage.setItem('project', titleProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
+        localStorage.setItem('projectsCategory', "commercial") 
         localStorage.setItem('projectID', titleProject.dataset.idproject)
-    
-        let projectURL = projectsList.filter((project) => parseInt(titleProject.dataset.idproject) == project.id)
-        let lista = JSON.stringify(projectsList)
-        localStorage.setItem('projectURL', projectURL[0].urlvideo)
-        localStorage.setItem('projectsList', lista)
     })
 
 })
