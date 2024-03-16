@@ -362,6 +362,10 @@ footer{
         background-color: var(--main-color-black);
     }
 
+    .project-div{
+        height: 50vh !important;
+    }
+
     #prev, #next{
         font-size: 1rem !important; 
         

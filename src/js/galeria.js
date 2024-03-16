@@ -65,7 +65,7 @@ export class ProjectGallery{
                 console.log(project)
                 let id = project.id
                 contenedor.innerHTML += `
-                    <div id=${project.id} class="project img-fluid p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh">
+                    <div id=${project.id} class="project-div project img-fluid p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh">
                         <div class="project-title-gallery container-fluid justify-content-center align-items-center" style="display: flex; height: 100%">
                             <h2 class="no-display-title project-title row mb-3 ms-3 text-light text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; color: var(--main-color-white)" data-idProject='${project.id}'>
                                 ${project.title}
