@@ -1,5 +1,6 @@
 
 import { getProjectsList } from "./allProjects.js"
+import { ddMenuMobile } from "./layoutElements.js"
 
 
 const titleProject = document.querySelector(".projectTitle")
@@ -42,6 +43,8 @@ function goToProject(){
         }
     )
 }
+
+ddMenuMobile()
 
 const videoContainer = document.querySelector("iframe")
 function renderVideo(){
