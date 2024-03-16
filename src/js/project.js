@@ -56,7 +56,7 @@ function renderVideo(){
 
     // Cambia el texto de los botones con los títulos de los proyectos
     if (prevProject) {
-        prev.innerHTML = `<i class="bi bi-caret-left-fill a-stills"></i> ${prevProject.title}`
+        prev.innerHTML = `<i class="bi bi-caret-left-fill a-stills"></i><span >${prevProject.title}</span>`
     } else {
         prev.innerText = "No hay proyecto anterior"
     }

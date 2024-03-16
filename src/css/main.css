@@ -338,7 +338,7 @@ footer{
 }
 
 @media (max-width: 1200px){
-    .video-container{
+    /* .video-container{
         height: 100%;
         align-items: center !important;
     }
@@ -346,14 +346,24 @@ footer{
         align-self: center !important;
         min-width: 100% !important;
         min-height: 100%;
+    } */
+    #prev, #next{
+        font-size: 1.5rem !important; 
     }
-    
 }
 
-/* @media (max-width: 720px){
-    .video-container{
+@media (max-width: 720px){
+    /* .video-container{
         width: 120%;
         align-items: start !important;
         overflow-x: hidden !important;
+    } */
+    .project-body{
+        background-color: var(--main-color-black);
     }
-} */
+
+    #prev, #next{
+        font-size: 1rem !important; 
+        
+    }
+}

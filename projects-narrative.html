@@ -12,9 +12,9 @@
     <title>Narrative</title>
 
 </head>
-<body >
+<body class="project-body">
     <header >
-        <nav class="navbar navbar-dark bg-white fixed-top pt-3 pb-3 pe-4" style="z-index: 1 !important;">
+        <nav class="navbar navbar-dark bg-white fixed-top pt-3 pb-3 pe-4 d-none d-md-inline-block" style="z-index: 1 !important;">
             <div class="container-fluid">
               <div class="container-fluid">
                 <div class="row exp-md">
@@ -55,28 +55,39 @@
 
     <main class="container-fluid mt-5">
         <section id="titulo" class="container-fluid text-center">
-            <h2 class=" projectTitle  text-uppercase display-3" style="display: none;font-family: 'BDSans-Black'; margin-top:4rem; ">Project</h2>
-           <!--  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, magni.</p> -->
+            <h2 class=" projectTitle  text-uppercase display-3 " style="display: none;font-family: 'BDSans-Black'; margin-top:4rem; ">Project</h2>
+           
         </section>
 
-        <section class="container-fluid" style="margin-top: 5rem;">
-            <div id="gallery-gen-video" style="width: 89%; position: relative; top:-3rem;padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0 auto">
+        <section class="container-fluid" style="margin-top: 20%; margin-bottom: 20%">
+            <div id="gallery-gen-video" style="width: 89%; position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0 auto">
               <iframe src="https://player.vimeo.com/video/544380025?h=aa97d4f317" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <section style="display:grid; grid-template-columns: 1fr 1fr; position: relative; bottom: 3rem">
-              <button id="prev" class="mx-md-5 px-5 fs-3 a-stills">Prev</button> 
-              <button id="next" class="mx-md-5 px-5 fs-3 a-stills">Next</button>
-            </section>
-                <!-- video width="70vw" controls>
-                    <source src="https://player.vimeo.com/video/544380025?h=aa97d4f317" type="video/mp4">
-                </video> -->
-                <!-- <iframe id="videoPlayer" src="https://player.vimeo.com/video/544380025?h=aa97d4f317" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
-                <!-- <p><a href="https://vimeo.com/544380025">Dominique Pazmi&ntilde;o R&iacute;os - Music video reel</a> from <a href="https://vimeo.com/dominiquerios">Dominique Pazmi&ntilde;o R&iacute;os</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
-            
-           
-            
         </section>
+        <div style="position: relative; height: 100%;">
 
+          <section style="display:grid; grid-template-columns: 1fr 1fr;">
+            <button id="prev" class="mx-md-5 ps-3 px-md-4 fs-2 text-start a-stills" style="max-width: 200px">Prev</button> 
+            <button id="next" class="mx-md-5 pe-3 px-md-4 fs-2 text-start a-stills" style="max-width: 200px">Next</button>
+          </section>
+          <footer class="d-none container-fluid f-select footer-hide-bg  p-3 pb-0 justify-content-center text-dark position-static">
+            <div class="row ">
+              <p class="d-none d-md-inline-block  email col text-uppercase ms-3 ms-md-5">
+                correo@gmail.com
+              </p>
+              <p class="d-md-none  email col text-uppercase ms-3 ms-md-5">
+                
+              </p>
+              <p class="col-sm-1 rrss col text-end text-uppercase footer-text-initial" style="width: 150px">
+                instagram
+              </p>
+              <p class="col-sm-2 rrss col text-end text-uppercase me-5 footer-text-initial" style="width: 140px">
+                imdb
+              </p>
+            </div>
+            
+          </footer>
+        </div>
         
         
     </main>
