@@ -350,6 +350,15 @@ footer{
     background-color: transparent;
 }
 
+.footer-project{
+    background-color: transparent !important;
+    p{
+        color: var(--main-color-black) !important;
+
+    }
+}
+
+
 @media (max-width: 1200px){
     /* .video-container{
         height: 100%;
@@ -373,6 +382,7 @@ footer{
         margin: 0 !important;
     }
 
+    
     /* #prev, #next{
         font-size: 1.2rem !important; 
     } */
@@ -381,6 +391,12 @@ footer{
 @media (max-width: 720px){
     .before-video{
         height: 12vh !important;
+    }
+
+    .footer-project{
+        p{
+            color: var(--main-color-white) !important;
+        }
     }
 }
 
@@ -413,6 +429,11 @@ footer{
     #prev, #next{
         font-size: 1rem !important; 
         
+    }
+
+    .footer-project{
+        position: fixed;
+        align-self: flex-end;
     }
 }
 
