@@ -308,6 +308,19 @@ dialog{
     height: 350px;
 }
 
+.before-video{
+    height: 0vh !important;
+}
+
+#gallery-gen-video{
+    width: 80% !important;
+    bottom: 3rem !important;
+}
+.botones-avance{
+    bottom: 7rem !important;
+    margin: 0 5rem !important;
+}
+
 .contact-grid{
     height: 100vh;
     display: grid;
@@ -347,8 +360,27 @@ footer{
         min-width: 100% !important;
         min-height: 100%;
     } */
-    #prev, #next{
-        font-size: 1.5rem !important; 
+    .before-video{
+        height: 16vh !important;
+    }
+
+    #gallery-gen-video{
+        width: 100% !important;
+    }
+
+    .botones-avance{
+        bottom: 3rem !important;
+        margin: 0 !important;
+    }
+
+    /* #prev, #next{
+        font-size: 1.2rem !important; 
+    } */
+}
+
+@media (max-width: 720px){
+    .before-video{
+        height: 12vh !important;
     }
 }
 
@@ -358,6 +390,10 @@ footer{
         align-items: start !important;
         overflow-x: hidden !important;
     } */
+    .nav-bg{
+        background-color: transparent !important;
+    }
+
     .project-body{
         background-color: var(--main-color-black);
     }
@@ -366,8 +402,27 @@ footer{
         height: 50vh !important;
     }
 
+    .before-video{
+        height: 20vh !important;
+    }
+
+    #gallery-gen-video{
+        width: 100% !important;
+    }
+
     #prev, #next{
         font-size: 1rem !important; 
+        
+    }
+}
+
+@media (max-width: 520px){
+    .before-video{
+        height: 24vh !important;
+    }
+
+    #prev, #next{
+        font-size: 0.8rem !important; 
         
     }
 }
