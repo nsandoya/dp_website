@@ -319,11 +319,12 @@ dialog{
 }
 
 #gallery-gen-video{
-    width: 80% !important;
+    width: 95% !important;
     bottom: 3rem !important;
 }
 .botones-avance{
-    bottom: 3rem !important;
+    padding-top: 15px;
+    bottom: 4rem !important;
     margin: 0 5rem !important;
 }
 
@@ -403,7 +404,6 @@ footer{
         bottom: 3rem !important;
         margin: 0 !important;
     }
-
     
     /* #prev, #next{
         font-size: 1.2rem !important; 
