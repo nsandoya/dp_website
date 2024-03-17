@@ -82,7 +82,7 @@ openModal.forEach(item=>{
 
         modalDialog.innerHTML = `
             <button id="closeModal"  style="width: 100px; height: 50px;"><i class="bi bi-x-lg"></i></button>
-            <img id="img-modal" src=${url} alt="" style="width: 70%; max-width: 60%; justify-self: center; align-self: center; border-radius: 10px">
+            <img id="img-modal" src=${url} alt="" style="width: 82%; max-width: 85%; justify-self: center; align-self: center; border-radius: 10px">
             
             <button class="prev"><i class="bi bi-caret-left-fill icon-size"></i></button>
             <button class="next"><i class="bi bi-caret-right-fill icon-size"></i></button>

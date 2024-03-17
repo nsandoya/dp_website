@@ -125,11 +125,11 @@ dialog{
 
 .prev{
     justify-self: start;
-    left: 15%
+    left: 3%
 }
 .next{
     justify-self: end;
-    right: 15%
+    right: 3%
 }
 
 #prev, #next{
@@ -279,8 +279,9 @@ dialog{
 }
 
 .img-gallery{
-    width: 350px;
-    height: 180px;
+    width: 380px;
+    height: 280px;
+    border-radius: 3px;
 
     background-size: cover;
     background-position: center;
@@ -297,6 +298,11 @@ dialog{
     background-color: rgba(0, 0, 0, 0.56);
     z-index: -1;
     
+}
+
+.img-modal{
+    width: 90%;
+    max-width: 90%;
 }
 
 /* Puesta en escena */
@@ -317,7 +323,7 @@ dialog{
     bottom: 3rem !important;
 }
 .botones-avance{
-    bottom: 7rem !important;
+    bottom: 3rem !important;
     margin: 0 5rem !important;
 }
 
@@ -358,6 +364,10 @@ footer{
     }
 }
 
+.footer-photos{
+    background-color: transparent !important;
+}
+
 
 @media (max-width: 1200px){
     /* .video-container{
@@ -371,6 +381,18 @@ footer{
     } */
     .before-video{
         height: 16vh !important;
+    }
+
+    .img-modal{
+        width: 80% !important;
+        max-width: 80% !important;
+    }
+
+    /* width: 320px; */
+    .img-gallery{
+        width: 380px;
+        height: 280px;
+        border-radius: 5px;
     }
 
     #gallery-gen-video{
@@ -388,6 +410,14 @@ footer{
     } */
 }
 
+@media (max-width: 820px){
+    .img-gallery{
+        width: 340px;
+        height: 280px;
+        border-radius: 5px;
+    }
+}
+
 @media (max-width: 720px){
     .before-video{
         height: 12vh !important;
@@ -397,6 +427,29 @@ footer{
         p{
             color: var(--main-color-white) !important;
         }
+    }
+
+    
+    /* .footer-photos{
+        p{
+            color: var(--main-color-black) !important;
+            text-shadow: 3px 3px 5px rgba(49, 49, 49, 0.7);
+        }
+    } */
+
+    .img-modal{
+        width: 100% !important;
+        max-width: 100% !important;
+        
+    }
+
+    .prev{
+        justify-self: start;
+        left: 0% !important;
+    }
+    .next{
+        justify-self: end;
+        right: 0% !important;
     }
 }
 
@@ -431,6 +484,11 @@ footer{
         
     }
 
+    .img-gallery{
+        width: 95%;
+        height: 280px;
+        border-radius: 5px;
+    }
     .footer-project{
         position: fixed;
         align-self: flex-end;
