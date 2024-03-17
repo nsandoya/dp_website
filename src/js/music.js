@@ -1,5 +1,5 @@
 import { getProjectGallery } from "./allProjects.js"
-import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive } from "./layoutElements.js"
+import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem } from "./layoutElements.js"
 
 //init_banner()
 
@@ -8,6 +8,9 @@ dynamicFooter()
 ddMenuMobile()
 
 navbarResponsive()
+
+offcanvasActiveItem()
+
 
 // Generar galería de proyectos
 let music = getProjectGallery("music")

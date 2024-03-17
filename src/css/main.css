@@ -446,13 +446,13 @@ footer{
         
     }
     
-    .name{
+    /* .name{
         height: fit-content !important;
-        /* margin-top: 5rem !important; */
+        margin-top: 5rem !important;
         h1{
             line-height: 3rem !important;
         }
-    }
+    } */
 
     .prev{
         justify-self: start;
