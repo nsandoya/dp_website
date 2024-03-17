@@ -48,11 +48,11 @@ export function navbarResponsive(){
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.5;">
                     <li><a class="ms-3" href="./journey.html" style="color: var(--main-color-white);">Journey</a></li>
                     <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
-                    <li><a class="ms-3" href="#" style="color: var(--main-color-white);">Series</a></li>
+                    <li><a class="ms-3" href="./series" style="color: var(--main-color-white);">Series</a></li>
                     </ul>
                 </li>
                 
-                <li class="col "><a href="" class="contact">Contact</a></li>
+                <li class="col "><a href="./contact" class="contact">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 text-end">
@@ -107,16 +107,16 @@ export function navbarStillsResponsive(){
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.95;">
                         <li><a class="journey ms-3" href="./journey.html" style="color: var(--main-color-white);">Journey</a></li>
                         <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
-                        <li><a class="series ms-3" href="#" style="color: var(--main-color-white);">Series</a></li>
+                        <li><a class="series ms-3" href="./series" style="color: var(--main-color-white);">Series</a></li>
                     </ul>
                     </li>
                     
-                    <li class="col"><a href="" style="color: var(--main-color-black);">Contact</a></li>
+                    <li class="col"><a href="./contact" style="color: var(--main-color-black);">Contact</a></li>
                 </ul>
                 </div>
                 <div class="row col-lg-3 col-md-3 text-end">
                 <section id="titulo" class="col-6 text-start ps-3">
-                    <h2 class="d-sm-inline-block d-md-none projectTitle  text-uppercase fs-5 " style="font-family: 'BDSans-Black'; color: var(--main-color-golden);">Journey</h2>
+                    <h2 class="d-sm-inline-block d-md-none projectTitle  text-uppercase fs-5 " style="font-family: 'BDSans-Black'; color: var(--main-color-golden);">${pageTitle}</h2>
                 
                 </section>
                 <!-- Botón que abre el offcanvas menu -->
