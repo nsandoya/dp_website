@@ -416,6 +416,10 @@ footer{
         height: 280px;
         border-radius: 5px;
     }
+    .contact-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+    }
 }
 
 @media (max-width: 720px){
@@ -428,14 +432,6 @@ footer{
             color: var(--main-color-white) !important;
         }
     }
-
-    
-    /* .footer-photos{
-        p{
-            color: var(--main-color-black) !important;
-            text-shadow: 3px 3px 5px rgba(49, 49, 49, 0.7);
-        }
-    } */
 
     .img-modal{
         width: 100% !important;
@@ -450,6 +446,11 @@ footer{
     .next{
         justify-self: end;
         right: 0% !important;
+    }
+
+    .contact-grid{
+        display: grid;
+        grid-template-columns: 21% 1fr !important;
     }
 }
 
