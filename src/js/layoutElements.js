@@ -185,3 +185,14 @@ export function dynamicFooter(){
     
 }
 
+export function offcanvasActiveItem(){
+    const offcanvas = document.querySelector(".offcanvas")
+    const offcanvasItems = offcanvas.querySelectorAll("ul li a")
+    console.log("offcanvas", offcanvasItems)
+    offcanvasItems.forEach((item)=>{
+        if(item.innerHTML == pageTitle){
+            console.log("item offcanvas", item.innerHTML)
+            item.classList.add("n-active-offcanvas")
+        }
+    })
+}

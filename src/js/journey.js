@@ -1,9 +1,13 @@
 import { Foto } from "./galeria.js"
 import { Galeria } from "./galeria.js"
-import { ddMenuMobile, navbarStillsResponsive } from "./layoutElements.js"
+import { ddMenuMobile, navbarStillsResponsive, offcanvasActiveItem } from "./layoutElements.js"
 
 // Navbar responsive
 navbarStillsResponsive()
+offcanvasActiveItem()
+
+const stills = document.querySelector(".ddm-click")
+stills.classList.add("n-active-offcanvas")
 
 // Crear lista de fotos
 const fotosLista = [

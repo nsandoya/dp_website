@@ -21,32 +21,51 @@
       </section>
 
       <section class="container-fluid">
-          <!-- Quitar la clase "noModal" cuando estemos en resoluciones sm y md -->
-          <!-- <div id="modal1" class="modal fade modal-container modal-xl">
-              <div class="modal-dialog modal-dialog-centered " >
-                  <div class="modal-content container-fluid  justify-content-center" style="background-color: transparent; border: none">
-                      <div class="modal-body">
-                          <div class="container-fluid justify-content-center">
-                              <div class="row" style="display: grid; grid-template-columns: 1fr auto 1fr;">
-                                  <button id="prevButton" class="col-1 btn-g-izq col-1"> Prev </button>
-                                  <img src="..." class="img-fluid col-10 imgGallery img-gallery" alt="">
-                                  <button id="nextButton" class="col-1 btn-g-der col-1"> Next </button>
-
-                              </div>
-                          </div>
-                      </div>
-                      
-                  </div>
-              </div>
-          </div>
-          <div class="gallery-gen row justify-content-center mt-lg-3">
-          </div> -->
           <div class="gallery-gen row justify-content-center mt-lg-3" style="z-index: -1;">
           </div>
-          
           <br>
-          
       </section>
+      
+      <div class="offcanvas offcanvas-start w-100" style="background-color: var(--main-color-yellow);" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header w-100 justify-content-end">
+          <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+          <button type="button " class="btn-close-white fs-3 my-2 mx-3 btn-close text-end text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <a class="pt-0 text-start" href="./index.html">
+            <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Dominique</h1>
+            <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Pazmiño</h1>
+            <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Ríos</h1>
+            <h3 class="fs-5 mb-0 mt-3 fw-light text-uppercase" style="font-family: 'Roboto-Light'; line-height:1.5em;letter-spacing: 0.28em; color:var(--main-color-black)">Cinemato<br>grapher</h3>
+           </a> 
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-5">
+            <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+              <a class="nav-link" style="font-family: 'BDSans-Black'" href="./index.html">Narrative</a>
+            </li>
+            <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+              <a class="nav-link" style="font-family: 'BDSans-Black';" href="./commercial.html">Commercial</a>
+            </li>
+            <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+              <a class="nav-link" style="font-family: 'BDSans-Black';" href="./music.html">Music</a>
+            </li>
+            <li class="dropdown display-5 mb-0 text-uppercase mb-2 pt-2" style="font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+              <a class="ddm-click dropdown-toggle text-uppercase" style="font-family: 'BDSans-Black';" href="#" id="navbarDropdown" role="button" >
+                Stills
+              </a>
+            </li>
+            <ul class="ddm-mobile ddm-mobile-d-none  bg-transparent border-0 text-uppercase">
+              <li><a class="fs-3" href="./journey.html" style="font-family: 'BDSans-Black';color: var(--main-color-white)">Journey</a></li>
+              <li class="w-25" style="color: var(--main-color-white); "><hr style="margin: 0.35rem 0"></li>
+              <li><a class="fs-3" href="./series.html" style="font-family: 'BDSans-Black';color: var(--main-color-white);">Series</a></li>
+            </ul>
+            <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+              <a class="nav-link" style="font-family: 'BDSans-Black';" href="./contact.html">Contact</a>
+            </li>
+            
+            <!-- Agrega más links según sea necesario -->
+          </ul>
+        </div>
+      </div>
       
   </main>
   <dialog id="modal-dialog" class="nodisplay">
