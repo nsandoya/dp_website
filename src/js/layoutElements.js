@@ -90,8 +90,7 @@ export function navbarResponsive(){
 
 export function navbarStillsResponsive(){
     header.innerHTML = `
-        <header class="header-project">
-        <nav class="nav-bg navbar navbar-dark navbar-expand-md fixed-top me-md-4" style="z-index: 1;">
+        <nav class="navbar  navbar-expand-md fixed-top me-md-4" style="height: 50px;z-index: 1;">
         <div class="container-fluid">
             <div class="container-fluid">
             <div class="row">
@@ -152,11 +151,12 @@ export function navbarStillsResponsive(){
     })
 
     const navbar = document.querySelector("nav")
-    if(pageTitle == "Contact" || pageTitle != "Sills"){
+    console.log("navbar", pageTitle.toLowerCase())
+    if(pageTitle.toLowerCase() == "contact" ){
         navbar.classList.add("bg-transparent")
         stills.classList.remove("n-active")
 
-    }else{
+    }else if(pageTitle.toLowerCase() == "journey" || pageTitle.toLowerCase() == "series"){
         navbar.classList.add("bg-white")
         stills.classList.add("n-active")
     }
@@ -164,7 +164,7 @@ export function navbarStillsResponsive(){
 
 // Footer dinámico
 export function dynamicFooter(){
-    window.onscroll = function(ev) {
+    window.onscroll = function(event) {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             // El usuario ha llegado al final de la página, cambia el color de fondo del footer
             document.querySelector(".f-select ").classList.remove("footer-hide-bg");
