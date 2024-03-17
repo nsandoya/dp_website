@@ -1,7 +1,9 @@
 import { Foto } from "./galeria.js"
 import { Galeria } from "./galeria.js"
-import { ddMenuMobile } from "./layoutElements.js"
+import { ddMenuMobile, navbarStillsResponsive } from "./layoutElements.js"
 
+// Navbar responsive
+navbarStillsResponsive()
 
 // Crear lista de fotos
 const fotosLista = [

@@ -6,111 +6,71 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./src/css/main.css" >
-    <title>Dominique Pazmiño Ríos | Director of Photography</title>
+    <title>Commercial</title>
 </head>
 <body class="p-0 m-0" >
     <header>
-        <!-- <nav class="navbar navbar-expand-xl navbar-dark bg-transparent fixed-top">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <h1 class="fs-5 mb-0">Dominique Pazmiño Ríos</h1>
-                <h3 class="fs-6 mb-0 fw-light text-uppercase">Director of Photography</h3>
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title text-uppercase" id="offcanvasDarkNavbarLabel">Menú</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 align-items-md-center">
-                    <li class="nav-item">
-                      <a class="nav-link active text-uppercase mx-md-3" aria-current="page" href="./html/categoria.html">Commercial</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-uppercase mx-md-3 px-md-3" href="./html/categoria.html">Film</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Music Video
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark mx-md-3">
-                        <li><a class="dropdown-item" href="#">Por un momento</a></li>
-                        <li><a class="dropdown-item" href="#">Nada bello</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Más</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-uppercase mx-md-3" href="./html/fotosViajes.html">Mirada en Pausa</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-uppercase mx-md-3" href="./html/contacto.html">Contact</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        </nav> -->
-        <nav class="navbar navbar-dark bg-transparent fixed-top mt-2 me-4">
-          <div class="container-fluid">
-            <div class="container-fluid">
-              <div class="row exp-md">
-                <div class="col-lg-2 col-md-0"></div>
-                <div class="col-7 text-center">
-                  <ul class="row align-text-center text-uppercase" style="color: var(--main-color-white)">
-                    <li class="col"><a href="./index.html">Narrative</a></li>
-                    <li class="col"><a href="./commercial.html" class="n-active">Commercial</a></li>
-                    <li class="col"><a href="./music.html" >Music</a></li>
-                    <!-- <li class="col"><a href="">Stills</a></li> -->
-                    <li class="dropdown" style="width: min-content !important;">
-                      <a class="dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Stills
-                      </a>
-                      <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.5;">
-                        <li><a class="ms-3" href="./journey.html" style="color: var(--main-color-white);">Journey</a></li>
-                        <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
-                        <li><a class="ms-3" href="#" style="color: var(--main-color-white);">Series</a></li>
-                      </ul>
-                    </li>
-                    
-                    <li class="col"><a href="">Contact</a></li>
-                  </ul>
-                </div>
-                <div class="col-lg-3 col-md-1 text-end">
-                   <a class="navbar-brand " href="#">
-                    <h1 class="fs-5 mb-0 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Dominique</h1>
-                    <h1 class="fs-5 mb-0 text-uppercase text-end mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Pazmiño</h1>
-                    <h1 class="fs-5 mb-0 text-uppercase text-end mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Ríos</h1>
-                    <h3 class="fs-6 mb-0 fw-light text-uppercase text-end" style="font-family: 'Roboto-Light'; line-height:1.5em;letter-spacing: 0.25em; color:var(--main-color-yellow)">Cinemato<br>grapher</h3>
-                  </a> 
-                </div>
-              </div>
-              
-            </div>
-            
-          </div>
-        </nav>
     </header>
+
+     <!-- offcanvas menu -->
+    <!-- Código del offcanvas menu -->
+    <div class="offcanvas offcanvas-start w-100" style="background-color: var(--main-color-yellow);" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header w-100 justify-content-end">
+        <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+        <button type="button " class="btn-close-white fs-3 my-2 mx-3 btn-close text-end text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <a class="pt-0 text-start" href="#">
+          <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Dominique</h1>
+          <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Pazmiño</h1>
+          <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Ríos</h1>
+          <h3 class="fs-5 mb-0 mt-3 fw-light text-uppercase" style="font-family: 'Roboto-Light'; line-height:1.5em;letter-spacing: 0.28em; color:var(--main-color-black)">Cinemato<br>grapher</h3>
+         </a> 
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-5">
+          <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="nav-link" style="font-family: 'BDSans-Black'" href="./index.html">Narrative</a>
+          </li>
+          <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="nav-link" style="font-family: 'BDSans-Black';" href="./commercial.html">Commercial</a>
+          </li>
+          <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="nav-link" style="font-family: 'BDSans-Black';" href="./music.html">Music</a>
+          </li>
+          <li class="dropdown display-5 mb-0 text-uppercase mb-2 pt-2" style="font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="ddm-click dropdown-toggle text-uppercase" style="font-family: 'BDSans-Black';" href="#" id="navbarDropdown" role="button" >
+              Stills
+            </a>
+          </li>
+          <ul class="ddm-mobile ddm-mobile-d-none  bg-transparent border-0 text-uppercase">
+            <li><a class="fs-3" href="./journey.html" style="font-family: 'BDSans-Black';color: var(--main-color-white)">Journey</a></li>
+            <li class="w-25" style="color: var(--main-color-white); "><hr style="margin: 0.35rem 0"></li>
+            <li><a class="fs-3" href="#" style="font-family: 'BDSans-Black';color: var(--main-color-white);">Series</a></li>
+          </ul>
+          <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="nav-link" style="font-family: 'BDSans-Black';" href="./contact.html">Contact</a>
+          </li>
+          
+          <!-- Agrega más links según sea necesario -->
+        </ul>
+      </div>
+    </div>
+
     <main class="container-fluid bg-black text-light p-0 displayImg" style="color: var(--main-color-white)">
          
     </main>
 
-    <footer class="container-fluid footer-hide-bg p-3 pb-0 justify-content-center">
-      <!-- <i class="row bi bi-instagram h-100 text-light"></i> -->
+    <footer class="container-fluid f-select footer-hide-bg  p-3 pb-0 justify-content-center ">
       <div class="row ">
-        <p class="footer-hide-text email col-sm-7 col-lg-9 text-uppercase ms-sm-0 ms-md-5">
+        <p class="d-none d-md-inline-block footer-hide-text email col text-uppercase ms-3 ms-md-5">
           correo@gmail.com
         </p>
-        <p class="col-sm-2 rrss col-md-1 mx-md-3 mx-lg-1 footer-text-initial text-uppercase">
+        <p class="d-md-none footer-hide-text email col text-uppercase ms-3 ms-md-5">
+          
+        </p>
+        <p class="col-sm-1 rrss col text-end text-uppercase footer-text-initial" style="width: 150px">
           instagram
         </p>
-        <p class="col-sm-2 rrss col-md-1 mx-md-3 mx-lg-1 footer-text-initial text-end 
-        text-uppercase">
+        <p class="col-sm-2 rrss text-end text-uppercase me-2 me-md-5 footer-text-initial" style="width: 100px">
           imdb
         </p>
       </div>
