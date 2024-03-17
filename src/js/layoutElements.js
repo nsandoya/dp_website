@@ -7,6 +7,18 @@ export function init_banner(){
         //banner.innerHTML=""
     }, 800)
     
+    const tituloBanner = document.querySelector(".name")
+    //console.log("titulo banner",tituloBanner)
+    const titulosBanner = tituloBanner.querySelectorAll("h1")
+    //console.log("h1s",titulosBanner)
+    if(window.innerWidth <= 720){
+        console.log("screen width detectado")
+        titulosBanner.forEach((item)=>{
+            item.classList.remove("display-4")
+            item.classList.add("display-2")
+            
+        })
+    }
 }
 
 // Submenu responsive
@@ -159,6 +171,9 @@ export function navbarStillsResponsive(){
     }else if(pageTitle.toLowerCase() == "journey" || pageTitle.toLowerCase() == "series"){
         navbar.classList.add("bg-white")
         stills.classList.add("n-active")
+    }else{
+        
+        navbar.classList.add("bg-white")
     }
 }
 
