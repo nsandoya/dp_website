@@ -1,7 +1,8 @@
 
 import { getProjectsList } from "./allProjects.js"
-import { ddMenuMobile } from "./layoutElements.js"
+import { ddMenuMobile, navbarStillsResponsive } from "./layoutElements.js"
 
+navbarStillsResponsive()
 
 const titleProject = document.querySelector(".projectTitle")
 const prev = document.querySelector("#prev")

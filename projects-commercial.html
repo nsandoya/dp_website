@@ -13,70 +13,133 @@
 
 </head>
 <body >
-    <header >
-        <nav class="navbar navbar-dark bg-white fixed-top pt-3 pb-3 pe-4" style="z-index: 1 !important;">
-            <div class="container-fluid">
-              <div class="container-fluid">
-                <div class="row exp-md">
-                  <div class="col-lg-2 col-md-0"></div>
-                  <div class="col-8 text-center">
-                    <ul class="row align-text-center justify-content-center text-uppercase my-0" style="padding-left: 0px; margin:0 auto">
-                      <li class="col-2"><a class="a-stills" href="./index.html">Narrative</a></li>
-                      <li class="col-2"><a class="a-stills n-active" href="./commercial.html">Commercial</a></li>
-                      <li class="col-2"><a class="a-stills" href="./music.html">Music</a></li>
-                      <!-- <li class="col"><a href="">Stills</a></li> -->
-                      <li class="dropdown col-2" style="width: min-content !important;">
-                        <a class="dropdown-toggle text-uppercase a-stills" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Stills
-                        </a>
-                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.5;">
-                          <li><a class="ms-3" href="./journey.html" style="color: var(--main-color-white);">Journey</a></li>
-                          <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
-                          <li><a class="ms-3" href="./series.html" style="color: var(--main-color-white);">Series</a></li>
-                        </ul>
-                      </li>
-                      
-                      <li class="col-2"><a class="a-stills" href="">Contact</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-lg-2 col-md-1 text-end">
-                     <a href="./index.html">
-                      <h1 class="fs-3 mb-0 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:0.6em; color: var(--main-color-yellow)">dp</h1>
-                      
-                    </a> 
-                  </div>
-                </div>
+  <header class="header-project">
+<!--     <nav class="nav-bg navbar navbar-dark navbar-expand-md bg-white fixed-top me-md-4" style="z-index: 1;">
+      <div class="container-fluid">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-2 col-md-0"></div>
+            <div class="col-lg-7 col-md-9 text-center">
+              <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-black) !important; margin-bottom:0; margin-top:0.3rem">
+                <li class="col"><a href="./index.html" class="n-active" style="color: var(--main-color-black);">Narrative</a></li>
+                <li class="col"><a href="./commercial.html" style="color: var(--main-color-black);">Commercial</a></li>
+                <li class="col"><a href="./music.html" style="color: var(--main-color-black);">Music</a></li>
+                <li class="dropdown" style="width: min-content !important; ">
+                  <a class="dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--main-color-black);">
+                    Stills
+                  </a>
+                  <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.95;">
+                    <li><a class="ms-3" href="./journey.html" style="color: var(--main-color-white);">Journey</a></li>
+                    <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
+                    <li><a class="ms-3" href="#" style="color: var(--main-color-white);">Series</a></li>
+                  </ul>
+                </li>
                 
-              </div>
-              
+                <li class="col"><a href="" style="color: var(--main-color-black);">Contact</a></li>
+              </ul>
             </div>
-          </nav>
-    </header>
+            <div class="row col-lg-3 col-md-3 text-end">
+              <section id="titulo" class="col-6 text-start ps-3">
+                <h2 class="d-sm-inline-block d-md-none projectTitle  text-uppercase fs-5 " style="font-family: 'BDSans-Black'; color: var(--main-color-white);">Project</h2>
+               
+              </section>
+               <button class="d-sm-inline-block d-md-none col border-0 pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
+                <h1 class="fs-3 text-uppercase mb-4 mb-md-2 pe-0 text-end" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)">DP</h1>
+               </button>
+               <a href="./index.html">
+
+                 <button class="d-none d-md-inline-block col border-0 pe-0" type="button" style="background-color: transparent;">
+                  <h1 class="fs-3 text-uppercase mb-4 mb-md-2 pe-0 text-end" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)">DP</h1>
+                 </button>
+               </a>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </nav> -->
+  </header>
+
+   
+    <div class="offcanvas offcanvas-start w-100" style="background-color: var(--main-color-yellow);" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header w-100 justify-content-end">
+        <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> -->
+        <button type="button " class="btn-close-white fs-3 my-2 mx-3 btn-close text-end text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <a class="pt-0 text-start" href="./index.html">
+          <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Dominique</h1>
+          <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Pazmiño</h1>
+          <h1 class="fs-4 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Ríos</h1>
+          <h3 class="fs-5 mb-0 mt-3 fw-light text-uppercase" style="font-family: 'Roboto-Light'; line-height:1.5em;letter-spacing: 0.28em; color:var(--main-color-black)">Cinemato<br>grapher</h3>
+         </a> 
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-5">
+          <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="nav-link" style="font-family: 'BDSans-Black'" href="./index.html">Narrative</a>
+          </li>
+          <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="nav-link" style="font-family: 'BDSans-Black';" href="./commercial.html">Commercial</a>
+          </li>
+          <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="nav-link" style="font-family: 'BDSans-Black';" href="./music.html">Music</a>
+          </li>
+          <li class="dropdown display-5 mb-0 text-uppercase mb-2 pt-2" style="font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="ddm-click dropdown-toggle text-uppercase" style="font-family: 'BDSans-Black';" href="#" id="navbarDropdown" role="button" >
+              Stills
+            </a>
+          </li>
+          <ul class="ddm-mobile ddm-mobile-d-none  bg-transparent border-0 text-uppercase">
+            <li><a class="fs-3" href="./journey.html" style="font-family: 'BDSans-Black';color: var(--main-color-white)">Journey</a></li>
+            <li class="w-25" style="color: var(--main-color-white); "><hr style="margin: 0.35rem 0"></li>
+            <li><a class="fs-3" href="#" style="font-family: 'BDSans-Black';color: var(--main-color-white);">Series</a></li>
+          </ul>
+          <li class="display-5 mb-0 text-uppercase mb-2" style=" font-weight: lighter; line-height:1em; color: var(--main-color-white)">
+            <a class="nav-link" style="font-family: 'BDSans-Black';" href="./contact.html">Contact</a>
+          </li>
+          
+          <!-- Agrega más links según sea necesario -->
+        </ul>
+      </div>
+    </div>
 
     <main class="container-fluid mt-5">
-        <section id="titulo" class="container-fluid text-center">
-            <h2 class=" projectTitle  text-uppercase display-3" style="display: none;font-family: 'BDSans-Black'; margin-top:4rem; ">Project</h2>
-           <!--  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, magni.</p> -->
-        </section>
-
-        <section class="container-fluid" style="margin-top: 5rem;">
-            <div id="gallery-gen-video" style="width: 89%; position: relative; top:-3rem;padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0 auto">
-              <iframe src="https://player.vimeo.com/video/544380025?h=aa97d4f317" style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <section style="display:grid; grid-template-columns: 1fr 1fr; position: relative; bottom: 3rem">
-              <button id="prev" class="mx-md-5 px-5 fs-3 a-stills">Prev</button> 
-              <button id="next" class="mx-md-5 px-5 fs-3 a-stills">Next</button>
-            </section>
-                <!-- video width="70vw" controls>
-                    <source src="https://player.vimeo.com/video/544380025?h=aa97d4f317" type="video/mp4">
-                </video> -->
-                <!-- <iframe id="videoPlayer" src="https://player.vimeo.com/video/544380025?h=aa97d4f317" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
-                <!-- <p><a href="https://vimeo.com/544380025">Dominique Pazmi&ntilde;o R&iacute;os - Music video reel</a> from <a href="https://vimeo.com/dominiquerios">Dominique Pazmi&ntilde;o R&iacute;os</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
-            
+        <!-- <section id="titulo" class="container-fluid text-center">
+            <h2 class=" projectTitle  text-uppercase display-3 " style="font-family: 'BDSans-Black'; margin-top:4rem; ">Project</h2>
            
-            
-        </section>
+        </section> -->
 
+        <section class="container-fluid" >
+          <div class="col before-video" ></div>
+          <div id="gallery-gen-video" class="col" style="position: relative;padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 0 auto">
+            <iframe src="https://player.vimeo.com/video/544380025?h=aa97d4f317" style="position: absolute; top:0; left: 0; width: 100%; height: 100%; overflow: hidden;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="botones-avance mt-2 bottom-50" style="position: relative; bottom: 3rem; height: 100%;">
+            <section class="mt-3" style="display:grid; grid-template-columns: 1fr 1fr;">
+              <button id="prev" class="px-lg-0 mx-0  mx-md-1 px-2  fs-5 text-start a-stills" style="max-width: 250px">Prev</button> 
+              <button id="next" class="px-lg-0 mx-0  mx-md-1 pe-3 px-2  fs-5 text-start a-stills" style="max-width: 250px">Next</button>
+            </section>
+          </div>
+      </section>
+
+          <footer class="footer-project container-fluid    pb-0 justify-content-center ">
+            <div class="row px-xl-5">
+              <p class="d-none footer-hide-text email col text-uppercase ms-3 ms-md-5 ps-0">
+                correo@gmail.com
+              </p>
+              <p class="footer-hide-text email col text-uppercase ms-3 ms-md-5">
+                
+              </p>
+              <p class="col-sm-1 rrss col text-end text-uppercase footer-text-initial pe-lg-1" style="width: 150px">
+                instagram
+              </p>
+              <p class="col-sm-2 rrss text-end text-uppercase me-4 me-sm-4 me-md-5  footer-text-initial" style="width: 100px">
+                imdb
+              </p>
+            </div>
+            
+          </footer>
+        </div>
         
         
     </main>
@@ -103,5 +166,4 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script type="module" src="../src/js/project.js"></script>
-</body>
 </html>

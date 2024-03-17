@@ -152,8 +152,10 @@ export function navbarStillsResponsive(){
     })
 
     const navbar = document.querySelector("nav")
-    if(pageTitle == "Contact"){
+    if(pageTitle == "Contact" || pageTitle != "Sills"){
         navbar.classList.add("bg-transparent")
+        stills.classList.remove("n-active")
+
     }else{
         navbar.classList.add("bg-white")
         stills.classList.add("n-active")
