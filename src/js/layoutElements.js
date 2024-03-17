@@ -48,11 +48,11 @@ export function navbarResponsive(){
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.5;">
                     <li><a class="ms-3" href="./journey.html" style="color: var(--main-color-white);">Journey</a></li>
                     <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
-                    <li><a class="ms-3" href="./series" style="color: var(--main-color-white);">Series</a></li>
+                    <li><a class="ms-3" href="./series.html" style="color: var(--main-color-white);">Series</a></li>
                     </ul>
                 </li>
                 
-                <li class="col "><a href="./contact" class="contact">Contact</a></li>
+                <li class="col "><a href="./contact.html" class="contact">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 text-end">
@@ -84,12 +84,14 @@ export function navbarResponsive(){
             item.classList.add("n-active")
         }
     })
+
+
 }
 
 export function navbarStillsResponsive(){
     header.innerHTML = `
         <header class="header-project">
-        <nav class="nav-bg navbar navbar-dark navbar-expand-md bg-white fixed-top me-md-4" style="z-index: 1;">
+        <nav class="nav-bg navbar navbar-dark navbar-expand-md fixed-top me-md-4" style="z-index: 1;">
         <div class="container-fluid">
             <div class="container-fluid">
             <div class="row">
@@ -101,17 +103,17 @@ export function navbarStillsResponsive(){
                     <li class="col"><a href="./music.html" class="music" style="color: var(--main-color-black);">Music</a></li>
                     <!-- <li class="col"><a href="">Stills</a></li> -->
                     <li class="dropdown" style="width: min-content !important; ">
-                    <a class="stills n-active dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--main-color-black);">
+                    <a class="stills dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--main-color-black);">
                         Stills
                     </a>
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.95;">
                         <li><a class="journey ms-3" href="./journey.html" style="color: var(--main-color-white);">Journey</a></li>
                         <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
-                        <li><a class="series ms-3" href="./series" style="color: var(--main-color-white);">Series</a></li>
+                        <li><a class="series ms-3" href="./series.html" style="color: var(--main-color-white);">Series</a></li>
                     </ul>
                     </li>
                     
-                    <li class="col"><a href="./contact" style="color: var(--main-color-black);">Contact</a></li>
+                    <li class="col"><a href="./contact.html" class="contact" style="color: var(--main-color-black);">Contact</a></li>
                 </ul>
                 </div>
                 <div class="row col-lg-3 col-md-3 text-end">
@@ -140,6 +142,7 @@ export function navbarStillsResponsive(){
     `
 
     const itemsNavbar = document.querySelectorAll("ul li a")
+    const stills = document.querySelector(".stills")
     itemsNavbar.forEach((item)=>{
         console.log("titulo pagina", pageTitle)
         console.log(item)
@@ -147,6 +150,14 @@ export function navbarStillsResponsive(){
             item.classList.add("n-active")
         }
     })
+
+    const navbar = document.querySelector("nav")
+    if(pageTitle == "Contact"){
+        navbar.classList.add("bg-transparent")
+    }else{
+        navbar.classList.add("bg-white")
+        stills.classList.add("n-active")
+    }
 }
 
 // Footer dinámico

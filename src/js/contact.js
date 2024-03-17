@@ -1,5 +1,5 @@
 
-import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive } from "./layoutElements.js"
+import { init_banner, dynamicFooter, ddMenuMobile, navbarStillsResponsive } from "./layoutElements.js"
 
 //init_banner()
 
@@ -7,4 +7,4 @@ dynamicFooter()
 
 ddMenuMobile()
 
-navbarResponsive()
+navbarStillsResponsive()
