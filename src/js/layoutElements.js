@@ -42,7 +42,7 @@ export function navbarResponsive(){
                 <li class="col "><a href="./music.html" class="music">Music</a></li>
                 <!-- <li class="col "><a href="" class="stills">Stills</a></li> -->
                 <li class="dropdown" style="width: min-content !important;">
-                    <a class="dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="dropdown-toggle text-uppercase" href="./index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Stills
                     </a>
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.5;">
