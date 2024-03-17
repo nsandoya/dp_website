@@ -1,6 +1,6 @@
 import { Foto } from "./galeria.js"
 import { Galeria } from "./galeria.js"
-
+import { ddMenuMobile } from "./layoutElements.js"
 
 
 // Crear lista de fotos
@@ -68,6 +68,9 @@ galeria.aggFotos(...fotosLista)
 
 const galleryContainer = document.querySelector(".gallery-gen")
 galeria.renderFotos()
+
+// Offcanvas menu
+ddMenuMobile()
 
 // Modales
 const modalDialog = document.querySelector("#modal-dialog");

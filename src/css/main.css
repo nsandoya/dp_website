@@ -21,7 +21,7 @@
     --main-color-yellow: #F6B947;
     --main-color-white: #F8F6ED;
     --main-color-golden: #A4997E;
-    --main-color-black: #31271D;
+    --main-color-black: #3b3a39;
   }
 
 /* Estilos para el web portfolio */
@@ -44,9 +44,10 @@ html {
     box-sizing: inherit !important;
   }
 
-/* body{
-    background-color: black !important;
-} */
+.navbar-toggler{
+    box-shadow: none !important; 
+    color: none !important
+}
 
 main{
     width: 100%; 
@@ -70,8 +71,11 @@ a{
     }
 }
 
-a:hover{
-    color: var(--main-color-yellow) !important;    
+.nav-bg, .navbar{
+
+    a:hover{
+        color: var(--main-color-yellow) !important;    
+    }
 }
 
 .offcanvas-body{
@@ -437,6 +441,13 @@ footer{
         width: 100% !important;
         max-width: 100% !important;
         
+    }
+    
+    .name{
+        height: min-content;
+        h1{
+            line-height: 3rem !important;
+        }
     }
 
     .prev{
