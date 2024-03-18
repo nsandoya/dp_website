@@ -199,7 +199,8 @@ dialog{
 }
 
 .displayImg{
-    background-image: url("../img/nuria.png");
+    /* background-image: url("../img/nuria.png"); */
+    background-color: var(--main-color-yellow);
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -458,17 +459,17 @@ footer{
         
     }
     .banner-content{
-        margin-left: 1.5rem !important;
+        margin-left: 0.3rem !important;
 
     }
-    .name{
+    /* .name{
         height: fit-content !important;
         margin-top: 5rem !important;
         h1{
-            font-size: 3rem;
+            font-size: 2.5rem;
             line-height: 3rem !important;
         }
-    }
+    } */
 
     .prev{
         justify-self: start;
