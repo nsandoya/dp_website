@@ -100,6 +100,31 @@ ddMenuMobile()
 const modalDialog = document.querySelector("#modal-dialog");
 const openModal = document.querySelectorAll(".openModal");
 
+function prevSwipe(itemID, photoInfo, imgModal){
+    itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
+    console.log(itemID)
+    let foto = galeria.fotos.filter(foto => foto.id == itemID);
+    //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
+    let fotoUsar = foto[0]
+    //console.log(fotoUsar.url)
+    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+    imgModal.src = fotoUsar.url
+    pieDeFoto.innerHTML = photoInfo
+}
+
+function nextSwipe(itemID, photoInfo, imgModal){
+    itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
+    console.log(itemID)
+    let foto = galeria.fotos.filter(foto => foto.id == itemID);
+    let fotoUsar = foto[0]
+    console.log(fotoUsar.url)
+    imgModal.src = fotoUsar.url
+
+    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+    imgModal.src = fotoUsar.url
+    pieDeFoto.innerHTML = photoInfo
+}
+
 /* console.log(openModal) */
 openModal.forEach(item=>{
     item.addEventListener('click', ()=>{
@@ -127,12 +152,11 @@ openModal.forEach(item=>{
         const imgModal = document.querySelector("#img-modal")
         const pieDeFoto = document.querySelector("#pieDeFoto")
         
-        let coords = imgModal.getBoundingClientRect();
-        console.log("position", coords.bottom)
+        
 
         let itemID = item.id; 
         let photoInfo = item.getAttribute('data-info')
-        prev.addEventListener('click', ()=>{
+        /* prev.addEventListener('click', ()=>{
             itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
             console.log(itemID)
             let foto = galeria.fotos.filter(foto => foto.id == itemID);
@@ -158,16 +182,40 @@ openModal.forEach(item=>{
             
         })
         
+        */
         const closeModal = document.querySelector("#closeModal")
         closeModal.addEventListener('click', (event)=>{
             modalDialog.close()
             modalDialog.innerHTML = ""
-            modalDialog.classList.add("nodisplay")
-
-        
-
-        
+            modalDialog.classList.add("nodisplay")        
         })
+        
+
+        let startX = 0;  // Variable para almacenar la posición inicial del toque
+        let threshold = 100;  // Distancia mínima para considerar el gesto como deslizamiento
+
+        // Agrega event listeners para los eventos de toque
+        imgModal.addEventListener('touchstart', e => {
+            startX = e.changedTouches[0].clientX;
+        });
+
+        imgModal.addEventListener('touchend', e => {
+            let endX = e.changedTouches[0].clientX;
+            let diffX = startX - endX;
+
+            // Si la diferencia es mayor que el umbral, considera el gesto como deslizamiento
+            if (Math.abs(diffX) > threshold) {
+                if (diffX > 0) {
+                    // Deslizamiento hacia la izquierda, muestra la siguiente imagen
+                    nextSwipe(itemID, photoInfo, imgModal);
+
+                } else {
+                    // Deslizamiento hacia la derecha, muestra la imagen anterior
+                    prevSwipe(itemID, photoInfo, imgModal);
+
+                }
+            }
+        });
     })
 })
 
