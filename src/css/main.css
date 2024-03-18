@@ -95,6 +95,10 @@ a{
     text-align: center;
     width: 100%;
 }
+
+.swiper-slide img{
+    max-width: 500px;
+}
 /* Swipe gallery */
 
 

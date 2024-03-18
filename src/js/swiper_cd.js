@@ -10,7 +10,7 @@ var span = document.getElementsByClassName("close")[0];
 // Cuando el usuario haga clic en el botón, abre el modal 
 function openModal() {
     console.log("click")
-  modal.style.display = "block";
+    modal.style.display = "block";
   
   // Inicializa Swiper cuando se abre el modal
   var mySwiper = new Swiper('.swiper-container', {
