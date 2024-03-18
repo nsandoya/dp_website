@@ -388,6 +388,12 @@ footer{
         margin-top: 1rem;
     }
 }
+.pum{
+    background-size: cover; 
+    background-position: center;
+    background-position-x:25%;
+    background-repeat: no-repeat;
+}
 .contact-body{
     background-image: url(./src/img/rainbow_1.jpg); 
     /* background-size: cover; */

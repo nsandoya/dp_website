@@ -67,7 +67,7 @@ const commercialProjectsList = [
     }),
     new Project({
         name: "por_un_momento",
-        title: "Por un momento",
+        title: "por un momento",
         urlvideo: "https://www.youtube.com/embed/1qnTlIzQ_DI?si=rebqJVINFN6uhHam"
     }),
     new Project({
@@ -93,7 +93,7 @@ const musicProjectsList = [
     }),
     new Project({
         name: "por_un_momento",
-        title: "Por un momento",
+        title: "por un momento",
         urlvideo: "https://www.youtube.com/embed/1qnTlIzQ_DI?si=rebqJVINFN6uhHam"
     }),
     
