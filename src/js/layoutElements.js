@@ -165,16 +165,28 @@ export function navbarStillsResponsive(){
     const navbar = document.querySelector("nav")
     console.log("navbar", pageTitle.toLowerCase())
     if(pageTitle.toLowerCase() == "contact" ){
+        navbar.classList.remove("bg-white")
         navbar.classList.add("bg-transparent")
         stills.classList.remove("n-active")
 
     }else if(pageTitle.toLowerCase() == "journey" || pageTitle.toLowerCase() == "series"){
+        navbar.classList.remove("bg-transparent")
         navbar.classList.add("bg-white")
         stills.classList.add("n-active")
-    }else{
-        
+    }/* else{
         navbar.classList.add("bg-white")
-    }
+    } */
+    window.addEventListener('resize', ()=>{
+
+        if(window.innerWidth <= 720){
+            console.log("ancho de pantalla", window.innerWidth)
+            navbar.classList.remove("bg-white")
+            navbar.classList.add("bg-transparent")
+        }else if(window.innerWidth > 720){
+            navbar.classList.remove("bg-transparent")
+            navbar.classList.add("bg-white")
+        }
+    })
 }
 
 // Footer dinámico
