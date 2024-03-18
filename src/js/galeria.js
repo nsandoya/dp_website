@@ -65,9 +65,10 @@ export class ProjectGallery{
                 console.log(project)
                 let id = project.id
                 let claseAux = ""
-                if(project.title.toLowerCase() == "por un momento") {
+                if(project.title.toLowerCase() === "por un momento") {
                     claseAux = "pum"
-
+                }else{
+                    claseAux = ""
                 }
                 contenedor.innerHTML += `
                     <div id=${project.id} class="project-div project img-fluid ${claseAux} p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh">
@@ -79,12 +80,7 @@ export class ProjectGallery{
                     </div>
                 `
              
-                const prDiv = document.querySelector(".project-div")  
-                if(project.title == "por un momento") {
-                    prDiv.classList.add("pum")
-                } else{
-                    console.log("sin shalom", project.title)
-                }
+                
             }
         )
     }
