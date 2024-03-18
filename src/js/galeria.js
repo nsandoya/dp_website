@@ -101,8 +101,7 @@ export class Galeria{
             (foto)=>{
                 console.log(foto.id) 
                 
-                galleryContainer.innerHTML += `<div id=${foto.id} class="openModal col-sm-1 col-md-4 mt-2 mx-1 img-gallery"  style="background-image: url(${foto.url});" >
-                    
+                galleryContainer.innerHTML += `<div id=${foto.id} class="openModal col-sm-1 col-md-4 mt-2 mx-1 img-gallery" data-info="${foto.place}, ${foto.year}" style="background-image: url(${foto.url});" >
                 </div>`
         })
     }
