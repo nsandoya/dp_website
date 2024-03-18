@@ -470,6 +470,11 @@ footer{
             line-height: 3rem !important;
         }
     } */
+    .name{
+        h1{
+            font-size: 4.5rem;
+        }
+    }
 
     .prev{
         justify-self: start;
