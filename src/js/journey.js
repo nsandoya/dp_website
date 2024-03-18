@@ -207,11 +207,29 @@ openModal.forEach(item=>{
             if (Math.abs(diffX) > threshold) {
                 if (diffX > 0) {
                     // Deslizamiento hacia la izquierda, muestra la siguiente imagen
-                    nextSwipe(itemID, photoInfo, imgModal);
+                    //nextSwipe(itemID, photoInfo, imgModal);
+                    itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
+                    console.log(itemID)
+                    let foto = galeria.fotos.filter(foto => foto.id == itemID);
+                    let fotoUsar = foto[0]
+                    console.log(fotoUsar.url)
+                    imgModal.src = fotoUsar.url
 
+                    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+                    imgModal.src = fotoUsar.url
+                    pieDeFoto.innerHTML = photoInfo
                 } else {
                     // Deslizamiento hacia la derecha, muestra la imagen anterior
-                    prevSwipe(itemID, photoInfo, imgModal);
+                    //prevSwipe(itemID, photoInfo, imgModal);
+                    itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
+                    console.log(itemID)
+                    let foto = galeria.fotos.filter(foto => foto.id == itemID);
+                    //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
+                    let fotoUsar = foto[0]
+                    //console.log(fotoUsar.url)
+                    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+                    imgModal.src = fotoUsar.url
+                    pieDeFoto.innerHTML = photoInfo
 
                 }
             }
