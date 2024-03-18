@@ -19,7 +19,7 @@ export function init_banner(){
         //banner.classList.remove("init_banner")
         banner.classList.add("init_banner_close")
         //banner.innerHTML=""
-    }, 800)
+    }, 630)
     
     
 }
@@ -112,7 +112,7 @@ export function navbarStillsResponsive(){
             <div class="row">
                 <div class="col-lg-2 col-md-0"></div>
                 <div class="col-lg-7 col-md-9 text-center">
-                <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-black) !important; margin-bottom:0; margin-top:0.3rem">
+                <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-golden) !important; margin-bottom:0; margin-top:0.3rem">
                     <li class="col"><a href="./index.html" class="narrative" style="color: var(--main-color-black);">Narrative</a></li>
                     <li class="col"><a href="./commercial.html" class="commercial" style="color: var(--main-color-black);">Commercial</a></li>
                     <li class="col"><a href="./music.html" class="music" style="color: var(--main-color-black);">Music</a></li>
@@ -159,8 +159,9 @@ export function navbarStillsResponsive(){
     const itemsNavbar = document.querySelectorAll("ul li a")
     const stills = document.querySelector(".stills")
     itemsNavbar.forEach((item)=>{
-        console.log("titulo pagina", pageTitle)
-        console.log(item)
+        //console.log("titulo pagina", pageTitle)
+        //console.log(item)
+        //item.classList.add()
         if(item.classList.contains(pageTitle.toLowerCase())){
             item.classList.add("n-active")
         }

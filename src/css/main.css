@@ -388,6 +388,13 @@ footer{
         margin-top: 1rem;
     }
 }
+.contact-body{
+    background-image: url(./src/img/rainbow_1.jpg); 
+    /* background-size: cover; */
+    /* ul a{
+        color: var(--main-color-white) !important;
+    } */
+}
 /* .name{
     h1{
         font-size: 3.8rem;
@@ -545,6 +552,7 @@ footer{
         padding-inline: 0;
         padding-right: 3rem;
     }
+    
 }
 
 @media (max-width: 520px){

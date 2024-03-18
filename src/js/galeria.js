@@ -90,10 +90,6 @@ export class Galeria{
     aggFotos(...foto){
         this.fotos.push(...foto);
     }
-    
-    /* oModal(){
-        modalDialog.showModal();
-    } */
 
     renderFotos(listaParaRender = this.fotos){
         galleryContainer.innerHTML = "";
