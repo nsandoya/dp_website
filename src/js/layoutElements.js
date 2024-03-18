@@ -14,12 +14,12 @@ export function init_banner(){
             
         })
     } */
-    /* const banner = document.querySelector(".init_banner")
+    const banner = document.querySelector(".init_banner")
     setTimeout(()=>{
         //banner.classList.remove("init_banner")
         banner.classList.add("init_banner_close")
         //banner.innerHTML=""
-    }, 800) */
+    }, 800)
     
     
 }

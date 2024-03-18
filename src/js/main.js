@@ -4,7 +4,7 @@ import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasAc
 document.addEventListener('DOMContentLoaded', (event) => {
     init_banner()
 
-    const tituloBanner = document.querySelector(".name");
+    /* const tituloBanner = document.querySelector(".name");
     const titulosBanner = tituloBanner.querySelectorAll("h1");
 
     if(window.innerWidth <= 720){
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         titulosBanner.forEach((item)=>{
             item.classList.add("display-4");
         });
-    }
+    } */
 });
 
 
