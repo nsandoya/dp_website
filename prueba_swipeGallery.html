@@ -12,9 +12,27 @@
     
 </head>
 <body>
-    <section class="main swiper mySwiper">
+    <button class="btn-modal">boton</button>
+    <div id="myModal" class="modal" style="display:none">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Aquí van tus slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- Si quieres botones de navegación -->
+            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+          </div>
+        </div>
+      </div>
+    <!-- <section class="main swiper mySwiper">
         <div class=" swiper-wrapper wrapper">
-            <div class="swiper-slide ">
+            <div class=" slide swiper-slide">
                 <img src="./src/img/por_un_momento.png" alt="" class="image">
                 <span class="image-data">Lorem ipsum</span>
             </div>
@@ -27,18 +45,17 @@
                 <span class="image-data">Lorem ipsum</span>
             </div>
         </div>
-        <!-- <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div> -->
         <div class="swiper-pagination"></div>
-    </section>
+    </section> -->
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
 
 
     <!-- <script type="module" src="./src/js/allProjects.js"></script> -->
     <!-- <script src="./src/js/swiper-bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- <script type="module" src="./src/js/swiper_cd.js"></script> -->
-    <!-- Initialize Swiper -->
-    <script>
+    <script src="./src/js/swiper_cd.js"></script>
+    <!-- <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -48,7 +65,7 @@
                 clickable: true,
             },
         });
-    </script>
+    </script> -->
     <!-- <script >
         
         var swiper = new Swiper(".mySwiper", {
