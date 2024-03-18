@@ -432,6 +432,10 @@ footer{
     background-position-x:25%;
     background-repeat: no-repeat;
 }
+.project-title-sm{
+    display: none;
+}
+
 .contact-body{
     background-image: url(./src/img/rainbow_1.jpg); 
     /* background-size: cover; */
@@ -572,6 +576,15 @@ footer{
     .project-div{
         height: 50vh !important;
     }
+    .project-title-gallery{
+        justify-content: start !important;
+    }
+    .project-title{
+        display: none !important;
+    }
+    .project-title-sm{
+        display: inline-block;
+    }
 
     .before-video{
         height: 20vh !important;
@@ -595,6 +608,8 @@ footer{
         position: fixed;
         align-self: flex-end;
     }
+    
+
     .contact-items{
         padding-inline: 0;
         padding-right: 3rem;

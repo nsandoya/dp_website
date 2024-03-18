@@ -70,16 +70,21 @@ export class ProjectGallery{
                 }else{
                     claseAux = ""
                 }
+
+                // project-title-gallery (class) justify-content-center
                 contenedor.innerHTML += `
                     <div id=${project.id} class="project-div project img-fluid ${claseAux} p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh">
-                        <div class="project-title-gallery container-fluid justify-content-center align-items-center" style="display: flex; height: 100%">
+                        <div class="project-title-gallery container-fluid  align-items-center justify-content-center" style="display: flex; height: 100%">
                             <h2 class="no-display-title project-title row mb-3 ms-3 text-light text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; color: var(--main-color-white)" data-idProject='${project.id}'>
                                 ${project.title}
+                            </h2>
+                            <h2 class="project-title-sm text-uppercase" style="font-family: 'BDSans-Black'; color: var(--main-color-white); position: absolute; font-size: 1rem; align-self: end; justify-self: start; text-align: left; margin-bottom: 20px; margin-left: 15px;" data-idProject='${project.id}'>
+                            ${project.title}
                             </h2>
                         </div>
                     </div>
                 `
-             
+                
                 
             }
         )
