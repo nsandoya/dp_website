@@ -200,6 +200,8 @@ export function navbarStillsResponsive(){
     
 }
 
+
+
 // Footer dinámico
 export function dynamicFooter(){
     window.onscroll = function(event) {
@@ -223,6 +225,7 @@ export function dynamicFooter(){
     
 }
 
+// Offcanvas: item activo
 export function offcanvasActiveItem(){
     const offcanvas = document.querySelector(".offcanvas")
     const offcanvasItems = offcanvas.querySelectorAll("ul li a")

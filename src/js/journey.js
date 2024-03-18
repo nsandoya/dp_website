@@ -96,6 +96,34 @@ galeria.renderFotos()
 // Offcanvas menu
 ddMenuMobile()
 
+// Fx para navegar la galería
+function prevSwipe(itemID, photoInfo, imgModal){
+    itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
+    console.log(itemID)
+    let foto = galeria.fotos.filter(foto => foto.id == itemID);
+    //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
+    let fotoUsar = foto[0]
+    //console.log(fotoUsar.url)
+    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+    imgModal.src = fotoUsar.url
+    pieDeFoto.innerHTML = photoInfo
+    
+}
+function nextSwipe(itemID, photoInfo, imgModal){
+    itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
+    console.log(itemID)
+    let foto = galeria.fotos.filter(foto => foto.id == itemID);
+    let fotoUsar = foto[0]
+    console.log(fotoUsar.url)
+    imgModal.src = fotoUsar.url
+
+    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+    imgModal.src = fotoUsar.url
+    pieDeFoto.innerHTML = photoInfo
+    
+}
+
+
 // Modales
 const modalDialog = document.querySelector("#modal-dialog");
 const openModal = document.querySelectorAll(".openModal");
@@ -134,6 +162,8 @@ openModal.forEach(item=>{
         let photoInfo = item.getAttribute('data-info')
         prev.addEventListener('click', ()=>{
             itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
+            prevSwipe(itemID, photoInfo, imgModal)
+            /* itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
             console.log(itemID)
             let foto = galeria.fotos.filter(foto => foto.id == itemID);
             //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
@@ -141,11 +171,14 @@ openModal.forEach(item=>{
             //console.log(fotoUsar.url)
             photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
             imgModal.src = fotoUsar.url
-            pieDeFoto.innerHTML = photoInfo
+            pieDeFoto.innerHTML = photoInfo */
             
         })
         next.addEventListener('click', ()=>{
             itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
+            nextSwipe(itemID, photoInfo, imgModal)
+
+            /* itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
             console.log(itemID)
             let foto = galeria.fotos.filter(foto => foto.id == itemID);
             let fotoUsar = foto[0]
@@ -154,7 +187,7 @@ openModal.forEach(item=>{
 
             photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
             imgModal.src = fotoUsar.url
-            pieDeFoto.innerHTML = photoInfo
+            pieDeFoto.innerHTML = photoInfo */
             
         })
         
@@ -217,7 +250,9 @@ openModal.forEach(item=>{
         hammertime.on('swipeleft', function(e) {
             // Muestra la siguiente imagen
             itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
-                    console.log(itemID)
+                nextSwipe(itemID, photoInfo, imgModal)
+
+                    /* console.log(itemID)
                     let foto = galeria.fotos.filter(foto => foto.id == itemID);
                     let fotoUsar = foto[0]
                     console.log(fotoUsar.url)
@@ -225,21 +260,22 @@ openModal.forEach(item=>{
 
                     photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
                     imgModal.src = fotoUsar.url
-                    pieDeFoto.innerHTML = photoInfo
+                    pieDeFoto.innerHTML = photoInfo */
         });
 
         // Agrega un listener para el evento swiperight
         hammertime.on('swiperight', function(e) {
             // Muestra la imagen anterior
             itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
-                    console.log(itemID)
+            prevSwipe(itemID, photoInfo, imgModal)
+                    /* console.log(itemID)
                     let foto = galeria.fotos.filter(foto => foto.id == itemID);
                     //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
                     let fotoUsar = foto[0]
                     //console.log(fotoUsar.url)
                     photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
                     imgModal.src = fotoUsar.url
-                    pieDeFoto.innerHTML = photoInfo
+                    pieDeFoto.innerHTML = photoInfo */
 });
     })
 })
