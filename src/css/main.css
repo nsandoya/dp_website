@@ -376,6 +376,18 @@ footer{
     background-color: transparent !important;
 }
 
+.init_banner{
+    h3{
+        margin-top: 1rem;
+    }
+}
+.name{
+    h1{
+        font-size: 3.8rem;
+        line-height: 3.5rem !important;
+    }
+    
+}
 
 @media (max-width: 1200px){
     /* .video-container{
@@ -445,14 +457,18 @@ footer{
         max-width: 100% !important;
         
     }
-    
-    /* .name{
+    .banner-content{
+        margin-left: 1.5rem !important;
+
+    }
+    .name{
         height: fit-content !important;
         margin-top: 5rem !important;
         h1{
+            font-size: 3rem;
             line-height: 3rem !important;
         }
-    } */
+    }
 
     .prev{
         justify-self: start;

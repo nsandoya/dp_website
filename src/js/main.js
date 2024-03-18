@@ -1,8 +1,24 @@
 import { getProjectGallery } from "./allProjects.js"
 import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem } from "./layoutElements.js"
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    init_banner()
 
-init_banner()
+    const tituloBanner = document.querySelector(".name");
+    const titulosBanner = tituloBanner.querySelectorAll("h1");
+
+    if(window.innerWidth <= 720){
+        //console.log("screen width detectado");
+        titulosBanner.forEach((item)=>{
+            item.classList.add("display-2");
+        });
+    }else{
+        titulosBanner.forEach((item)=>{
+            item.classList.add("display-4");
+        });
+    }
+});
+
 
 dynamicFooter()
 
