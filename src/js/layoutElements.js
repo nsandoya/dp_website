@@ -19,7 +19,7 @@ export function init_banner(){
         //banner.classList.remove("init_banner")
         banner.classList.add("init_banner_close")
         //banner.innerHTML=""
-    }, 630)
+    }, 950)
     
     
 }

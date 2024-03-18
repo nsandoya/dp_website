@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Swipe Gallery</title>
+    <link rel="stylesheet" href="./src/css/swiper.min.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+    <section class="main swiper mySwiper">
+        <div class="wrapper swiper-wrapper">
+            <div class="slide swiper-slide">
+                <img src="./src/img/por_un_momento.png" alt="" class="image">
+                <span class="image-data">Lorem ipsum</span>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="./src/img/nuria.png" alt="" class="image">
+                <span class="image-data">Lorem ipsum</span>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="./src/img/las_maravillas.png" alt="" class="image">
+                <span class="image-data">Lorem ipsum</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <script type="module" src="./src/js/allProjects.js"></script> -->
+    <script src="./src/js/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            /* slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true, */
+        });
+    </script>
+</body>
+</html>
