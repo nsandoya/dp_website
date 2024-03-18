@@ -106,7 +106,7 @@ export function navbarResponsive(){
 
 export function navbarStillsResponsive(){
     header.innerHTML = `
-        <nav class="navbar  navbar-expand-md fixed-top me-md-4" style="height: 50px;z-index: 1;">
+        <nav class="navbar bg-white navbar-expand-md fixed-top me-md-4" style="height: 50px;z-index: 1;">
         <div class="container-fluid">
             <div class="container-fluid">
             <div class="row">
@@ -180,8 +180,7 @@ export function navbarStillsResponsive(){
     }/* else{
         navbar.classList.add("bg-white")
     } */
-    window.addEventListener('resize', ()=>{
-
+    function navbarChanges(){
         if(window.innerWidth <= 720){
             console.log("ancho de pantalla", window.innerWidth)
             navbar.classList.remove("bg-white")
@@ -190,7 +189,14 @@ export function navbarStillsResponsive(){
             navbar.classList.remove("bg-transparent")
             navbar.classList.add("bg-white")
         }
+    }
+    window.addEventListener('DOMContentLoaded', ()=>{
+        navbarChanges()
     })
+    window.addEventListener('resize', ()=>{
+        navbarChanges()
+    })
+    
 }
 
 // Footer dinámico

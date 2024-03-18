@@ -21,7 +21,7 @@
     --main-color-yellow: #F6B947;
     --main-color-white: #F8F6ED;
     --main-color-golden: #A4997E;
-    --main-color-black: #3b3a39;
+    --main-color-black: #2E2C2B;
   }
 
 /* Estilos para el web portfolio */
@@ -90,8 +90,13 @@ a{
 }
 .n-active-offcanvas{
     color: var(--main-color-black) !important
-
 }
+/* .nv-sec{
+    a{
+        color: var(--main-color-golden)
+    }
+} */
+
 .openModal:hover{
     cursor: pointer !important;
 }

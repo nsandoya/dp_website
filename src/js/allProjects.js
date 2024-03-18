@@ -57,19 +57,23 @@ narrative.addProjects(...narrativeProjectsList);
 const commercialProjectsList = [
     new Project({
         name: "nada_bello",
-        title: "Nada bello"
+        title: "Nada bello",
+        urlvideo: "https://www.youtube.com/embed/qWlLdZ3_6aQ?si=ekPxTuapgRrYBMIk"
     }),
     new Project({
         name: "junior",
-        title: "Junior"
+        title: "Junior",
+        urlvideo: "https://player.vimeo.com/video/544380025?h=aa97d4f317"
     }),
     new Project({
         name: "por_un_momento",
-        title: "Por un momento"
+        title: "Por un momento",
+        urlvideo: "https://www.youtube.com/embed/1qnTlIzQ_DI?si=rebqJVINFN6uhHam"
     }),
     new Project({
         name: "las_maravillas",
-        title: "Las maravillas"
+        title: "Las maravillas",
+        urlvideo: "https://player.vimeo.com/video/410875955?h=3e56b19d9d"
     }),
 
 ]
@@ -79,15 +83,18 @@ commercial.addProjects(...commercialProjectsList)
 const musicProjectsList = [
     new Project({
         name: "las_maravillas",
-        title: "Las maravillas"
+        title: "Las maravillas",
+        urlvideo: "https://player.vimeo.com/video/410875955?h=3e56b19d9d"
     }),
     new Project({
         name: "nada_bello",
-        title: "Nada bello"
+        title: "Nada bello",
+        urlvideo: "https://www.youtube.com/embed/qWlLdZ3_6aQ?si=ekPxTuapgRrYBMIk"
     }),
     new Project({
         name: "por_un_momento",
-        title: "Por un momento"
+        title: "Por un momento",
+        urlvideo: "https://www.youtube.com/embed/1qnTlIzQ_DI?si=rebqJVINFN6uhHam"
     }),
     
 ]
