@@ -471,8 +471,12 @@ footer{
         }
     } */
     .name{
+        height: fit-content;
+        margin-bottom: 1.5rem;
+        align-self: end;
         h1{
             font-size: 4.5rem;
+            line-height: 3rem ;
         }
     }
 
