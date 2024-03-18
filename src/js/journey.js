@@ -98,7 +98,7 @@ ddMenuMobile()
 
 // Fx para navegar la galería
 function prevSwipe(itemID, photoInfo, imgModal){
-    itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
+    //itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
     console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
     //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
@@ -110,7 +110,7 @@ function prevSwipe(itemID, photoInfo, imgModal){
     
 }
 function nextSwipe(itemID, photoInfo, imgModal){
-    itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
+    //itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
     console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
     let fotoUsar = foto[0]
@@ -276,7 +276,7 @@ openModal.forEach(item=>{
                     photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
                     imgModal.src = fotoUsar.url
                     pieDeFoto.innerHTML = photoInfo */
-});
+        });
     })
 })
 
