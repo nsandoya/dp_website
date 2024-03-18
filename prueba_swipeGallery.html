@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba Swipe Gallery</title>
-    <link rel="stylesheet" href="./src/css/swiper.min.css">
+    <link href="/favicon.ico" type="image/x-icon" rel="icon">
+    <!-- <link rel="stylesheet" href="./src/css/main_swipe.css"> -->
     <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./src/css/swiper.min.css"> -->
+    
 </head>
 <body>
     <section class="main swiper mySwiper">
-        <div class="wrapper swiper-wrapper">
-            <div class="slide swiper-slide">
+        <div class=" swiper-wrapper wrapper">
+            <div class="swiper-slide ">
                 <img src="./src/img/por_un_momento.png" alt="" class="image">
                 <span class="image-data">Lorem ipsum</span>
             </div>
@@ -23,18 +27,40 @@
                 <span class="image-data">Lorem ipsum</span>
             </div>
         </div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
     </section>
 
 
     <!-- <script type="module" src="./src/js/allProjects.js"></script> -->
-    <script src="./src/js/swiper-bundle.min.js"></script>
+    <!-- <script src="./src/js/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script type="module" src="./src/js/swiper_cd.js"></script> -->
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            /* slidesPerView: 1,
+            slidesPerView: 1,
             spaceBetween: 30,
-            loop: true, */
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
         });
     </script>
+    <!-- <script >
+        
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            
+        });
+    </script> -->
 </body>
 </html>
