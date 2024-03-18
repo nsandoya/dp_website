@@ -500,6 +500,9 @@ footer{
 }
 
 @media (max-width: 720px){
+    .prev, .next{
+        display: none;
+    }
     .before-video{
         height: 12vh !important;
     }

@@ -100,30 +100,6 @@ ddMenuMobile()
 const modalDialog = document.querySelector("#modal-dialog");
 const openModal = document.querySelectorAll(".openModal");
 
-function prevSwipe(itemID, photoInfo, imgModal){
-    itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
-    console.log(itemID)
-    let foto = galeria.fotos.filter(foto => foto.id == itemID);
-    //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
-    let fotoUsar = foto[0]
-    //console.log(fotoUsar.url)
-    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
-    imgModal.src = fotoUsar.url
-    pieDeFoto.innerHTML = photoInfo
-}
-
-function nextSwipe(itemID, photoInfo, imgModal){
-    itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
-    console.log(itemID)
-    let foto = galeria.fotos.filter(foto => foto.id == itemID);
-    let fotoUsar = foto[0]
-    console.log(fotoUsar.url)
-    imgModal.src = fotoUsar.url
-
-    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
-    imgModal.src = fotoUsar.url
-    pieDeFoto.innerHTML = photoInfo
-}
 
 /* console.log(openModal) */
 openModal.forEach(item=>{
@@ -156,7 +132,7 @@ openModal.forEach(item=>{
 
         let itemID = item.id; 
         let photoInfo = item.getAttribute('data-info')
-        /* prev.addEventListener('click', ()=>{
+        prev.addEventListener('click', ()=>{
             itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
             console.log(itemID)
             let foto = galeria.fotos.filter(foto => foto.id == itemID);
@@ -182,7 +158,7 @@ openModal.forEach(item=>{
             
         })
         
-        */
+       
         const closeModal = document.querySelector("#closeModal")
         closeModal.addEventListener('click', (event)=>{
             modalDialog.close()
@@ -191,7 +167,7 @@ openModal.forEach(item=>{
         })
         
 
-        let startX = 0;  // Variable para almacenar la posición inicial del toque
+       /*  let startX = 0;  // Variable para almacenar la posición inicial del toque
         let threshold = 100;  // Distancia mínima para considerar el gesto como deslizamiento
 
         // Agrega event listeners para los eventos de toque
@@ -233,7 +209,38 @@ openModal.forEach(item=>{
 
                 }
             }
+        }); */
+        // Crea una nueva instancia de Hammer en tu imagen modal
+        var hammertime = new Hammer(imgModal);
+
+        // Agrega un listener para el evento swipeleft
+        hammertime.on('swipeleft', function(e) {
+            // Muestra la siguiente imagen
+            itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
+                    console.log(itemID)
+                    let foto = galeria.fotos.filter(foto => foto.id == itemID);
+                    let fotoUsar = foto[0]
+                    console.log(fotoUsar.url)
+                    imgModal.src = fotoUsar.url
+
+                    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+                    imgModal.src = fotoUsar.url
+                    pieDeFoto.innerHTML = photoInfo
         });
+
+        // Agrega un listener para el evento swiperight
+        hammertime.on('swiperight', function(e) {
+            // Muestra la imagen anterior
+            itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
+                    console.log(itemID)
+                    let foto = galeria.fotos.filter(foto => foto.id == itemID);
+                    //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
+                    let fotoUsar = foto[0]
+                    //console.log(fotoUsar.url)
+                    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+                    imgModal.src = fotoUsar.url
+                    pieDeFoto.innerHTML = photoInfo
+});
     })
 })
 
