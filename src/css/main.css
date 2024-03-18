@@ -56,6 +56,9 @@ body{
 main{
     width: 100%; 
     max-width: 100vw;
+
+    transition: all 1s ease-in-out;
+
 }
 
 ul{
@@ -251,6 +254,8 @@ dialog{
 
 .no-display-title{
     display:none;
+    transition: all 1s ease-in-out;
+
 }
 
 .nodisplayImg{
@@ -431,6 +436,9 @@ footer{
     background-position: center;
     background-position-x:25%;
     background-repeat: no-repeat;
+}
+.project-title{
+    transition: all 3s ease-in-out;
 }
 .project-title-sm{
     display: none;

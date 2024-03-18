@@ -230,9 +230,9 @@ export function dynamicFooter(){
         if(window.innerWidth <= 720){
             document.querySelector(".f-select").classList.add("footer-hide-bg");
             document.querySelector(".email").classList.add("footer-hide-text");
-            rrss.forEach((item) =>{
+            /* rrss.forEach((item) =>{
                 item.classList.add("footer-text-initial")
-            })
+            }) */
         }
     };
     
