@@ -167,7 +167,7 @@ export function navbarStillsResponsive(){
     })
 
     const navbar = document.querySelector("nav")
-    console.log("navbar", pageTitle.toLowerCase())
+    //console.log("navbar", pageTitle.toLowerCase())
     if(pageTitle.toLowerCase() == "contact" ){
         navbar.classList.remove("bg-white")
         navbar.classList.add("bg-transparent")
@@ -182,10 +182,10 @@ export function navbarStillsResponsive(){
     } */
     function navbarChanges(){
         if(window.innerWidth <= 720){
-            console.log("ancho de pantalla", window.innerWidth)
+            //console.log("ancho de pantalla", window.innerWidth)
             navbar.classList.remove("bg-white")
             navbar.classList.add("bg-transparent")
-        }else if(window.innerWidth > 720){
+        }else if(window.innerWidth > 720 && pageTitle.toLowerCase() != "contact"){
             navbar.classList.remove("bg-transparent")
             navbar.classList.add("bg-white")
         }

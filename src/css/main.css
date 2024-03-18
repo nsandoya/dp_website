@@ -349,7 +349,8 @@ dialog{
 
 .contact-items{
     margin: auto 0;
-    padding-inline: 4.5rem;
+    padding-inline: 5rem;
+    padding-right: 3rem
 }
 
 footer{
@@ -539,6 +540,10 @@ footer{
     .footer-project{
         position: fixed;
         align-self: flex-end;
+    }
+    .contact-items{
+        padding-inline: 0;
+        padding-right: 3rem;
     }
 }
 
