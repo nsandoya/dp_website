@@ -578,6 +578,7 @@ footer{
         h1{
             padding-left: 0 !important;
             line-height: 3.5rem !important;
+            margin-inline: 0 !important;
         }
     }
     /* .name{
@@ -601,7 +602,11 @@ footer{
     .name{
         height: 80%;
         align-self: end;
-        margin-inline: 0
+        margin-inline: 0  !important;
+        h1{
+            padding-left: 0 !important;
+            margin-left: 0 !important;
+        }
     }
     .img-container{
         h2{ 
