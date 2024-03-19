@@ -461,9 +461,7 @@ footer{
 /* .project-title{
     transition: var(--transition-init-banner)
 } */
-.project-title-sm{
-    display: none;
-}
+
 .offcanvas-transition{
     /* transition: all 0.5s cubic-bezier(.55,.09,.68,.53) !important; */
     transition: transform 1.2s cubic-bezier(0.6,0,0.4,1)
@@ -555,6 +553,9 @@ footer{
 }
 
 @media (max-width: 720px){
+    .project-title-sm{
+        display: none;
+    }
     .prev, .next{
         display: none;
     }
