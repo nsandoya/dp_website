@@ -2,6 +2,9 @@ import { Foto } from "./galeria.js"
 import { Galeria } from "./galeria.js"
 import { ddMenuMobile, navbarStillsResponsive, offcanvasActiveItem } from "./layoutElements.js"
 
+
+localStorage.setItem('projectsCategory', "stills") 
+
 // Navbar responsive
 navbarStillsResponsive()
 offcanvasActiveItem()

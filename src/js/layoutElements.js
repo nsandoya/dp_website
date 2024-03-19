@@ -42,7 +42,10 @@ export function ddMenuMobile(){
 
 
 const header = document.querySelector("header")
+//const pageTitle = document.title
 const pageTitle = document.title
+const docTitle = localStorage.getItem('projectsCategory') 
+
 // Navbar responsive
 export function navbarResponsive(){
     header.innerHTML = `
@@ -99,7 +102,11 @@ export function navbarResponsive(){
         if(item.classList.contains(pageTitle.toLowerCase())){
             item.classList.add("n-active")
         }
+        
     })
+    if(pageTitle == "Dominique Pazmiño Ríos | Cinematographer"){
+        itemsNavbar[0].classList.add("n-active")
+    }
 
 
 }
@@ -242,11 +249,19 @@ export function dynamicFooter(){
 export function offcanvasActiveItem(){
     const offcanvas = document.querySelector(".offcanvas")
     const offcanvasItems = offcanvas.querySelectorAll("ul li a")
-    console.log("offcanvas", offcanvasItems)
+
+    //const docTitle = localStorage.getItem('projectsCategory') 
+    console.log("page title",pageTitle)
+    //console.log("offcanvas", offcanvasItems)
     offcanvasItems.forEach((item)=>{
+        //console.log("item offcanvas", item.innerHTML)
         if(item.innerHTML == pageTitle){
-            console.log("item offcanvas", item.innerHTML)
+            //console.log("item offcanvas", item.innerHTML)
             item.classList.add("n-active-offcanvas")
         }
     })
+
+    if(pageTitle == "Dominique Pazmiño Ríos | Cinematographer"){
+        offcanvasItems[0].classList.add("n-active-offcanvas")
+    }
 }

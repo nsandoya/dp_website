@@ -2,12 +2,19 @@ import { Foto } from "./galeria.js"
 import { Galeria } from "./galeria.js"
 import { ddMenuMobile, navbarStillsResponsive, offcanvasActiveItem } from "./layoutElements.js"
 
+localStorage.setItem('projectsCategory', "stills") 
+
 // Navbar responsive
 navbarStillsResponsive()
 offcanvasActiveItem()
 
+localStorage.setItem('projectsCategory', "stills") 
+
+
 const stills = document.querySelector(".ddm-click")
 stills.classList.add("n-active-offcanvas")
+
+
 
 // Crear lista de fotos
 const fotosLista = [

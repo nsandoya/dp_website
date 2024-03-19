@@ -22,6 +22,9 @@
     --main-color-white: #F8F6ED;
     --main-color-golden: #A4997E;
     --main-color-black: #2E2C2B;
+
+    --transition-init-banner: transition: all 0.5s cubic-bezier(.55,.06,.74,.38);
+    --transition-sec-elements: transition: all 0.3s cubic-bezier(.82,.42,.44,1);
   }
 
 /* Estilos para el web portfolio */
@@ -50,7 +53,9 @@ body{
 
 .navbar-toggler{
     box-shadow: none !important; 
-    color: none !important
+    color: none !important;
+    transition: all 0.25s cubic-bezier(.55,.06,.68,.19) !important;
+
 }
 
 main{
@@ -67,7 +72,9 @@ ul{
 a{
     color: whitesmoke;
     text-decoration: none !important;
+    transition: all 0.25s cubic-bezier(.55,.06,.68,.19) !important;
 }
+
 
 /* Swipe gallery */
 .main{
@@ -106,18 +113,26 @@ a{
 
 .a-stills{
     color: var(--main-color-golden);
+    transition: all 0.25s cubic-bezier(.55,.06,.68,.19) !important;
     a:hover{
         cursor: pointer;
     }
 }
+.nav{
+    transition: all 1.2s cubic-bezier(.54,.32,.63,.42) !important;
 
+}
 .nav-bg, .navbar{
 
     a:hover{
-        color: var(--main-color-yellow) !important;    
+        color: var(--main-color-yellow) !important;   
+
     }
 }
+/* .offcanvasNavbar{
+    transition: all 3s cubic-bezier(.54,.32,.63,.42) !important
 
+} */
 .offcanvas-body{
     a:hover{
         color: var(--main-color-black) !important;    
@@ -400,6 +415,13 @@ footer{
     position:fixed;
     left:0px;
     bottom:0px;
+
+    transition: all 0.3s cubic-bezier(.82,.42,.44,1);
+    a:hover{
+        cursor: pointer;
+        color: var(--main-color-yellow);
+
+    }
 }
 
 .footer-text-initial{
@@ -436,11 +458,31 @@ footer{
     background-position-x:25%;
     background-repeat: no-repeat;
 }
-.project-title{
-    transition: all 3s ease-in-out;
-}
+/* .project-title{
+    transition: var(--transition-init-banner)
+} */
 .project-title-sm{
     display: none;
+}
+.offcanvas-transition{
+    transition: all 0.5s cubic-bezier(.55,.09,.68,.53) !important;
+}
+/* .project-title-gallery{
+    opacity: 0 !important;
+    transition: all 0.3s cubic-bezier(.82,.42,.44,1) !important;
+} */
+/* .project-title-gallery:hover{
+    opacity: 1 !important;
+} */
+
+.img-container{
+    h2{
+        opacity: 0 !important;
+        transition: all 0.25s cubic-bezier(.55,.06,.68,.19) !important;
+    }
+    h2:hover{
+        opacity: 1 !important;
+    }
 }
 
 .contact-body{
@@ -551,6 +593,12 @@ footer{
         }
     }
  */
+
+    
+
+    .project-title-sm{
+        display: inline-block;
+    }
     .prev{
         justify-self: start;
         left: 0% !important;
@@ -582,17 +630,15 @@ footer{
 
     .project-div{
         height: 50vh !important;
+        
     }
-    .project-title-gallery{
+    
+   /*  .project-title-gallery{
         justify-content: start !important;
-    }
-    .project-title{
-        display: none !important;
-    }
-    .project-title-sm{
-        display: inline-block;
-    }
+        transition: all 0.3s cubic-bezier(.82,.42,.44,1);
+    } */
 
+    
     .before-video{
         height: 20vh !important;
     }

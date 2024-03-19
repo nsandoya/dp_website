@@ -7,6 +7,7 @@ init_banner()
     
 }); */
 
+localStorage.setItem('projectsCategory', "narrative") 
 
 dynamicFooter()
 
@@ -21,24 +22,28 @@ offcanvasActiveItem()
 let narrative = getProjectGallery("narrative")
 narrative.renderProjects()
 
+
 // Mostrar u ocultar título de proyecto
 const projectTitle = document.querySelectorAll(".project-title-gallery")
 
 projectTitle.forEach(item => {
-    console.log(item.innerHTML)
+    /* console.log(item.innerHTML)
     item.addEventListener('mouseover', ()=>{
-        item.querySelector(".project-title-gallery h2").classList.remove("no-display-title")
+        item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
+        item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
+        //item.style.transition = "all 0.3s cubic-bezier(.82,.42,.44,1) !important;"
     })
     item.addEventListener('mouseout', ()=>{
-        item.querySelector(".project-title-gallery h2").classList.add("no-display-title")
+        item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
+        item.querySelector(".project-title-gallery h2").classList.remove("project-title-transition");
     })
-
+ */
     
     item.addEventListener('click', ()=>{
         let titleProject = item.querySelector(".project-title-gallery h2")
         
         localStorage.setItem('project', titleProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
-        localStorage.setItem('projectsCategory', "narrative") 
+        //localStorage.setItem('projectsCategory', "narrative") 
         localStorage.setItem('projectID', titleProject.dataset.idproject)
     })
 

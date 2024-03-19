@@ -16,6 +16,9 @@ offcanvasActiveItem()
 let music = getProjectGallery("music")
 music.renderProjects();
 
+localStorage.setItem('projectsCategory', "music") 
+
+
 
 // Mostrar u ocultar título de proyecto
 const projectTitle = document.querySelectorAll(".project-title-gallery")
@@ -32,7 +35,7 @@ projectTitle.forEach(item => {
     item.addEventListener('click', ()=>{
         let titleProject = item.querySelector(".project-title-gallery h2")
         localStorage.setItem('project', titleProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
-        localStorage.setItem('projectsCategory', "music") 
+        //localStorage.setItem('projectsCategory', "music") 
         localStorage.setItem('projectID', titleProject.dataset.idproject)
     })
 })
