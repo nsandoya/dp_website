@@ -17,7 +17,7 @@ navbarResponsive()
 
 offcanvasActiveItem()
 
-titulosMobile()
+
 
 
 // Generar galería de proyectos
