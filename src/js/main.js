@@ -1,5 +1,5 @@
 import { getProjectGallery } from "./allProjects.js"
-import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem } from "./layoutElements.js"
+import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem, titulosMobile, touchMobile } from "./layoutElements.js"
 
 init_banner()
 /* document.addEventListener('DOMContentLoaded', (event) => {
@@ -16,6 +16,8 @@ ddMenuMobile()
 navbarResponsive()
 
 offcanvasActiveItem()
+
+titulosMobile()
 
 
 // Generar galería de proyectos

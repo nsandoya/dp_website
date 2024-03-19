@@ -207,8 +207,6 @@ export function navbarStillsResponsive(){
     
 }
 
-
-
 // Footer dinámico
 export function dynamicFooter(){
     window.onscroll = function(event) {
@@ -264,4 +262,34 @@ export function offcanvasActiveItem(){
     if(pageTitle == "Dominique Pazmiño Ríos | Cinematographer"){
         offcanvasItems[0].classList.add("n-active-offcanvas")
     }
+}
+
+export function touchMobile(item){
+    document.querySelector(`#${item}`)
+    item.style.opacity = "1";
+}
+// Titulos de proyectos en mobile
+export function titulosMobile(){
+    console.log("funciona la fx mobile")
+    const titulosMobile = document.querySelectorAll(".project-title")
+    titulosMobile.forEach((titulo)=>{
+        console.log("funciona el foreach")
+        /* var hammertime = new Hammer(titulo);
+        hammertime.on('swipeleft', function(e) {
+            // Muestra la siguiente imagen
+            console.log("tocó titulo")
+            touchMobile(titulo)
+        }) */;
+    })
+    
+    /* titulosMobile.forEach((titulo)=>{
+        var hammertime = new Hammer(titulo);
+        hammertime.on('swipeleft', function(e) {
+            // Muestra la siguiente imagen
+            console.log("tocó titulo")
+            touchMobile(titulo)
+        });
+    }) */
+    /* console.log("toco título")
+    titulo.addEventListener('touchstart', touchMobile(titulo)) */
 }
