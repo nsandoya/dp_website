@@ -600,7 +600,6 @@ footer{
     }
  */
     .name{
-        display: none !important;
         height: 80%;
         align-self: end;
         margin-inline: 0  !important;
