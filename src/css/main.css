@@ -556,6 +556,9 @@ footer{
     .project-title-sm{
         display: none;
     }
+    .project-title-sm:hover{
+        display: inline-block;
+    }
     .prev, .next{
         display: none;
     }
@@ -596,7 +599,7 @@ footer{
     }
     .init_banner{
         h3{
-            margin-left: 1rem !important;
+            margin-left: 1.5rem !important;
         }
     }
 
