@@ -172,7 +172,7 @@ a{
     height: 50%;
     transform: translateY(-100%);
 
-    transition: all .4s ease-in-out;
+    /* transition: all .4s ease-in-out; */
 }
 
 dialog{
@@ -465,7 +465,8 @@ footer{
     display: none;
 }
 .offcanvas-transition{
-    transition: all 0.5s cubic-bezier(.55,.09,.68,.53) !important;
+    /* transition: all 0.5s cubic-bezier(.55,.09,.68,.53) !important; */
+    transition: all 0.5s cubic-bezier(.55,.06,.74,.38)
 }
 /* .project-title-gallery{
     opacity: 0 !important;
@@ -596,9 +597,9 @@ footer{
 
     
 
-    .project-title-sm{
+    /* .project-title-sm{
         display: inline-block;
-    }
+    } */
     .prev{
         justify-self: start;
         left: 0% !important;
