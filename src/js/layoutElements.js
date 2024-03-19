@@ -265,8 +265,9 @@ export function offcanvasActiveItem(){
 }
 
 export function touchMobile(item){
-    item.preventDefault()
+    console.log("TOCADO")
     let h2 = document.querySelector(`#${item}`)
+    h2.preventDefault()
     h2.style.opacity = "1";
 }
 // Titulos de proyectos en mobile

@@ -9,7 +9,7 @@ const imgSlidewhow = document.querySelector(".modal-container img")
 const openModal = document.querySelectorAll(".openModal-dialog");
 const closeModal = document.querySelector("#closeModal-dialog") */
 
-let x = window.matchMedia("(min-width: 1000px)")
+//let x = window.matchMedia("(min-width: 1000px)")
 /* const modal = document.querySelector(".modal-container") */
 
 
@@ -75,7 +75,7 @@ export class ProjectGallery{
                 contenedor.innerHTML += `
                     <div id=${project.id} class="project-div project img-fluid ${claseAux} p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh;">
                         <div class="project-title-gallery container-fluid  align-items-center justify-content-center" style="display: flex; height: 100%; ">
-                            <h2 class="project-title row mb-3 ms-3 text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; color: var(--main-color-white);" data-idProject='${project.id}' ontouchstart(touchMobile${project.id})>
+                            <h2 class="project-title row mb-3 ms-3 text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; color: var(--main-color-white);" data-idProject='${project.id}' >
                                 ${project.title}
                             </h2>
                             

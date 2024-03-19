@@ -581,24 +581,7 @@ footer{
             margin-inline: 0 !important;
         }
     }
-    /* .name{
-        height: fit-content !important;
-        margin-top: 5rem !important;
-        h1{
-            font-size: 2.5rem;
-            line-height: 3rem !important;
-        }
-    } */
-    /* .name{
-        height: fit-content;
-        margin-bottom: 1.5rem;
-        align-self: end;
-        h1{
-            font-size: 4.5rem;
-            line-height: 3rem ;
-        }
-    }
- */
+
     .name{
         height: 80%;
         align-self: end;
@@ -612,7 +595,7 @@ footer{
     }
     .init_banner{
         h3{
-            margin-left: 0.5rem !important;
+            margin-left: 1rem !important;
         }
     }
 
