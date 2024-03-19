@@ -265,6 +265,7 @@ export function offcanvasActiveItem(){
 }
 
 export function touchMobile(item){
+    item.preventDefault()
     document.querySelector(`#${item}`)
     item.style.opacity = "1";
 }

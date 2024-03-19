@@ -574,8 +574,11 @@ footer{
         
     }
     .banner-content{
-        margin-left: 0.3rem !important;
-
+        /* margin-left: 0.3rem !important; */
+        h1{
+            padding-left: 0 !important;
+            line-height: 3.5rem !important;
+        }
     }
     /* .name{
         height: fit-content !important;
@@ -596,12 +599,13 @@ footer{
     }
  */
     .name{
-        height: 50%;
+        height: 80%;
         align-self: end;
+        margin-inline: 0
     }
     .img-container{
         h2{ 
-            opacity: 0;
+            opacity: 0 !important;
             font-size: 2.1rem;
             justify-self: center !important;
             text-align: center !important;
