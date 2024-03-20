@@ -49,7 +49,10 @@ html {
 
 body{
     position: relative;
+}
+.body-main-page{
     background-color: var(--main-color-yellow);
+
 }
 
 .navbar-toggler{
@@ -631,7 +634,7 @@ footer{
     }
     .footer-sm-group-1, .footer-sm-group-2{
         display: grid;
-        grid-template-columns: 1fr 2fr ;
+        grid-template-columns: 120px 2fr ;
         grid-template-rows: 20px 20px 20px;
         row-gap: 5px;
         align-content: start;
