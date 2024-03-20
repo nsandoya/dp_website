@@ -626,6 +626,7 @@ footer{
         h1{
             padding-left: 0 !important;
             margin-left: 0 !important;
+            font-size: 3rem
         };
         
     }
@@ -671,12 +672,12 @@ footer{
 
 @media (max-width: 720px){
     
-    .init_banner{
+    /* .init_banner{
         h3{
             
             margin-left: 1rem !important
         }
-    }
+    } */
     /* .video-container{
         width: 120%;
         align-items: start !important;
