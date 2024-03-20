@@ -267,7 +267,8 @@ dialog{
 }
 
 .no-display-title{
-    display:none;
+    opacity: 0;
+    /* display:none; */
     transition: all 1s ease-in-out;
 
 }
@@ -560,6 +561,12 @@ footer{
     .project-title-sm:hover{
         opacity: 1;
     } */
+    .init_banner{
+        .name{
+            height: 70%;
+            margin-bottom: 2rem;
+        }
+    }
     .prev, .next{
         display: none;
     }
@@ -607,7 +614,7 @@ footer{
     .img-container{
         h2{ 
             opacity: 0 !important;
-            font-size: 2rem;
+            font-size: 1.8rem;
             justify-self: center !important;
             text-align: center !important;
             margin: 0 !important;
