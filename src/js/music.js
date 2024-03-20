@@ -1,5 +1,5 @@
 import { getProjectGallery } from "./allProjects.js"
-import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem } from "./layoutElements.js"
+import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem, touchTitle } from "./layoutElements.js"
 
 //init_banner()
 
@@ -24,13 +24,14 @@ localStorage.setItem('projectsCategory', "music")
 const projectTitle = document.querySelectorAll(".project-title-gallery")
 
 projectTitle.forEach(item => {
-    console.log(item.innerHTML)
+    touchTitle()
+    /* console.log(item.innerHTML)
     item.addEventListener('mouseover', ()=>{
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title")
     })
     item.addEventListener('mouseout', ()=>{
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title")
-    })
+    }) */
 
     item.addEventListener('click', ()=>{
         let titleProject = item.querySelector(".project-title-gallery h2")

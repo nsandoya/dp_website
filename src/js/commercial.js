@@ -1,5 +1,5 @@
 import { getProjectGallery } from "./allProjects.js";
-import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem } from "./layoutElements.js"
+import { dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem, touchTitle } from "./layoutElements.js"
 
 //init_banner()
 
@@ -23,19 +23,20 @@ localStorage.setItem('projectsCategory', "commercial")
 const projectTitle = document.querySelectorAll(".project-title-gallery")
 
 projectTitle.forEach(item => {
-    console.log(item.innerHTML)
+    touchTitle(item)
+    /* console.log(item.innerHTML)
     item.addEventListener('mouseover', ()=>{
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title")
     })
     item.addEventListener('mouseout', ()=>{
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title")
     })
-
+ */
     item.addEventListener('click', ()=>{
         let titleProject = item.querySelector(".project-title-gallery h2")
         
         localStorage.setItem('project', titleProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
-        //localStorage.setItem('projectsCategory', "commercial") 
+        localStorage.setItem('projectsCategory', "commercial") 
         localStorage.setItem('projectID', titleProject.dataset.idproject)
     })
 
