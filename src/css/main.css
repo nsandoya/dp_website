@@ -553,12 +553,12 @@ footer{
 }
 
 @media (max-width: 720px){
-    .project-title-sm{
+    /* .project-title-sm{
         display: none;
-    }
-    .project-title-sm:hover{
+    } */
+    /* .project-title-sm:hover{
         display: inline-block;
-    }
+    } */
     .prev, .next{
         display: none;
     }
@@ -597,11 +597,11 @@ footer{
         };
         
     }
-    .init_banner{
+    /* .init_banner{
         h3{
             margin-left: 1.5rem !important;
         }
-    }
+    } */
 
     .img-container{
         h2{ 

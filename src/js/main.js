@@ -29,7 +29,7 @@ narrative.renderProjects()
 const projectTitle = document.querySelectorAll(".project-title-gallery")
 
 projectTitle.forEach(item => {
-    /* console.log(item.innerHTML)
+    console.log("Cacha los titulos?",item.innerHTML)
     item.addEventListener('mouseover', ()=>{
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
@@ -39,7 +39,7 @@ projectTitle.forEach(item => {
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
         item.querySelector(".project-title-gallery h2").classList.remove("project-title-transition");
     })
- */
+
     
     item.addEventListener('click', ()=>{
         let titleProject = item.querySelector(".project-title-gallery h2")
