@@ -742,6 +742,16 @@ footer{
 }
 
 @media (max-width: 720px){
+    .init-banner{
+        h1{
+            font-size: 3.5rem;
+        }
+    }
+    .name{
+        height: 75%;
+        align-self: end;
+        margin-bottom: 1rem;
+    }
     
     /* .init_banner{
         h3{
