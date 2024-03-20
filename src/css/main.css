@@ -620,7 +620,7 @@ footer{
     .footer-dp-logo{
         display: inline-block;
         margin-top: 1.5rem;
-        margin-left: 1.5rem
+        margin-left: 0.5rem
     }
 
     .footer-menu{
@@ -631,10 +631,10 @@ footer{
     }
     .footer-sm-group-1, .footer-sm-group-2{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 20px 20px;
+        grid-template-columns: 1fr 2fr ;
+        grid-template-rows: 20px 20px 20px;
         row-gap: 5px;
-        align-content: center;
+        align-content: start;
         /* display: flex;
         flex-direction: row;
         flex-wrap: wrap; */
@@ -648,7 +648,7 @@ footer{
         }
         a{
             display: inline-block;
-            padding-inline: 1rem;
+            padding-right: 1rem;
             text-transform: uppercase;
             font-family: 'Syne' !important;
             font-size: 0.9rem;
@@ -660,15 +660,18 @@ footer{
         }
     }
     .footer-sm-group-1{
-        margin-top: 5px
+        margin-top: 1.5rem
     }
     .footer-sm-group-2{
+        margin-top: 1rem;
         grid-template-columns: 1fr 2fr;
         a{
             p{
                 text-align: left;
                 color: var(--main-color-black) !important;
                 letter-spacing: 0em;
+                padding-right: 0.5rem;
+                
 
             }
         }
@@ -744,7 +747,7 @@ footer{
 @media (max-width: 720px){
     .init-banner{
         h1{
-            font-size: 3.5rem;
+            font-size: 4.5rem;
         }
     }
     .name{
