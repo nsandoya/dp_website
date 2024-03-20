@@ -24,7 +24,7 @@ localStorage.setItem('projectsCategory', "music")
 const projectTitle = document.querySelectorAll(".project-title-gallery")
 
 projectTitle.forEach(item => {
-    touchTitle()
+    touchTitle(item)
     /* console.log(item.innerHTML)
     item.addEventListener('mouseover', ()=>{
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title")

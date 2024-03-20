@@ -495,12 +495,21 @@ footer{
     }
 }
 
+/* .mt-video-container{
+    transition: all 0.30s ease-in;
+} */
+
 .contact-body{
     background-image: url(./src/img/rainbow_1.jpg); 
     /* background-size: cover; */
     /* ul a{
         color: var(--main-color-white) !important;
     } */
+}
+
+.rrss-projects a{ 
+    color: var(--main-color-black) !important;
+    opacity: 0.8;
 }
 /* .name{
     h1{
@@ -509,8 +518,15 @@ footer{
     }
     
 } */
+@media (min-width: 1200px){
+    .mt-video-container{
+
+        margin-top: 6rem !important;
+    }
+}
 
 @media (max-width: 1200px){
+    
     /* .video-container{
         height: 100%;
         align-items: center !important;
@@ -647,6 +663,10 @@ footer{
         display: grid;
         grid-template-columns: 21% 1fr !important;
     }
+
+    .rrss-projects a{
+        color: var(--main-color-white) !important;
+    }
 }
 
 @media (max-width: 720px){
@@ -654,6 +674,7 @@ footer{
         h3{
             margin-inline: 0 !important;
             padding-inline: 0 !important;
+            margin-left: 1rem !important
         }
     }
     /* .video-container{
@@ -666,7 +687,7 @@ footer{
     }
 
     .project-body{
-        background-color: var(--main-color-back);
+        background-color: var(--main-color-black) !important;
     }
 
     .project-div{

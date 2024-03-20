@@ -84,7 +84,7 @@ const musicProjectsList = [
     new Project({
         name: "las_maravillas",
         title: "Las maravillas",
-        urlvideo: "https://player.vimeo.com/video/410875955?h=3e56b19d9d"
+        urlvideo: "https://player.vimeo.com/video/410875955?h=3e56b19d9d?title=0"
     }),
     new Project({
         name: "nada_bello",

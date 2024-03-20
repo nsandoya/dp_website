@@ -76,7 +76,10 @@ function renderVideo(){
 
     let currentProject = prLista.find((item)=>item.id == itemID)
     let videoURL = currentProject.urlvideo
-    console.log("projecto vista",currentProject,"url", videoURL)
+    //console.log("projecto vista",currentProject,"url", videoURL)
+    console.log("video container", videoContainer)
+    /* let videoHeader = document.querySelector("iframe .Title_module_header__da7f0d22")
+    videoHeader.style.display = "none" */
     videoContainer.src = videoURL
 
 }
