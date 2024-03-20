@@ -585,12 +585,12 @@ footer{
     .project-title-sm:hover{
         opacity: 1;
     } */
-    .init_banner{
+    /* .init_banner{
         .name{
             height: 70%;
             margin-bottom: 2rem;
         }
-    }
+    } */
     .prev, .next{
         display: none;
     }
@@ -610,18 +610,18 @@ footer{
         
     }
     .banner-content{
-        /* margin-left: 0.3rem !important; */
-        h1{
+        margin-left: 0.3rem !important;
+        /* h1{
             padding-left: 0 !important;
             line-height: 3.5rem !important;
             margin-inline: 0 !important;
-        }
+        } */
     }
 
     .name{
-        height: 80%;
+        /* height: 80%;
         align-self: end;
-        margin-inline: 0  !important;
+        margin-inline: 0  !important; */
 
         h1{
             padding-left: 0 !important;

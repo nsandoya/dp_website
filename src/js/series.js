@@ -167,7 +167,7 @@ openModal.forEach(item=>{
             
         `
 
-        console.log("alto de pantalla",window.innerHeight)
+        /* console.log("alto de pantalla",window.innerHeight)
         let height = window.innerHeight
         height = height * 10 / 100
         let img = document.querySelector("#img-modal")
@@ -177,7 +177,7 @@ openModal.forEach(item=>{
             width = window.innerWidth
             width = width * 10 / 100
             console.log("ancho de pantalla", width)
-        }
+        } */
         
         const prev = document.querySelector(".prev")
         const next = document.querySelector(".next")
