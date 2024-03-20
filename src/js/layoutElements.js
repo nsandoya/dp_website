@@ -230,37 +230,48 @@ export function navbarStillsResponsive(){
 
 // Footer dinámico
 export function dynamicFooter(){
+    //item.style.color("var(--main-color-black)")
     window.onscroll = function(event) {
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
             // El usuario ha llegado al final de la página, cambia el color de fondo del footer
             document.querySelector(".f-select ").classList.remove("footer-hide-bg");
             document.querySelector(".email").classList.remove("footer-hide-text");
-            let rrss = document.querySelectorAll(".rrss");
+            let rrss = document.querySelectorAll(".rrss a");
             rrss.forEach((item) =>{
                 item.classList.remove("footer-text-initial")
+                //item.classList.add("footer-rrss-end")
+                item.classList.add("footer-rrss-end")
+                
             })
             if(window.innerWidth <= 720){
                 document.querySelector(".f-select").classList.add("footer-hide-bg");
+                let rrss = document.querySelectorAll(".rrss a");
+
                 rrss.forEach((item) =>{
+                    item.classList.remove("footer-rrss-end")
                     item.classList.add("footer-text-initial")
+
                 })
             }
         }else{
             document.querySelector(".f-select").classList.add("footer-hide-bg");
             document.querySelector(".email").classList.add("footer-hide-text");
-            let rrss = document.querySelectorAll(".rrss");
+            let rrss = document.querySelectorAll(".rrss a");
+            rrss.forEach((item) =>{
+                item.classList.remove("footer-rrss-end")
+                item.classList.add("footer-text-initial")
+            })
+        }
+
+        
+        if(window.innerWidth <= 720){
+            document.querySelector(".f-select").classList.add("footer-hide-bg");
+            document.querySelector(".email").classList.add("footer-hide-text");
             rrss.forEach((item) =>{
                 item.classList.add("footer-text-initial")
             })
         }
-        if(window.innerWidth <= 720){
-            document.querySelector(".f-select").classList.add("footer-hide-bg");
-            document.querySelector(".email").classList.add("footer-hide-text");
-            /* rrss.forEach((item) =>{
-                item.classList.add("footer-text-initial")
-            }) */
-        }
-    };
+    }
     
 }
 

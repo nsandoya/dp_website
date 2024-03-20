@@ -448,6 +448,9 @@ footer{
 
     }
 }
+.footer-rrss-end{
+    color: var(--main-color-black) !important;
+}
 
 .footer-photos{
     background-color: transparent !important;
@@ -663,7 +666,7 @@ footer{
     }
 
     .project-body{
-        background-color: var(--main-color-yellow);
+        background-color: var(--main-color-back);
     }
 
     .project-div{
