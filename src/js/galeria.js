@@ -26,6 +26,12 @@ export class Foto{
     aggUrl(){
         this.url = `../src/img/${this.name}.png`
     }
+    aggUrlJourney(){
+        this.url = `../src/img/${this.name}.png`
+    }
+    aggUrlSeries(){
+        this.url = `../src/img/mirada_en_pausa/${this.name}.webp`
+    }
 }
 export class Project{
     constructor({id, name, title, year="", producer= "", role= "Director of Photography",url="", urlvideo=""}){
@@ -109,8 +115,9 @@ export class Galeria{
             (foto)=>{
                 console.log(foto.id) 
                 
-                galleryContainer.innerHTML += `<div id=${foto.id} class="openModal col-sm-1 col-md-4 mt-2 mx-1 img-gallery" data-info="${foto.place}, ${foto.year}" style="background-image: url(${foto.url});" >
+                galleryContainer.innerHTML += `<div id=${foto.id} class="openModal col-sm-1 col-md-4 mt-2 mx-1 img-gallery" data-info="${foto.place} ${foto.year}" style="background-image: url(${foto.url});" >           
                 </div>`
+                /* Añadirle luego la comita a data-info! */
         })
     }
 

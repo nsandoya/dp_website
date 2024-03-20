@@ -670,10 +670,10 @@ footer{
 }
 
 @media (max-width: 720px){
+    
     .init_banner{
         h3{
-            margin-inline: 0 !important;
-            padding-inline: 0 !important;
+            
             margin-left: 1rem !important
         }
     }
