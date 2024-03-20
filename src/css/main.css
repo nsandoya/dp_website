@@ -248,10 +248,15 @@ dialog{
     background-position: center; 
     background-repeat: no-repeat;
     
+    
 }
 
 .img-container:hover{
     cursor: pointer;
+}
+
+.project-title-transition{
+    transition:  0.25s cubic-bezier(.55,.06,.68,.19) 
 }
 
 .nodisplay{
@@ -642,6 +647,12 @@ footer{
 }
 
 @media (max-width: 720px){
+    .init_banner{
+        h3{
+            margin-inline: 0 !important;
+            padding-inline: 0 !important;
+        }
+    }
     /* .video-container{
         width: 120%;
         align-items: start !important;
@@ -706,10 +717,5 @@ footer{
         font-size: 0.8rem !important; 
         
     }
-    .init_banner{
-        h3{
-            margin-inline: 0 !important;
-            padding-inline: 0 !important;
-        }
-    }
+    
 }

@@ -5,6 +5,27 @@ export function init_banner(){
     //console.log("titulo banner",tituloBanner)
     const titulosBanner = tituloBanner.querySelectorAll("h1")
     //console.log("h1s",titulosBanner)
+    const h3 = document.querySelector(".init_banner h3")
+    console.log("Cachado el h3", h3)
+    function paraInitBanner(){
+        if(window.innerWidth <= 720 && h3.style.padding > 0){
+            console.log("Detectados resultados indeseados")
+            h3.style.padding = 0; 
+            h3.style.margin = 0; 
+        }else{
+            console.log("es solo un else")
+        }
+    }
+    window.addEventListener('resize', ()=>{
+        paraInitBanner()
+        
+    })
+    window.addEventListener('DOMContentLoaded', ()=>{
+        paraInitBanner()
+        
+    })
+
+
     
     /* if(window.innerWidth <= 720){
         console.log("screen width detectado")
@@ -264,14 +285,17 @@ export function offcanvasActiveItem(){
     }
 }
 
-export function touchMobile(item){
+
+// NO USAR
+
+function touchMobile(item){
     console.log("TOCADO")
     let h2 = document.querySelector(`#${item}`)
     h2.preventDefault()
     h2.style.opacity = "1";
 }
 // Titulos de proyectos en mobile
-export function titulosMobile(){
+function titulosMobile(){
     console.log("funciona la fx mobile")
     const titulosMobile = document.querySelectorAll(".project-title")
     titulosMobile.forEach((titulo)=>{
