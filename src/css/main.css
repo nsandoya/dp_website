@@ -49,6 +49,7 @@ html {
 
 body{
     position: relative;
+    background-color: var(--main-color-yellow);
 }
 
 .navbar-toggler{
@@ -511,6 +512,10 @@ footer{
     color: var(--main-color-black) !important;
     opacity: 0.8;
 }
+
+.footer-sm{
+    display: none;
+}
 /* .name{
     h1{
         font-size: 3.8rem;
@@ -602,6 +607,72 @@ footer{
         p{
             color: var(--main-color-white) !important;
         }
+    }
+
+    .footer-sm{
+        background-color: var(--main-color-yellow);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+
+        
+    }
+    .footer-dp-logo{
+        display: inline-block;
+        margin-top: 1.5rem;
+        margin-left: 1.5rem
+    }
+
+    .footer-menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 88px 1fr;
+        margin-left: 1rem
+    }
+    .footer-sm-group-1, .footer-sm-group-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 20px 20px;
+        row-gap: 5px;
+        align-content: center;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; */
+        /* p{
+            line-height: 0.5em;
+        } */
+        p{
+            max-width: min-content;
+            line-height: 1rem;
+            
+        }
+        a{
+            display: inline-block;
+            padding-inline: 1rem;
+            text-transform: uppercase;
+            font-family: 'Syne' !important;
+            font-size: 0.9rem;
+            text-align: left;
+            letter-spacing: 0.1em;
+            /* font-weight: bold; */
+            /* height: 2rem */
+
+        }
+    }
+    .footer-sm-group-1{
+        margin-top: 5px
+    }
+    .footer-sm-group-2{
+        grid-template-columns: 1fr 2fr;
+        a{
+            p{
+                text-align: left;
+                color: var(--main-color-black) !important;
+                letter-spacing: 0em;
+
+            }
+        }
+
     }
 
     .img-modal{
