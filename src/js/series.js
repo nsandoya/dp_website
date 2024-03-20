@@ -146,6 +146,8 @@ const openModal = document.querySelectorAll(".openModal");
 /* console.log(openModal) */
 openModal.forEach(item=>{
     item.addEventListener('click', ()=>{
+        let width = "85%"
+
         let url = getComputedStyle(item).backgroundImage.slice(4, -1).replace(/"/g, "")
         modalDialog.classList.remove("nodisplay")
         modalDialog.showModal()
@@ -154,7 +156,8 @@ openModal.forEach(item=>{
             <button id="closeModal"  style="width: 100px; height: 50px;"><i class="bi bi-x-lg"></i></button>
             <div style="display:grid; grid-template-columns: 1fr; grid-template-rows: fit-content 1fr">
 
-            <img id="img-modal" src=${url} alt="" style="width: 80%; max-width: 85%; justify-self: center; align-self: end; border-radius: 10px">
+            <img id="img-modal" src=${url} alt="" style="max-height: 100vh;
+            width: auto; max-width: 85%; justify-self: center; align-self: end; border-radius: 10px; ">
             
             <span id="pieDeFoto" class="text-white text-center text-uppercase mt-3">${item.getAttribute('data-info')}</span>
             </div>
@@ -164,6 +167,17 @@ openModal.forEach(item=>{
             
         `
 
+        console.log("alto de pantalla",window.innerHeight)
+        let height = window.innerHeight
+        height = height * 10 / 100
+        let img = document.querySelector("#img-modal")
+        console.log("alto de imagen",getComputedStyle(img).height)
+        if(height < 1000){
+
+            width = window.innerWidth
+            width = width * 10 / 100
+            console.log("ancho de pantalla", width)
+        }
         
         const prev = document.querySelector(".prev")
         const next = document.querySelector(".next")
