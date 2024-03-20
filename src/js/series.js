@@ -157,7 +157,7 @@ openModal.forEach(item=>{
             <div style="display:grid; grid-template-columns: 1fr; grid-template-rows: fit-content 1fr">
 
             <img id="img-modal" src=${url} alt="" style="max-height: 100vh;
-            width: auto; max-width: 85%; justify-self: center; align-self: end; border-radius: 10px; ">
+            width: auto; max-width: 85%; justify-self: center; align-self: end; border-radius: 10px; transition: all 1s ease-in">
             
             <span id="pieDeFoto" class="text-white text-center text-uppercase mt-3">${item.getAttribute('data-info')}</span>
             </div>
