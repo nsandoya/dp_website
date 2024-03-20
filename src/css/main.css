@@ -447,11 +447,11 @@ footer{
     background-color: transparent !important;
 }
 
-.init_banner{
+/* .init_banner{
     h3{
         margin-top: 1rem;
     }
-}
+} */
 .pum{
     background-size: cover; 
     background-position: center;
@@ -475,6 +475,7 @@ footer{
     opacity: 1 !important;
 } */
 
+/* ESTE ES EL QUE ACTÚA SOBRE LOS TÍTULOS */
 .img-container{
     h2{
         opacity: 0 !important;
@@ -554,10 +555,10 @@ footer{
 
 @media (max-width: 720px){
     /* .project-title-sm{
-        display: none;
-    } */
-    /* .project-title-sm:hover{
-        display: inline-block;
+        opacity: 0;
+    }
+    .project-title-sm:hover{
+        opacity: 1;
     } */
     .prev, .next{
         display: none;

@@ -29,13 +29,17 @@ narrative.renderProjects()
 const projectTitle = document.querySelectorAll(".project-title-gallery")
 
 projectTitle.forEach(item => {
-    console.log("Cacha los titulos?",item.innerHTML)
-    item.addEventListener('mouseover', ()=>{
+    //console.log("Cacha los titulos?",item.innerHTML)
+    // cambio de 'mouseover''mouseout' a 'touchstart''touchend'
+    item.addEventListener('touchstart', ()=>{
+        console.log("Cambio en el título (touch)")
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
         //item.style.transition = "all 0.3s cubic-bezier(.82,.42,.44,1) !important;"
     })
-    item.addEventListener('mouseout', ()=>{
+    item.addEventListener('touchend', ()=>{
+        console.log("Cambio en el título (touch)")
+
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
         item.querySelector(".project-title-gallery h2").classList.remove("project-title-transition");
     })
