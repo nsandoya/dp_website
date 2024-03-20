@@ -745,7 +745,7 @@ footer{
 }
 
 @media (max-width: 720px){
-    .init-banner{
+    .init_banner{
         h1{
             font-size: 4.5rem;
         }
