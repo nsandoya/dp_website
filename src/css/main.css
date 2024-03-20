@@ -614,11 +614,11 @@ footer{
     .img-container{
         h2{ 
             opacity: 0 !important;
-            font-size: 1.8rem;
+            font-size: 1.5rem !important;
             justify-self: center !important;
             text-align: center !important;
             margin: 0 !important;
-            padding-inline: 3rem;
+            /* padding-inline: 3rem; */
         }
     }
 
@@ -652,7 +652,7 @@ footer{
     }
 
     .project-body{
-        background-color: var(--main-color-black);
+        background-color: var(--main-color-yellow);
     }
 
     .project-div{
@@ -705,5 +705,11 @@ footer{
     #prev, #next{
         font-size: 0.8rem !important; 
         
+    }
+    .init_banner{
+        h3{
+            margin-inline: 0 !important;
+            padding-inline: 0 !important;
+        }
     }
 }
