@@ -648,7 +648,7 @@ footer{
         }
         a{
             display: inline-block;
-            padding-right: 1rem;
+            padding-right: 1rem !important;
             text-transform: uppercase;
             font-family: 'Syne' !important;
             font-size: 0.9rem;
@@ -666,10 +666,10 @@ footer{
     }
     .footer-sm-group-2{
         margin-top: 1rem;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 120px 2fr;
         a{
-            padding-right: 0 !important;
-            padding-right: 5px!important;
+            /* padding-right: 0 !important; */
+            /* padding-right: 5px!important; */
             p{
                 text-align: left;
                 color: var(--main-color-black) !important;
@@ -751,7 +751,7 @@ footer{
 @media (max-width: 720px){
     .init_banner{
         h1{
-            font-size: 5rem;
+            font-size: 6rem;
         }
     }
     .name{
