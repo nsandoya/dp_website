@@ -4,7 +4,7 @@ export function init_banner(){
     const init_banner_sm = document.querySelector(".init_banner_sm")
     const init_banner_lg = document.querySelector(".init_banner_lg")
 
-    if(window.innerWidth <= 720){
+    if(window.innerWidth <= 768){
         setTimeout(()=>{
             //banner.classList.remove("init_banner")
             init_banner_sm.classList.add("init_banner_close")
@@ -18,6 +18,20 @@ export function init_banner(){
         }, 950)
 
     }   
+
+    window.addEventListener('resize', ()=>{
+        if(window.innerWidth <= 768){
+            setTimeout(()=>{
+                init_banner_sm.classList.add("init_banner_close")
+                init_banner_lg.classList.remove("init_banner_close")
+            }, 950)
+        }else{
+            setTimeout(()=>{
+                init_banner_lg.classList.add("init_banner_close")
+                init_banner_sm.classList.remove("init_banner_close")
+            }, 950)
+        }
+    })
     
 }
 
