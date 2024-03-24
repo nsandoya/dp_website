@@ -1,13 +1,30 @@
 // Generar banner inicial
 
 export function init_banner(){
-    const tituloBanner = document.querySelector(".name")
+    const init_banner_sm = document.querySelector(".init_banner_sm")
+    const init_banner_lg = document.querySelector(".init_banner_lg")
+
+    if(window.innerWidth <= 720){
+        setTimeout(()=>{
+            //banner.classList.remove("init_banner")
+            init_banner_sm.classList.add("init_banner_close")
+            //banner.innerHTML=""
+        }, 950)
+    }else{
+        setTimeout(()=>{
+            //banner.classList.remove("init_banner")
+            init_banner_lg.classList.add("init_banner_close")
+            //banner.innerHTML=""
+        }, 950)
+
+    }
+    //const tituloBanner = document.querySelector(".name")
     //console.log("titulo banner",tituloBanner)
-    const titulosBanner = tituloBanner.querySelectorAll("h1")
-    //console.log("h1s",titulosBanner)
-    const h3 = document.querySelector(".init_banner h3")
+    /* const titulosBanner = tituloBanner.querySelectorAll("h1")
+    //console.log("h1s",titulosBanner) */
+    /*const h3 = document.querySelector(".init_banner h3")
     console.log("Cachado el h3", h3)
-    function paraInitBanner(){
+     function paraInitBanner(){
         if(window.innerWidth <= 720 && h3.style.padding > 0){
             console.log("Detectados resultados indeseados")
             h3.style.padding = 0; 
@@ -23,7 +40,7 @@ export function init_banner(){
     window.addEventListener('DOMContentLoaded', ()=>{
         paraInitBanner()
         
-    })
+    }) */
 
 
     
@@ -35,12 +52,20 @@ export function init_banner(){
             
         })
     } */
-    const banner = document.querySelector(".init_banner")
-    setTimeout(()=>{
-        //banner.classList.remove("init_banner")
-        banner.classList.add("init_banner_close")
-        //banner.innerHTML=""
-    }, 950)
+    
+    /* 
+    const banners = document.querySelectorAll(".init_banner")
+    banners.forEach((banner)=>{
+        console.log("Hay banner")
+        banner.addEventListener('DOMContentLoaded', (event)=>{
+            setTimeout(()=>{
+                //banner.classList.remove("init_banner")
+                event.target.classList.add("init_banner_close")
+                //banner.innerHTML=""
+            }, 950)
+        })
+
+    }) */
     
     
 }
