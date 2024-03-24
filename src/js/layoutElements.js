@@ -17,56 +17,7 @@ export function init_banner(){
             //banner.innerHTML=""
         }, 950)
 
-    }
-    //const tituloBanner = document.querySelector(".name")
-    //console.log("titulo banner",tituloBanner)
-    /* const titulosBanner = tituloBanner.querySelectorAll("h1")
-    //console.log("h1s",titulosBanner) */
-    /*const h3 = document.querySelector(".init_banner h3")
-    console.log("Cachado el h3", h3)
-     function paraInitBanner(){
-        if(window.innerWidth <= 720 && h3.style.padding > 0){
-            console.log("Detectados resultados indeseados")
-            h3.style.padding = 0; 
-            h3.style.margin = 0; 
-        }else{
-            console.log("es solo un else")
-        }
-    }
-    window.addEventListener('resize', ()=>{
-        paraInitBanner()
-        
-    })
-    window.addEventListener('DOMContentLoaded', ()=>{
-        paraInitBanner()
-        
-    }) */
-
-
-    
-    /* if(window.innerWidth <= 720){
-        console.log("screen width detectado")
-        titulosBanner.forEach((item)=>{
-            item.classList.remove("display-4")
-            item.classList.add("display-2")
-            
-        })
-    } */
-    
-    /* 
-    const banners = document.querySelectorAll(".init_banner")
-    banners.forEach((banner)=>{
-        console.log("Hay banner")
-        banner.addEventListener('DOMContentLoaded', (event)=>{
-            setTimeout(()=>{
-                //banner.classList.remove("init_banner")
-                event.target.classList.add("init_banner_close")
-                //banner.innerHTML=""
-            }, 950)
-        })
-
-    }) */
-    
+    }   
     
 }
 
@@ -91,13 +42,12 @@ export function touchTitle(item){
         console.log("Cambio en el título (touch)")
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
-        //item.style.transition = "all 0.3s cubic-bezier(.82,.42,.44,1) !important;"
     })
     item.addEventListener('touchend', ()=>{
         console.log("Cambio en el título (touch)")
 
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
-        /* item.querySelector(".project-title-gallery h2").classList.remove("project-title-transition"); */
+        
     })
 }
 
@@ -216,7 +166,7 @@ export function navbarStillsResponsive(){
                 </section>
                 <!-- Botón que abre el offcanvas menu -->
                 <button class="d-sm-inline-block d-md-none col border-0 pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
-                    <h1 class="fs-3 text-uppercase mt-1 mb-4 mb-md-2 pe-0 text-end" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)"><i class="bi bi-list" style="color:var(--main-color-yellow)"></i></h1>
+                    <h1 class="fs-3 text-uppercase mb-4 mb-md-2 pe-0 text-end" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)"><i class="bi bi-list" style="color:var(--main-color-yellow)"></i></h1>
                 </button>
                 <!-- Botón que dirige al Home -->
                 <a href="./index.html">
