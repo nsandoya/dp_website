@@ -50,7 +50,7 @@ projectTitle.forEach(item => {
         console.log("Cambio en el título (touch)")
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
-        //item.style.transition = "all 0.3s cubic-bezier(.82,.42,.44,1) !important;"
+        
     })
     item.addEventListener('touchend', ()=>{
         console.log("Cambio en el título (touch)")
