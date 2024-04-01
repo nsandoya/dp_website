@@ -25,7 +25,7 @@ const projectTitle = document.querySelectorAll(".project-title-gallery")
 
 let lastTouchedTitle = null;
 projectTitle.forEach(item => {
-    touchTitle(lastTouchedTitle,item)
+    touchTitle(lastTouchedTitle, item)
     /* console.log(item.innerHTML)
     item.addEventListener('mouseover', ()=>{
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title")

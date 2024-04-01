@@ -51,8 +51,20 @@ export function ddMenuMobile(){
     })
 }
 
-export function touchTitle(item){
+export function touchTitle(lastTouchedTitle, item){
     item.addEventListener('touchstart', ()=>{
+        console.log("Cambio en el título (touch)")
+        let title = item.querySelector(".project-title-gallery h2");
+        title.classList.add("project-title-transition");
+
+        if (lastTouchedTitle && lastTouchedTitle !== title) {
+            lastTouchedTitle.classList.add("no-display-title");
+        }
+        
+        title.classList.remove("no-display-title");
+        lastTouchedTitle = title;
+    })
+    /* item.addEventListener('touchstart', ()=>{
         console.log("Cambio en el título (touch)")
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
@@ -62,7 +74,7 @@ export function touchTitle(item){
 
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
         
-    })
+    }) */
 }
 
 const header = document.querySelector("header")
