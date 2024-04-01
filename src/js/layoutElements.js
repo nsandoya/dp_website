@@ -101,7 +101,7 @@ export function navbarResponsive(){
                     Stills
                     </a>
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.5;">
-                    <li><a class="ms-3" href="./journey.html" style="color: var(--main-color-white);">Journal</a></li>
+                    <li><a class="ms-3" href="./journal.html" style="color: var(--main-color-white);">Journal</a></li>
                     <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
                     <li><a class="ms-3" href="./series.html" style="color: var(--main-color-white);">Series</a></li>
                     </ul>
@@ -176,7 +176,7 @@ export function navbarStillsResponsive(){
                         Stills
                     </a>
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.95;">
-                        <li><a class="journal ms-3" href="./journey.html" style="color: var(--main-color-white);">Journal</a></li>
+                        <li><a class="journal ms-3" href="./journal.html" style="color: var(--main-color-white);">Journal</a></li>
                         <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
                         <li><a class="series ms-3" href="./series.html" style="color: var(--main-color-white);">Series</a></li>
                     </ul>
