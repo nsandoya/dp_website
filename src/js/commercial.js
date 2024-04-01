@@ -16,7 +16,7 @@ offcanvasActiveItem()
 let commercial = getProjectGallery("commercial")
 commercial.renderProjects()
 
-localStorage.setItem('projectsCategory', "commercial") 
+localStorage.setItem('projectsCategory', "commercials") 
 
 
 // Mostrar u ocultar título de proyecto

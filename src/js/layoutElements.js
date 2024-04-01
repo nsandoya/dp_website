@@ -93,7 +93,7 @@ export function navbarResponsive(){
             <div class="col-lg-7 col-md-9 text-center">
                 <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-white)">
                 <li class="col "><a href="./index.html" class="narrative">Narrative</a></li>
-                <li class="col "><a href="./commercial.html" class="commercial">Commercials</a></li>
+                <li class="col "><a href="./commercials.html" class="commercials">Commercials</a></li>
                 <li class="col "><a href="./music.html" class="music">Music</a></li>
                 <!-- <li class="col "><a href="" class="stills">Stills</a></li> -->
                 <li class="dropdown" style="width: min-content !important;">
@@ -168,7 +168,7 @@ export function navbarStillsResponsive(){
                 <div class="col-lg-7 col-md-9 text-center">
                 <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-golden) !important; margin-bottom:0; margin-top:0.3rem">
                     <li class="col"><a href="./index.html" class="narrative" style="color: var(--main-color-black);">Narrative</a></li>
-                    <li class="col"><a href="./commercial.html" class="commercial" style="color: var(--main-color-black);">Commercials</a></li>
+                    <li class="col"><a href="./commercials.html" class="commercial" style="color: var(--main-color-black);">Commercials</a></li>
                     <li class="col"><a href="./music.html" class="music" style="color: var(--main-color-black);">Music</a></li>
                     <!-- <li class="col"><a href="">Stills</a></li> -->
                     <li class="dropdown" style="width: min-content !important; ">
