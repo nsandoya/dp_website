@@ -21,9 +21,21 @@ localStorage.setItem('projectsCategory', "commercial")
 
 // Mostrar u ocultar título de proyecto
 const projectTitle = document.querySelectorAll(".project-title-gallery")
-
+let lastTouchedTitle = null;
 projectTitle.forEach(item => {
-    touchTitle(item)
+    item.addEventListener('touchstart', ()=>{
+        console.log("Cambio en el título (touch)")
+        let title = item.querySelector(".project-title-gallery h2");
+        title.classList.add("project-title-transition");
+
+        if (lastTouchedTitle && lastTouchedTitle !== title) {
+            lastTouchedTitle.classList.add("no-display-title");
+        }
+        
+        title.classList.remove("no-display-title");
+        lastTouchedTitle = title;
+    })
+    //touchTitle(item)
     /* console.log(item.innerHTML)
     item.addEventListener('mouseover', ()=>{
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title")
