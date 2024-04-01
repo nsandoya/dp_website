@@ -92,7 +92,7 @@ fotosLista.forEach((foto)=>{
 })
 // Crear galería
 const galeria = new Galeria({
-    categoria: "Journey"
+    categoria: "Journal"
 })
 // Añadir fotos a galería
 galeria.aggFotos(...fotosLista)

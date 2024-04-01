@@ -23,6 +23,7 @@
     --main-color-white: #F8F6ED;
     --main-color-golden: #A4997E;
     --main-color-black: #2E2C2B;
+    --main-color-gray: #8f8e8e;
 
     --transition-init-banner: transition: all 0.5s cubic-bezier(.55,.06,.74,.38);
     --transition-sec-elements: transition: all 0.3s cubic-bezier(.82,.42,.44,1);
@@ -115,6 +116,9 @@ a{
 }
 /* Swipe gallery */
 
+.title-contact{
+    color: var(--main-color-gray);
+}
 
 .a-stills{
     color: var(--main-color-golden);
