@@ -28,8 +28,21 @@ narrative.renderProjects()
 
 // Mostrar u ocultar título de proyecto
 const projectTitle = document.querySelectorAll(".project-title-gallery")
-export function touchTitle(item){
+export function touchTitle(lastTouchedTitle,item){
     item.addEventListener('touchstart', ()=>{
+        console.log("Cambio en el título (touch)")
+        let title = item.querySelector(".project-title-gallery h2");
+        title.classList.add("project-title-transition");
+
+        if (lastTouchedTitle && lastTouchedTitle !== title) {
+            lastTouchedTitle.classList.add("no-display-title");
+        }
+        
+        title.classList.remove("no-display-title");
+        lastTouchedTitle = title;
+    })
+
+    /* item.addEventListener('touchstart', ()=>{
         console.log("Cambio en el título (touch)")
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
@@ -39,11 +52,10 @@ export function touchTitle(item){
         console.log("Cambio en el título (touch)")
 
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
-        /* item.querySelector(".project-title-gallery h2").classList.remove("project-title-transition"); */
-    })
+        // item.querySelector(".project-title-gallery h2").classList.remove("project-title-transition"); 
+    }) */
 }
 
-let lastTouchedTitle = null;
 
 /* projectTitle.forEach(item => {
     item.addEventListener('touchstart', ()=>{
@@ -59,18 +71,8 @@ let lastTouchedTitle = null;
         lastTouchedTitle = title;
     })
 }) */
-
-
+let lastTouchedTitle = null;
 projectTitle.forEach(item => {
-    // cambio de 'mouseover''mouseout' a 'touchstart''touchend'
-    /* let lastTouchedTitle = null;
-    item.addEventListener('touchstart', ()=>{
-        if (item.classList.contains("no-display-title")){
-            item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
-            item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
-            lastTouchedTitle = item
-        }
-    }) */
     item.addEventListener('touchstart', ()=>{
         console.log("Cambio en el título (touch)")
         let title = item.querySelector(".project-title-gallery h2");

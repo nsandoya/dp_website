@@ -81,7 +81,7 @@ export function navbarResponsive(){
             <div class="col-lg-7 col-md-9 text-center">
                 <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-white)">
                 <li class="col "><a href="./index.html" class="narrative">Narrative</a></li>
-                <li class="col "><a href="./commercial.html" class="commercial">Commercial</a></li>
+                <li class="col "><a href="./commercial.html" class="commercial">Commercials</a></li>
                 <li class="col "><a href="./music.html" class="music">Music</a></li>
                 <!-- <li class="col "><a href="" class="stills">Stills</a></li> -->
                 <li class="dropdown" style="width: min-content !important;">
