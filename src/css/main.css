@@ -577,11 +577,9 @@ footer{
 } */
 
 .contact-body{
-    background-image: url(./src/img/rainbow_1.jpg); 
-    /* background-size: cover; */
-    /* ul a{
-        color: var(--main-color-white) !important;
-    } */
+    /* background-image: url(./src/img/rainbow_1.jpg);  */
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .rrss-projects a{ 
