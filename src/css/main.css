@@ -549,13 +549,11 @@ footer{
     transition: transform 1.2s cubic-bezier(0.6,0,0.4,1)
    /*  transition: all 0.56 ease-in; */
 }
-/* .project-title-gallery{
-    opacity: 0 !important;
-    transition: all 0.3s cubic-bezier(.82,.42,.44,1) !important;
-} */
-/* .project-title-gallery:hover{
-    opacity: 1 !important;
-} */
+
+.titulo-galeria-lg{
+    font-family: 'BDSans-Black'; 
+    color: var(--main-color-golden);
+}
 
 /* ESTE ES EL QUE ACTÚA SOBRE LOS TÍTULOS */
 .img-container{
@@ -571,13 +569,14 @@ footer{
 .series-descr{
     width: 75%;
     margin-inline: auto !important;
+    color: var(--main-color-black) !important;
+    
 }
 /* .mt-video-container{
     transition: all 0.30s ease-in;
 } */
 
 .contact-body{
-    /* background-image: url(./src/img/rainbow_1.jpg);  */
     background-size: cover; 
     background-repeat: no-repeat;
 }
@@ -900,6 +899,7 @@ footer{
     }
     .series-descr-cont{
         margin-top: 2rem !important;
+        
     }
     .series-descr{
         width: 95%;
