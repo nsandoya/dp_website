@@ -71,15 +71,12 @@ function renderVideo(){
         next.innerHTML = `${nextProject.title} <i class="bi bi-caret-right-fill a-stills"></i>`
     } else {
         next.innerHTML = `${prLista[0].title} <i class="bi bi-caret-right-fill a-stills"></i>` // Esto es provisional, creo :v
-        //next.innerText = "No hay proyecto siguiente"
     }
 
     let currentProject = prLista.find((item)=>item.id == itemID)
     let videoURL = currentProject.urlvideo
-    //console.log("projecto vista",currentProject,"url", videoURL)
     console.log("video container", videoContainer)
-    /* let videoHeader = document.querySelector("iframe .Title_module_header__da7f0d22")
-    videoHeader.style.display = "none" */
+    
     videoContainer.src = videoURL
 
 }

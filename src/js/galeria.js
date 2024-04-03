@@ -1,18 +1,8 @@
-/* import { oModal } from "./journey.js" */
 
 // HTML elements
 const galleryContainer = document.querySelector(".gallery-gen")
 const galeriaGen = document.querySelector(".gallery-gen img")
 const imgSlidewhow = document.querySelector(".modal-container img")
-
-/* const modalDialog = document.querySelector("#modal-dialog");
-const openModal = document.querySelectorAll(".openModal-dialog");
-const closeModal = document.querySelector("#closeModal-dialog") */
-
-//let x = window.matchMedia("(min-width: 1000px)")
-/* const modal = document.querySelector(".modal-container") */
-
-
 
 export class Foto{
     constructor({id, name, year="", place= "", url}){
@@ -77,7 +67,6 @@ export class ProjectGallery{
                     claseAux = ""
                 }
 
-                // project-title-gallery (class) justify-content-center
                 contenedor.innerHTML += `
                     <div id=${project.id} class="project-div project img-fluid ${claseAux} p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh;">
                         <div class="project-title-gallery container-fluid  align-items-center justify-content-center" style="display: flex; height: 100%; ">
@@ -188,8 +177,6 @@ const galeria = new Galeria({
 // Añadir fotos a galería
 galeria.aggFotos(...fotosLista)
 
-/* console.log(galeria.fotos) */
-/* galeria.renderFotos() */
 
 let current_img = ""
 let imgModal = ""

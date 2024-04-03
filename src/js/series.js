@@ -112,19 +112,15 @@ galeria.renderFotos()
 
 // Fx para navegar la galería
 function prevSwipe(itemID, photoInfo, imgModal){
-    //itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
     console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
-    //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
     let fotoUsar = foto[0]
-    //console.log(fotoUsar.url)
     photoInfo = `${fotoUsar.place} ${fotoUsar.year}` // Añadirle luego la coma 
     imgModal.src = fotoUsar.url
     pieDeFoto.innerHTML = photoInfo
     
 }
 function nextSwipe(itemID, photoInfo, imgModal){
-    //itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
     console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
     let fotoUsar = foto[0]
@@ -143,7 +139,6 @@ const modalDialog = document.querySelector("#modal-dialog");
 const openModal = document.querySelectorAll(".openModal");
 
 
-/* console.log(openModal) */
 openModal.forEach(item=>{
     item.addEventListener('click', ()=>{
         let width = "85%"
@@ -166,18 +161,6 @@ openModal.forEach(item=>{
             <button class="next"><i class="bi bi-caret-right-fill icon-size"></i></button>
             
         `
-
-        /* console.log("alto de pantalla",window.innerHeight)
-        let height = window.innerHeight
-        height = height * 10 / 100
-        let img = document.querySelector("#img-modal")
-        console.log("alto de imagen",getComputedStyle(img).height)
-        if(height < 1000){
-
-            width = window.innerWidth
-            width = width * 10 / 100
-            console.log("ancho de pantalla", width)
-        } */
         
         const prev = document.querySelector(".prev")
         const next = document.querySelector(".next")
@@ -191,31 +174,11 @@ openModal.forEach(item=>{
         prev.addEventListener('click', ()=>{
             itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
             prevSwipe(itemID, photoInfo, imgModal)
-            /* itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
-            console.log(itemID)
-            let foto = galeria.fotos.filter(foto => foto.id == itemID);
-            //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
-            let fotoUsar = foto[0]
-            //console.log(fotoUsar.url)
-            photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
-            imgModal.src = fotoUsar.url
-            pieDeFoto.innerHTML = photoInfo */
             
         })
         next.addEventListener('click', ()=>{
             itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
             nextSwipe(itemID, photoInfo, imgModal)
-
-            /* itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
-            console.log(itemID)
-            let foto = galeria.fotos.filter(foto => foto.id == itemID);
-            let fotoUsar = foto[0]
-            console.log(fotoUsar.url)
-            imgModal.src = fotoUsar.url
-
-            photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
-            imgModal.src = fotoUsar.url
-            pieDeFoto.innerHTML = photoInfo */
             
         })
         
@@ -227,50 +190,6 @@ openModal.forEach(item=>{
             modalDialog.classList.add("nodisplay")        
         })
         
-
-       /*  let startX = 0;  // Variable para almacenar la posición inicial del toque
-        let threshold = 100;  // Distancia mínima para considerar el gesto como deslizamiento
-
-        // Agrega event listeners para los eventos de toque
-        imgModal.addEventListener('touchstart', e => {
-            startX = e.changedTouches[0].clientX;
-        });
-
-        imgModal.addEventListener('touchend', e => {
-            let endX = e.changedTouches[0].clientX;
-            let diffX = startX - endX;
-
-            // Si la diferencia es mayor que el umbral, considera el gesto como deslizamiento
-            if (Math.abs(diffX) > threshold) {
-                if (diffX > 0) {
-                    // Deslizamiento hacia la izquierda, muestra la siguiente imagen
-                    //nextSwipe(itemID, photoInfo, imgModal);
-                    itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
-                    console.log(itemID)
-                    let foto = galeria.fotos.filter(foto => foto.id == itemID);
-                    let fotoUsar = foto[0]
-                    console.log(fotoUsar.url)
-                    imgModal.src = fotoUsar.url
-
-                    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
-                    imgModal.src = fotoUsar.url
-                    pieDeFoto.innerHTML = photoInfo
-                } else {
-                    // Deslizamiento hacia la derecha, muestra la imagen anterior
-                    //prevSwipe(itemID, photoInfo, imgModal);
-                    itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
-                    console.log(itemID)
-                    let foto = galeria.fotos.filter(foto => foto.id == itemID);
-                    //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
-                    let fotoUsar = foto[0]
-                    //console.log(fotoUsar.url)
-                    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
-                    imgModal.src = fotoUsar.url
-                    pieDeFoto.innerHTML = photoInfo
-
-                }
-            }
-        }); */
         // Crea una nueva instancia de Hammer en tu imagen modal
         var hammertime = new Hammer(imgModal);
 
@@ -280,15 +199,6 @@ openModal.forEach(item=>{
             itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
                 nextSwipe(itemID, photoInfo, imgModal)
 
-                    /* console.log(itemID)
-                    let foto = galeria.fotos.filter(foto => foto.id == itemID);
-                    let fotoUsar = foto[0]
-                    console.log(fotoUsar.url)
-                    imgModal.src = fotoUsar.url
-
-                    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
-                    imgModal.src = fotoUsar.url
-                    pieDeFoto.innerHTML = photoInfo */
         });
 
         // Agrega un listener para el evento swiperight
@@ -296,14 +206,7 @@ openModal.forEach(item=>{
             // Muestra la imagen anterior
             itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
             prevSwipe(itemID, photoInfo, imgModal)
-                    /* console.log(itemID)
-                    let foto = galeria.fotos.filter(foto => foto.id == itemID);
-                    //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
-                    let fotoUsar = foto[0]
-                    //console.log(fotoUsar.url)
-                    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
-                    imgModal.src = fotoUsar.url
-                    pieDeFoto.innerHTML = photoInfo */
+                    
         });
     })
 })

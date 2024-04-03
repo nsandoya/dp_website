@@ -57,20 +57,6 @@ export function touchTitle(lastTouchedTitle,item){
 }
 
 
-/* projectTitle.forEach(item => {
-    item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
-        let title = item.querySelector(".project-title-gallery h2");
-        title.classList.add("project-title-transition");
-
-        if (lastTouchedTitle && lastTouchedTitle !== title) {
-            lastTouchedTitle.classList.add("no-display-title");
-        }
-        
-        title.classList.remove("no-display-title");
-        lastTouchedTitle = title;
-    })
-}) */
 let lastTouchedTitle = null;
 projectTitle.forEach(item => {
     item.addEventListener('touchstart', ()=>{

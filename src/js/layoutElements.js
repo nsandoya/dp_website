@@ -308,13 +308,9 @@ export function offcanvasActiveItem(){
     const offcanvas = document.querySelector(".offcanvas")
     const offcanvasItems = offcanvas.querySelectorAll("ul li a")
 
-    //const docTitle = localStorage.getItem('projectsCategory') 
-    console.log("page title",pageTitle)
-    //console.log("offcanvas", offcanvasItems)
+    //console.log("page title",pageTitle)
     offcanvasItems.forEach((item)=>{
-        //console.log("item offcanvas", item.innerHTML)
         if(item.innerHTML == pageTitle){
-            //console.log("item offcanvas", item.innerHTML)
             item.classList.add("n-active-offcanvas")
         }
     })

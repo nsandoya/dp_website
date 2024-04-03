@@ -35,15 +35,7 @@ projectTitle.forEach(item => {
         title.classList.remove("no-display-title");
         lastTouchedTitle = title;
     })
-    //touchTitle(item)
-    /* console.log(item.innerHTML)
-    item.addEventListener('mouseover', ()=>{
-        item.querySelector(".project-title-gallery h2").classList.remove("no-display-title")
-    })
-    item.addEventListener('mouseout', ()=>{
-        item.querySelector(".project-title-gallery h2").classList.add("no-display-title")
-    })
- */
+    
     item.addEventListener('click', ()=>{
         let titleProject = item.querySelector(".project-title-gallery h2")
         

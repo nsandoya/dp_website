@@ -136,7 +136,6 @@ const modalDialog = document.querySelector("#modal-dialog");
 const openModal = document.querySelectorAll(".openModal");
 
 
-/* console.log(openModal) */
 openModal.forEach(item=>{
     item.addEventListener('click', ()=>{
         let url = getComputedStyle(item).backgroundImage.slice(4, -1).replace(/"/g, "")

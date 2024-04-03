@@ -124,11 +124,6 @@ musicProjectsList.forEach((project)=>{
 })
 
 
-console.log(narrative.projects)
-console.log(commercial.projects)
-console.log(music.projects)
-
-
 export function getProjectsList(projectsListName){
     projectsListName = projectsListName.toLowerCase()
     console.log("titulo en la fx",projectsListName)
