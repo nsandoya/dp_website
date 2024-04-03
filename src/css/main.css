@@ -645,6 +645,11 @@ footer{
 
     #gallery-gen-video{
         width: 100% !important;
+        position: relative;
+        padding-bottom: 56.25%; 
+        height: 0; 
+        overflow: hidden; 
+        margin: 0 auto
     }
 
     .botones-avance{
