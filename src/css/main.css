@@ -354,6 +354,10 @@ dialog{
     background-image: url(../img/black_bg.png)
 }
 
+.ddm-mobile{
+    margin: 0.5rem 0 !important;
+}
+
 .ddm-mobile-d-none{
     display: none
 }
@@ -645,11 +649,11 @@ footer{
 
     #gallery-gen-video{
         width: 100% !important;
-        position: relative;
+        /* position: relative;
         padding-bottom: 56.25%; 
         height: 0; 
         overflow: hidden; 
-        margin: 0 auto
+        margin: 0 auto */
     }
 
     .botones-avance{
