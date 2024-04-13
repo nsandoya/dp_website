@@ -146,7 +146,7 @@ a{
 
 .offcanvas-header{
     h1{
-        font-family: 'BDSans-Black'; 
+        font-family: 'BDSans-Black' !important; 
         font-weight: lighter; 
         line-height:1em; 
         color: var(--main-color-white);
@@ -170,7 +170,7 @@ a{
             line-height:1em; 
             color: var(--main-color-white);
             a{
-                font-family: 'BDSans-Black';
+                font-family: 'BDSans-Black' !important;
                 color: var(--main-color-white);
             }
         }
