@@ -21,7 +21,7 @@ const fotosLista = [
     new Foto({
         id: "1",
         name: "Banning",
-        tag: "Banning",
+        tag: "banning",
         //year: 2020,
         place: "CA"
     }),
