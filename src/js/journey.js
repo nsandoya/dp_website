@@ -201,7 +201,7 @@ const fotosLista = [
         id: "28",
         name: "Culebra",
         tag: "culebra",
-        place: "EC"
+        place: "PR"
     }),
     new Foto({
         id: "29",
