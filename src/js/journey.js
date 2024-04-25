@@ -20,75 +20,218 @@ stills.classList.add("n-active-offcanvas")
 const fotosLista = [
     new Foto({
         id: "1",
-        name: "junior",
-        year: 2020,
-        place: "Guayaquil"
+        name: "Banning",
+        tag: "Banning",
+        //year: 2020,
+        place: "CA"
     }),
     new Foto({
         id: "2",
-        name: "nuria",
-        year: 2022,
-        place: "Manabi"
+        name: "Santa Monica",
+        tag: "santa_monica",
+        //year: 2022,
+        place: "CA"
 
     }),
     new Foto({
         id: "3",
-        name: "las_maravillas",
-        year: 2021,
-        place: "Quito"
+        name: "Santa Monica",
+        tag: "santa_monica",
+        //year: 2021,
+        place: "CA"
 
     }),
     new Foto({
         id: "4",
-        name: "nada_bello",
-        year: 2024,
-        place: "Ambato"
+        name: "Santa Monica",
+        tag: "santa_monica",
+        //year: 2024,
+        place: "CA"
 
     }),
     new Foto({
         id: "5",
-        name: "por_un_momento",
-        year: 2023,
-        place: "Guayaquil"
+        name: "Mar del Plata",
+        tag: "mar_del_plata",
+        //year: 2023,
+        place: "ARG"
 
     }),
     new Foto({
         id: "6",
-        name: "junior",
-        year: 2022,
-        place: "Posorja"
+        name: "Santa Barbara",
+        tag: "santa_barbara",
+        //year: 2022,
+        place: "CA"
 
     }),
     new Foto({
         id: "7",
-        name: "nuria",
-        year: 2018,
-        place: "Cuenca"
+        name: "Los Angeles",
+        tag: "los_angeles",
+        //year: 2018,
+        place: "CA"
 
     }),
     new Foto({
         id: "8",
-        name: "las_maravillas",
-        year: 2019,
-        place: "Guayaquil"
+        name: "San Bernardino",
+        tag: "san_bernardino",
+        //year: 2019,
+        place: "CA"
 
     }),
     new Foto({
         id: "9",
-        name: "nada_bello",
-        year: 2021,
-        place: "Manta"
+        name: "Riverside",
+        tag: "riverside",
+        //year: 2021,
+        place: "CA"
 
     }),
-    /* new Foto({
+    new Foto({
         id: "10",
-        name: "por_un_momento",
-
-    }), */
+        name: "Santo Domingo",
+        tag: "santo_domingo",
+        place: "EC"
+    }),
+    new Foto({
+        id: "11",
+        name: "Sherman Oaks",
+        tag: "sherman_oaks",
+        place: "LA"
+    }),
+    new Foto({
+        id: "12",
+        name: "Van Nuys",
+        tag: "van_nuys",
+        place: "LA"
+    }),
+    new Foto({
+        id: "13",
+        name: "Van Nuys",
+        tag: "van_nuys",
+        place: "LA"
+    }),
+    new Foto({
+        id: "14",
+        name: "Santa Barbara",
+        tag: "santa_barbara",
+        place: "CA"
+    }),
+    new Foto({
+        id: "15",
+        name: "Los Ángeles",
+        tag: "los_angeles",
+        place: "CA"
+    }),
+    new Foto({
+        id: "16",
+        name: "Fontana",
+        tag: "fontana",
+        place: "CA"
+    }),
+    new Foto({
+        id: "17",
+        name: "San Bernardino",
+        tag: "san_bernardino",
+        place: "CA"
+    }),
+    new Foto({
+        id: "18",
+        name: "San Bernardino",
+        tag: "san_bernardino",
+        place: "CA"
+    }),
+    new Foto({
+        id: "19",
+        name: "Saõ Paulo",
+        tag: "sao_paulo",
+        place: "BRA"
+    }),
+    new Foto({
+        id: "20",
+        name: "Las Vegas",
+        tag: "las_vegas",
+        place: "NV"
+    }),
+    new Foto({
+        id: "21",
+        name: "Saõ Paulo",
+        tag: "sao_paulo",
+        place: "BRA"
+    }),
+    new Foto({
+        id: "22",
+        name: "Los Ángeles",
+        tag: "los_angeles",
+        place: "CA"
+    }),
+    new Foto({
+        id: "23",
+        name: "Guayaquil",
+        tag: "guayaquil",
+        place: "EC"
+    }),
+    new Foto({
+        id: "24",
+        name: "Los Ángeles",
+        tag: "los_angeles",
+        place: "CA"
+    }),
+    new Foto({
+        id: "25",
+        name: "Los Ángeles",
+        tag: "los_angeles",
+        place: "CA"
+    }),
+    new Foto({
+        id: "26",
+        name: "Los Ángeles",
+        tag: "los_angeles",
+        place: "CA"
+    }),
+    new Foto({
+        id: "27",
+        name: "Galapagos Island",
+        tag: "galapagos",
+        place: "EC"
+    }),
+    new Foto({
+        id: "28",
+        name: "Culebra",
+        tag: "culebra",
+        place: "EC"
+    }),
+    new Foto({
+        id: "29",
+        name: "Ocean Park",
+        tag: "ocean_park",
+        place: "PR"
+    }),
+    new Foto({
+        id: "30",
+        name: "Saõ Paulo",
+        tag: "sao_paulo",
+        place: "BRA"
+    }),
+    new Foto({
+        id: "31",
+        name: "Guayaquil",
+        tag: "guayaquil",
+        place: "EC"
+    }),
+    new Foto({
+        id: "32",
+        name: "Guayaquil",
+        tag: "guayaquil",
+        place: "EC"
+    }),
 ]
 // Añadir urls a c/foto
 fotosLista.forEach((foto)=>{
-    foto.aggUrl()
+    foto.aggUrlJourney();
+    //console.log("url",foto.url)
 })
 // Crear galería
 const galeria = new Galeria({
@@ -106,25 +249,25 @@ ddMenuMobile()
 // Fx para navegar la galería
 function prevSwipe(itemID, photoInfo, imgModal){
     //itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
-    console.log(itemID)
+    //console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
     //let info = galeria.fotos.find(foto => `${foto.place}, ${foto.year}` == photoInfo)
     let fotoUsar = foto[0]
     //console.log(fotoUsar.url)
-    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+    photoInfo = `${fotoUsar.name}, ${fotoUsar.place}`
     imgModal.src = fotoUsar.url
     pieDeFoto.innerHTML = photoInfo
     
 }
 function nextSwipe(itemID, photoInfo, imgModal){
     //itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
-    console.log(itemID)
+    //console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
     let fotoUsar = foto[0]
     console.log(fotoUsar.url)
     imgModal.src = fotoUsar.url
 
-    photoInfo = `${fotoUsar.place}, ${fotoUsar.year}`
+    photoInfo = `${fotoUsar.name}, ${fotoUsar.place}`
     imgModal.src = fotoUsar.url
     pieDeFoto.innerHTML = photoInfo
     
@@ -146,7 +289,8 @@ openModal.forEach(item=>{
             <button id="closeModal"  style="width: 100px; height: 50px;"><i class="bi bi-x-lg"></i></button>
             <div style="display:grid; grid-template-columns: 1fr; grid-template-rows: fit-content 1fr">
 
-            <img id="img-modal" src=${url} alt="" style="width: 80%; max-width: 85%; justify-self: center; align-self: end; border-radius: 10px">
+            <img id="img-modal" src=${url} alt="" style="max-height: 90vh;
+            width: auto; max-width: 85%; justify-self: center; align-self: end; border-radius: 10px; transition: all 1s ease-in">
             
             <span id="pieDeFoto" class="text-white text-center text-uppercase mt-3">${item.getAttribute('data-info')}</span>
             </div>

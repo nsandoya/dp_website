@@ -11,7 +11,7 @@ const prev = document.querySelector("#prev")
 const next = document.querySelector("#next")
 
 let projectsListName = document.title;
-console.log("titulo de la pag", projectsListName)
+//console.log("titulo de la pag", projectsListName)
 let projectsList = getProjectsList(projectsListName)
 let prLista = []
 projectsList.forEach((pr)=>{
@@ -22,14 +22,14 @@ let itemID = 0
 if (localStorage.getItem('projectID')){
     itemID = localStorage.getItem('projectID'); 
 }
-console.log(parseInt(itemID))
-console.log("Lista de proyectos", projectsList)
+//console.log(parseInt(itemID))
+//console.log("Lista de proyectos", projectsList)
 
 // No usar estas dos fx
 function saveProjectTitle(){
     item.addEventListener('click', ()=>{
         let idProject = item.querySelector(".project-title-gallery h2")
-        /* console.log(idProject.innerText) */
+        /* //console.log(idProject.innerText) */
         localStorage.setItem('project', idProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
 
     })
@@ -75,7 +75,7 @@ function renderVideo(){
 
     let currentProject = prLista.find((item)=>item.id == itemID)
     let videoURL = currentProject.urlvideo
-    console.log("video container", videoContainer)
+    //console.log("video container", videoContainer)
     
     videoContainer.src = videoURL
 
@@ -86,7 +86,7 @@ renderVideo()
 
 prev.addEventListener('click', ()=>{
     itemID = parseInt(itemID) > 0 ? parseInt(itemID) - 1 : prLista.length-1 ;
-    console.log("Retrocede desde",itemID)
+    //console.log("Retrocede desde",itemID)
     let project = prLista[parseInt(itemID)] // Aquí cambiamos itemID - 1 por itemID
    
     if (project !== undefined) {
@@ -95,14 +95,14 @@ prev.addEventListener('click', ()=>{
         localStorage.setItem('projectURL',project.urlvideo)
         renderVideo()
     } else {
-        console.log('No hay proyecto en el índice', itemID);
+        //console.log('No hay proyecto en el índice', itemID);
     }
 })
 
 next.addEventListener('click', ()=>{
     itemID = parseInt(itemID) < prLista.length - 1 ? parseInt(itemID) + 1 : 0;
 
-    console.log("Avanza desde",itemID)
+    //console.log("Avanza desde",itemID)
     let project = prLista[parseInt(itemID)] // Aquí cambiamos itemID - 1 por itemID
     if (project !== undefined) {
         localStorage.setItem('projectID',project.id)
@@ -110,7 +110,7 @@ next.addEventListener('click', ()=>{
         localStorage.setItem('projectURL',project.urlvideo)
         renderVideo()
     } else {
-        console.log('No hay proyecto en el índice', itemID);
+        //console.log('No hay proyecto en el índice', itemID);
     }
     
 })

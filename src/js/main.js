@@ -30,7 +30,7 @@ narrative.renderProjects()
 const projectTitle = document.querySelectorAll(".project-title-gallery")
 export function touchTitle(lastTouchedTitle,item){
     item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
         let title = item.querySelector(".project-title-gallery h2");
         title.classList.add("project-title-transition");
 
@@ -43,13 +43,13 @@ export function touchTitle(lastTouchedTitle,item){
     })
 
     /* item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
         //item.style.transition = "all 0.3s cubic-bezier(.82,.42,.44,1) !important;"
     })
     item.addEventListener('touchend', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
 
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
         // item.querySelector(".project-title-gallery h2").classList.remove("project-title-transition"); 
@@ -60,7 +60,7 @@ export function touchTitle(lastTouchedTitle,item){
 let lastTouchedTitle = null;
 projectTitle.forEach(item => {
     item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
         let title = item.querySelector(".project-title-gallery h2");
         title.classList.add("project-title-transition");
 
@@ -73,7 +73,7 @@ projectTitle.forEach(item => {
     })
 
     /* item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
         if (lastTouchedTitle) {
             lastTouchedTitle.classList.add("no-display-title");
         }
@@ -85,13 +85,13 @@ projectTitle.forEach(item => {
 
     
     /* item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
         
     })
     item.addEventListener('touchend', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
 
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
         

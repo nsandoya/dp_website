@@ -24,7 +24,7 @@ const projectTitle = document.querySelectorAll(".project-title-gallery")
 let lastTouchedTitle = null;
 projectTitle.forEach(item => {
     item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
         let title = item.querySelector(".project-title-gallery h2");
         title.classList.add("project-title-transition");
 

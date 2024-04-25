@@ -126,7 +126,7 @@ musicProjectsList.forEach((project)=>{
 
 export function getProjectsList(projectsListName){
     projectsListName = projectsListName.toLowerCase()
-    console.log("titulo en la fx",projectsListName)
+    //console.log("titulo en la fx",projectsListName)
     let projectsList 
     switch (projectsListName) {
         case "narrative":
@@ -139,13 +139,13 @@ export function getProjectsList(projectsListName){
             projectsList = music.projects
             break;
     };
-    console.log("Lista obtenida",projectsList)
+    //console.log("Lista obtenida",projectsList)
     return projectsList
 }
 
 export function getProjectGallery(projectName){
     projectName = projectName.toLowerCase()
-    console.log("titulo de la galería",projectName)
+    //console.log("titulo de la galería",projectName)
     let projectGallery 
     switch (projectName) {
         case "narrative":
@@ -158,6 +158,6 @@ export function getProjectGallery(projectName){
             projectGallery = music
             break;
     };
-    console.log("Galería obtenida",projectGallery)
+    //console.log("Galería obtenida",projectGallery)
     return projectGallery
 }

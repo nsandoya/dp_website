@@ -53,7 +53,7 @@ export function ddMenuMobile(){
 
 export function touchTitle(lastTouchedTitle, item){
     item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
         let title = item.querySelector(".project-title-gallery h2");
         title.classList.add("project-title-transition");
 
@@ -65,12 +65,12 @@ export function touchTitle(lastTouchedTitle, item){
         lastTouchedTitle = title;
     })
     /* item.addEventListener('touchstart', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
         item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
         item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
     })
     item.addEventListener('touchend', ()=>{
-        console.log("Cambio en el título (touch)")
+        //console.log("Cambio en el título (touch)")
 
         item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
         
@@ -144,8 +144,8 @@ export function navbarResponsive(){
     `
     const itemsNavbar = document.querySelectorAll("ul li a")
     itemsNavbar.forEach((item)=>{
-        console.log("titulo pagina", pageTitle)
-        console.log(item)
+        //console.log("titulo pagina", pageTitle)
+        //console.log(item)
         if(item.classList.contains(pageTitle.toLowerCase())){
             item.classList.add("n-active")
         }
@@ -212,8 +212,8 @@ export function navbarStillsResponsive(){
     const itemsNavbar = document.querySelectorAll("ul li a")
     const stills = document.querySelector(".stills")
     itemsNavbar.forEach((item)=>{
-        //console.log("titulo pagina", pageTitle)
-        //console.log(item)
+        ////console.log("titulo pagina", pageTitle)
+        ////console.log(item)
         //item.classList.add()
         if(item.classList.contains(pageTitle.toLowerCase())){
             item.classList.add("n-active")
@@ -221,7 +221,7 @@ export function navbarStillsResponsive(){
     })
 
     const navbar = document.querySelector("nav")
-    //console.log("navbar", pageTitle.toLowerCase())
+    ////console.log("navbar", pageTitle.toLowerCase())
     if(pageTitle.toLowerCase() == "contact" ){
         navbar.classList.remove("bg-white")
         navbar.classList.add("bg-transparent")
@@ -236,7 +236,7 @@ export function navbarStillsResponsive(){
     } */
     function navbarChanges(){
         if(window.innerWidth <= 720){
-            //console.log("ancho de pantalla", window.innerWidth)
+            ////console.log("ancho de pantalla", window.innerWidth)
             navbar.classList.remove("bg-white")
             navbar.classList.add("bg-transparent")
         }else if(window.innerWidth > 720 && pageTitle.toLowerCase() != "contact"){
@@ -308,7 +308,7 @@ export function offcanvasActiveItem(){
     const offcanvas = document.querySelector(".offcanvas")
     const offcanvasItems = offcanvas.querySelectorAll("ul li a")
 
-    //console.log("page title",pageTitle)
+    ////console.log("page title",pageTitle)
     offcanvasItems.forEach((item)=>{
         if(item.innerHTML == pageTitle){
             item.classList.add("n-active-offcanvas")
@@ -324,21 +324,21 @@ export function offcanvasActiveItem(){
 // NO USAR
 
 function touchMobile(item){
-    console.log("TOCADO")
+    //console.log("TOCADO")
     let h2 = document.querySelector(`#${item}`)
     h2.preventDefault()
     h2.style.opacity = "1";
 }
 // Titulos de proyectos en mobile
 function titulosMobile(){
-    console.log("funciona la fx mobile")
+    //console.log("funciona la fx mobile")
     const titulosMobile = document.querySelectorAll(".project-title")
     titulosMobile.forEach((titulo)=>{
-        console.log("funciona el foreach")
+        //console.log("funciona el foreach")
         /* var hammertime = new Hammer(titulo);
         hammertime.on('swipeleft', function(e) {
             // Muestra la siguiente imagen
-            console.log("tocó titulo")
+            //console.log("tocó titulo")
             touchMobile(titulo)
         }) */;
     })
@@ -347,10 +347,10 @@ function titulosMobile(){
         var hammertime = new Hammer(titulo);
         hammertime.on('swipeleft', function(e) {
             // Muestra la siguiente imagen
-            console.log("tocó titulo")
+            //console.log("tocó titulo")
             touchMobile(titulo)
         });
     }) */
-    /* console.log("toco título")
+    /* //console.log("toco título")
     titulo.addEventListener('touchstart', touchMobile(titulo)) */
 }

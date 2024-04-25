@@ -5,9 +5,10 @@ const galeriaGen = document.querySelector(".gallery-gen img")
 const imgSlidewhow = document.querySelector(".modal-container img")
 
 export class Foto{
-    constructor({id, name, year="", place= "", url}){
+    constructor({id, name, tag, year="", place= "", url}){
         this.id = id,
         this.name = name,
+        this.tag = tag,
         this.year = year,
         this.place = place,
         this.url = url
@@ -17,7 +18,7 @@ export class Foto{
         this.url = `../src/img/${this.name}.png`
     }
     aggUrlJourney(){
-        this.url = `../src/img/${this.name}.png`
+        this.url = `../src/img/journal/${this.id}_${this.tag}.webp`
     }
     aggUrlSeries(){
         this.url = `../src/img/mirada_en_pausa/${this.name}.webp`
@@ -58,7 +59,7 @@ export class ProjectGallery{
         contenedor.innerHTML = "";
         lista.forEach(
             (project)=>{
-                console.log(project)
+                //console.log(project)
                 let id = project.id
                 let claseAux = ""
                 if(project.title.toLowerCase() === "por un momento") {
@@ -102,9 +103,9 @@ export class Galeria{
         galleryContainer.innerHTML = "";
         listaParaRender.forEach(
             (foto)=>{
-                console.log(foto.id) 
+                //console.log(foto.id) 
                 
-                galleryContainer.innerHTML += `<div id=${foto.id} class="openModal col-sm-1 col-md-4 mt-2 mx-1 img-gallery" data-info="${foto.place} ${foto.year}" style="background-image: url(${foto.url});" >           
+                galleryContainer.innerHTML += `<div id=${foto.id} class="openModal col-sm-1 col-md-4 mt-2 mx-1 img-gallery" data-info="${foto.name}, ${foto.place}" style="background-image: url(${foto.url});" >           
                 </div>`
                 /* Añadirle luego la comita a data-info! */
         })

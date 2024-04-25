@@ -95,7 +95,7 @@ function subirFotos(fotosLista, numeroDeFotos){
 }
 
 subirFotos(fotosListaAct, 32)
-console.log("fotos nuevas",fotosListaAct)
+//console.log("fotos nuevas",fotosListaAct)
 // Añadir urls a c/foto
 fotosListaAct.forEach((foto)=>{
     foto.aggUrlSeries()
@@ -112,7 +112,7 @@ galeria.renderFotos()
 
 // Fx para navegar la galería
 function prevSwipe(itemID, photoInfo, imgModal){
-    console.log(itemID)
+    //console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
     let fotoUsar = foto[0]
     photoInfo = `${fotoUsar.place} ${fotoUsar.year}` // Añadirle luego la coma 
@@ -121,10 +121,10 @@ function prevSwipe(itemID, photoInfo, imgModal){
     
 }
 function nextSwipe(itemID, photoInfo, imgModal){
-    console.log(itemID)
+    //console.log(itemID)
     let foto = galeria.fotos.filter(foto => foto.id == itemID);
     let fotoUsar = foto[0]
-    console.log(fotoUsar.url)
+    //console.log(fotoUsar.url)
     imgModal.src = fotoUsar.url
 
     photoInfo = `${fotoUsar.place} ${fotoUsar.year}` // Añadirle luego la coma 
