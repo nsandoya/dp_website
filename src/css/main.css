@@ -2,25 +2,25 @@
 @font-face{
     font-family: 'BDSans-Black';
     src: url(../fonts/BDSans-Black.ttf);
-    font-display: swap;
+    /* font-display: swap; */
 
 }
 @font-face{
     font-family: 'Roboto-Light';
     src: url(../fonts/Roboto-Light.ttf);
-    font-display: swap;
+    /* font-display: swap; */
 
 }
 @font-face{
     font-family: 'Roboto-Bold';
     src: url(../fonts/Roboto-Bold.ttf);
-    font-display: swap;
+    /* font-display: swap; */
 
 }
 @font-face{
     font-family: 'Syne';
     src: url(../fonts/Syne-VariableFont_wght.ttf);
-    font-display: swap;
+    /* font-display: swap; */
 
 }
 
@@ -742,18 +742,6 @@ footer{
 }
 
 @media (max-width: 720px){
-    /* .project-title-sm{
-        opacity: 0;
-    }
-    .project-title-sm:hover{
-        opacity: 1;
-    } */
-    /* .init_banner{
-        .name{
-            height: 70%;
-            margin-bottom: 2rem;
-        }
-    } */
 
 
     .prev, .next{
@@ -849,17 +837,10 @@ footer{
     }
     .banner-content{
         margin-left: 0.3rem !important;
-        /* h1{
-            padding-left: 0 !important;
-            line-height: 3.5rem !important;
-            margin-inline: 0 !important;
-        } */
+
     }
 
     .name{
-        /* height: 80%;
-        align-self: end;
-        margin-inline: 0  !important; */
 
         h1{
             padding-left: 0 !important;
@@ -868,27 +849,16 @@ footer{
         };
         
     }
-    /* .init_banner{
-        h3{
-            margin-left: 1.5rem !important;
-        }
-    } */
 
-    .img-container{
-        h2{ 
-            opacity: 0 !important;
-            font-size: 2.5rem !important;
-            justify-self: center !important;
-            text-align: center !important;
-            margin: 0 !important;
-            /* padding-inline: 3rem; */
-        }
+    .img-container h2{ 
+        opacity: 0 !important;
+        font-size: 2.5rem !important;
+        justify-self: center !important;
+        text-align: center !important;
+        margin: 0 !important;
+        /* padding-inline: 3rem; */
     }
 
-
-    /* .project-title-sm{
-        display: inline-block;
-    } */
     .prev{
         justify-self: start;
         left: 0% !important;
