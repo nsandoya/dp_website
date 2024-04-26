@@ -37,7 +37,7 @@ export class Project{
     }
 
     addUrl(){
-        this.url = `../src/img/${this.name}.png`
+        this.url = `../src/img/${this.name}.webp`
     }
 }
 
