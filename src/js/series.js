@@ -175,12 +175,12 @@ openModal.forEach(item=>{
             itemID = parseInt(itemID) > 1 ? parseInt(itemID) - 1 : galeria.fotos.length;
             prevSwipe(itemID, photoInfo, imgModal)
             
-        })
+        }, {passive: true})
         next.addEventListener('click', ()=>{
             itemID = parseInt(itemID) < galeria.fotos.length ? parseInt(itemID) + 1 : 1;
             nextSwipe(itemID, photoInfo, imgModal)
             
-        })
+        }, {passive: true})
         
        
         const closeModal = document.querySelector("#closeModal")
@@ -188,7 +188,7 @@ openModal.forEach(item=>{
             modalDialog.close()
             modalDialog.innerHTML = ""
             modalDialog.classList.add("nodisplay")        
-        })
+        }, {passive: true})
         
         // Crea una nueva instancia de Hammer en tu imagen modal
         var hammertime = new Hammer(imgModal);

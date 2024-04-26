@@ -1,10 +1,6 @@
 import { getProjectGallery } from "./allProjects.js"
 import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem} from "./layoutElements.js"
 
-/* document.addEventListener('DOMContentLoaded', (event) => {
-    
-    
-}); */
 
 init_banner()
 
@@ -40,20 +36,8 @@ export function touchTitle(lastTouchedTitle,item){
         
         title.classList.remove("no-display-title");
         lastTouchedTitle = title;
-    })
+    }, {passive: true})
 
-    /* item.addEventListener('touchstart', ()=>{
-        //console.log("Cambio en el título (touch)")
-        item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
-        item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
-        //item.style.transition = "all 0.3s cubic-bezier(.82,.42,.44,1) !important;"
-    })
-    item.addEventListener('touchend', ()=>{
-        //console.log("Cambio en el título (touch)")
-
-        item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
-        // item.querySelector(".project-title-gallery h2").classList.remove("project-title-transition"); 
-    }) */
 }
 
 
@@ -70,32 +54,7 @@ projectTitle.forEach(item => {
         
         title.classList.remove("no-display-title");
         lastTouchedTitle = title;
-    })
-
-    /* item.addEventListener('touchstart', ()=>{
-        //console.log("Cambio en el título (touch)")
-        if (lastTouchedTitle) {
-            lastTouchedTitle.classList.add("no-display-title");
-        }
-        let title = item.querySelector(".project-title-gallery h2");
-        title.classList.add("project-title-transition");
-        title.classList.remove("no-display-title");
-        lastTouchedTitle = title;
-    }) */
-
-    
-    /* item.addEventListener('touchstart', ()=>{
-        //console.log("Cambio en el título (touch)")
-        item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
-        item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
-        
-    })
-    item.addEventListener('touchend', ()=>{
-        //console.log("Cambio en el título (touch)")
-
-        item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
-        
-    }) */
+    }, {passive: true})
 
     
     item.addEventListener('click', ()=>{
@@ -104,7 +63,7 @@ projectTitle.forEach(item => {
         localStorage.setItem('project', titleProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
         //localStorage.setItem('projectsCategory', "narrative") 
         localStorage.setItem('projectID', titleProject.dataset.idproject)
-    })
+    }, {passive: true})
 
 })
 
@@ -115,7 +74,7 @@ projects.forEach(
     (project) => {
         project.addEventListener('click', ()=>{
             window.location.href = "./projects-narrative.html"
-        })
+        }, {passive: true})
     }
 )
 

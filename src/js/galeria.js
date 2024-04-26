@@ -15,7 +15,7 @@ export class Foto{
     }
 
     aggUrl(){
-        this.url = `../src/img/${this.name}.png`
+        this.url = `../src/img/${this.name}.webp`
     }
     aggUrlJourney(){
         this.url = `../src/img/journal/${this.id}_${this.tag}.webp`
@@ -78,16 +78,11 @@ export class ProjectGallery{
                         </div>
                     </div>
                 `
-                /* <h2 class="project-title-sm text-uppercase" style="font-family: 'BDSans-Black'; color: var(--main-color-white); width:35%;position: absolute; font-size: 1rem; align-self: end; justify-self: start; text-align: left; margin-bottom: 20px; margin-left: 15px;" data-idProject='${project.id}'>
-                            ${project.title}
-                            </h2> */
                 
             }
         )
     }
 }
-
-
 
 export class Galeria{
     constructor({fotos=[], categoria=""}){
