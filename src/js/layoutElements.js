@@ -92,26 +92,26 @@ export function navbarResponsive(){
             <div class="col-lg-2 col-md-0"></div>
             <div class="col-lg-7 col-md-9 text-center">
                 <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-white)">
-                <li class="col "><a href="./index.html" class="narrative">Narrative</a></li>
-                <li class="col "><a href="./commercials.html" class="commercials">Commercials</a></li>
-                <li class="col "><a href="./music.html" class="music">Music</a></li>
+                <li class="col "><a href="/" class="narrative">Narrative</a></li>
+                <li class="col "><a href="./commercials" class="commercials">Commercials</a></li>
+                <li class="col "><a href="./music" class="music">Music</a></li>
                 <!-- <li class="col "><a href="" class="stills">Stills</a></li> -->
                 <li class="dropdown" style="width: min-content !important;">
-                    <a class="dropdown-toggle text-uppercase" href="./index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="dropdown-toggle text-uppercase" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Stills
                     </a>
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.5;">
-                    <li><a class="ms-3" href="./journal.html" style="color: var(--main-color-white);">Journal</a></li>
+                    <li><a class="ms-3" href="./journal" style="color: var(--main-color-white);">Journal</a></li>
                     <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
-                    <li><a class="ms-3" href="./series.html" style="color: var(--main-color-white);">Series</a></li>
+                    <li><a class="ms-3" href="./series" style="color: var(--main-color-white);">Series</a></li>
                     </ul>
                 </li>
                 
-                <li class="col "><a href="./contact.html" class="contact">Contact</a></li>
+                <li class="col "><a href="./contact" class="contact">Contact</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 text-end">
-                <a class="navbar-brand  pt-0 d-none d-sm-none d-md-grid " href="#">
+                <a class="navbar-brand  pt-0 d-none d-sm-none d-md-grid " href="./index">
                 <h1 class="fs-5 mb-0 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Dominique</h1>
                 <h1 class="fs-5 mb-0 text-uppercase text-end mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Pazmiño</h1>
                 <h1 class="fs-5 mb-0 text-uppercase text-end mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Ríos</h1>
@@ -121,7 +121,7 @@ export function navbarResponsive(){
                 
                 <div class="row">
                 <!-- <span class="navbar-toggler-icon"></span> -->
-                <a href="./index.html" class="d-md-none col-6 text-start">
+                <a href="./index" class="d-md-none col-6 text-start">
                 <h1 class="display-5 d-inline-block  mb-0 text-uppercase mb-2 pe-0 text-start" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)">DP</h1>
                 </a>
 
@@ -167,22 +167,22 @@ export function navbarStillsResponsive(){
                 <div class="col-lg-2 col-md-0"></div>
                 <div class="col-lg-7 col-md-9 text-center">
                 <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-golden) !important; margin-bottom:0; margin-top:0.3rem">
-                    <li class="col"><a href="./index.html" class="narrative" style="color: var(--main-color-black);">Narrative</a></li>
-                    <li class="col"><a href="./commercials.html" class="commercial" style="color: var(--main-color-black);">Commercials</a></li>
-                    <li class="col"><a href="./music.html" class="music" style="color: var(--main-color-black);">Music</a></li>
+                    <li class="col"><a href="./index" class="narrative" style="color: var(--main-color-black);">Narrative</a></li>
+                    <li class="col"><a href="./commercials" class="commercial" style="color: var(--main-color-black);">Commercials</a></li>
+                    <li class="col"><a href="./music" class="music" style="color: var(--main-color-black);">Music</a></li>
                     <!-- <li class="col"><a href="">Stills</a></li> -->
                     <li class="dropdown" style="width: min-content !important; ">
                     <a class="stills dropdown-toggle text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--main-color-black);">
                         Stills
                     </a>
                     <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown" style="opacity: 0.95;">
-                        <li><a class="journal ms-3" href="./journal.html" style="color: var(--main-color-white);">Journal</a></li>
+                        <li><a class="journal ms-3" href="./journal" style="color: var(--main-color-white);">Journal</a></li>
                         <li class="dropdown-divider" style="color: var(--main-color-white);"><hr></li>
-                        <li><a class="series ms-3" href="./series.html" style="color: var(--main-color-white);">Series</a></li>
+                        <li><a class="series ms-3" href="./series" style="color: var(--main-color-white);">Series</a></li>
                     </ul>
                     </li>
                     
-                    <li class="col"><a href="./contact.html" class="contact" style="color: var(--main-color-black);">Contact</a></li>
+                    <li class="col"><a href="./contact" class="contact" style="color: var(--main-color-black);">Contact</a></li>
                 </ul>
                 </div>
                 <div class="row col-lg-3 col-md-3 text-end">
@@ -195,7 +195,7 @@ export function navbarStillsResponsive(){
                     <h1 class="fs-3 text-uppercase mb-4 mb-md-2 pe-0 text-end" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)"><i class="bi bi-list" style="color:var(--main-color-yellow)"></i></h1>
                 </button>
                 <!-- Botón que dirige al Home -->
-                <a href="./index.html">
+                <a href="./index">
                     <button class="d-none d-md-inline-block col border-0 pe-0" type="button" style="background-color: transparent;">
                     <h1 class="fs-3 text-uppercase mb-4 mb-md-2 pe-0 text-end" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)">DP</h1>
                     </button>
