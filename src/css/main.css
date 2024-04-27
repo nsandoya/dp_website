@@ -962,7 +962,7 @@ footer{
         img{
             max-width: 100% !important;
             position: relative;
-            /* bottom: 3% !important; */
+            /* bottom: 3% !important; */ /* para commit */
         }
     }
 
