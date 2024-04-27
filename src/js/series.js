@@ -154,7 +154,7 @@ openModal.forEach(item=>{
             <img id="img-modal" src=${url} alt="" style="max-height: 100vh;
             width: auto; max-width: 85%; justify-self: center; align-self: end; border-radius: 10px; transition: all 1s ease-in">
             
-            <span id="pieDeFoto" class="text-white text-center text-uppercase mt-3">${item.getAttribute('data-info')}</span>
+            <span id="pieDeFoto" class="text-white text-center text-uppercase mt-3"></span>
             </div>
 
             <button class="prev"><i class="bi bi-caret-left-fill icon-size"></i></button>
