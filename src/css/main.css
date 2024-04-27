@@ -222,8 +222,8 @@ a{
 
 .init_banner_sm, .init_banner_lg{
     z-index: 3;
-    width: 100%;
-    max-width: 100% !important;
+    /* width: 100%;
+    max-width: 100% !important; */
     height: 100%;
     overflow-y: hidden;
     transform: translateY(0);
@@ -732,7 +732,7 @@ footer{
         max-width: 100vw;
         max-height: 100vh;
         img{
-            width: 100vw ;
+            /* width: 100vw ; */
             height: 100%;
             /* position: relative;
             bottom: 40% !important; */
@@ -960,9 +960,9 @@ footer{
 @media (max-width: 520px){
     .init_banner_sm{
         img{
-            max-width: 100% !important;
+            /* max-width: 100% !important; */
             position: relative;
-            /* bottom: 3% !important; */ /* para commit */
+            bottom: 3% !important; 
         }
     }
 
