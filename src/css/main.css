@@ -222,6 +222,8 @@ a{
 
 .init_banner_sm, .init_banner_lg{
     z-index: 3;
+    width: 100%;
+    max-width: 100% !important;
     height: 100%;
     overflow-y: hidden;
     transform: translateY(0);
@@ -960,7 +962,7 @@ footer{
         img{
             max-width: 100% !important;
             position: relative;
-            bottom: 3% !important;
+            /* bottom: 3% !important; */
         }
     }
 
