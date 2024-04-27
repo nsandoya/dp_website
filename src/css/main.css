@@ -722,7 +722,7 @@ footer{
         display: inline-block !important ;
     }
     .init_banner_lg{
-        display: none ;
+        display: none !important;
     }
     .init_banner_sm, .init_banner_lg{
         width: 100vw;
@@ -730,14 +730,14 @@ footer{
         max-width: 100vw;
         max-height: 100vh;
         img{
-            width: 100vw !important;
+            width: 100vw ;
             height: 100%;
             /* position: relative;
             bottom: 40% !important; */
         }
-        h1{
+        /* h1{
             font-size: 6rem;
-        }
+        } */
     }
 }
 
@@ -959,7 +959,7 @@ footer{
     .init_banner_sm{
         img{
             position: relative;
-            /* bottom: 3% !important; */
+            bottom: 3% !important;
         }
     }
 

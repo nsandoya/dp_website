@@ -36,7 +36,7 @@ export function touchTitle(lastTouchedTitle,item){
         
         title.classList.remove("no-display-title");
         lastTouchedTitle = title;
-    }, {passive: true})
+    }/* , {passive: true} */)
 
 }
 
@@ -54,7 +54,7 @@ projectTitle.forEach(item => {
         
         title.classList.remove("no-display-title");
         lastTouchedTitle = title;
-    }, {passive: true})
+    }/* , {passive: true} */)
 
     
     item.addEventListener('click', ()=>{
@@ -63,7 +63,7 @@ projectTitle.forEach(item => {
         localStorage.setItem('project', titleProject.innerText) // Se crea una variable en el local storage, y se le asigna el título del proyecto como valor
         //localStorage.setItem('projectsCategory', "narrative") 
         localStorage.setItem('projectID', titleProject.dataset.idproject)
-    }, {passive: true})
+    }/* , {passive: true} */)
 
 })
 
@@ -74,7 +74,7 @@ projects.forEach(
     (project) => {
         project.addEventListener('click', ()=>{
             window.location.href = "./projects-narrative.html"
-        }, {passive: true})
+        }/* , {passive: true} */)
     }
 )
 

@@ -64,17 +64,6 @@ export function touchTitle(lastTouchedTitle, item){
         title.classList.remove("no-display-title");
         lastTouchedTitle = title;
     })
-    /* item.addEventListener('touchstart', ()=>{
-        //console.log("Cambio en el título (touch)")
-        item.querySelector(".project-title-gallery h2").classList.add("project-title-transition");
-        item.querySelector(".project-title-gallery h2").classList.remove("no-display-title");
-    })
-    item.addEventListener('touchend', ()=>{
-        //console.log("Cambio en el título (touch)")
-
-        item.querySelector(".project-title-gallery h2").classList.add("no-display-title");
-        
-    }) */
 }
 
 const header = document.querySelector("header")
@@ -111,7 +100,7 @@ export function navbarResponsive(){
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 text-end">
-                <a class="navbar-brand  pt-0 d-none d-sm-none d-md-grid " href="./index">
+                <a class="navbar-brand  pt-0 d-none d-sm-none d-md-grid " href="/">
                 <h1 class="fs-5 mb-0 text-uppercase mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Dominique</h1>
                 <h1 class="fs-5 mb-0 text-uppercase text-end mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Pazmiño</h1>
                 <h1 class="fs-5 mb-0 text-uppercase text-end mb-2" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-white)">Ríos</h1>
@@ -167,7 +156,7 @@ export function navbarStillsResponsive(){
                 <div class="col-lg-2 col-md-0"></div>
                 <div class="col-lg-7 col-md-9 text-center">
                 <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-golden) !important; margin-bottom:0; margin-top:0.3rem">
-                    <li class="col"><a href="./index" class="narrative" style="color: var(--main-color-black);">Narrative</a></li>
+                    <li class="col"><a href="/" class="narrative" style="color: var(--main-color-black);">Narrative</a></li>
                     <li class="col"><a href="./commercials" class="commercial" style="color: var(--main-color-black);">Commercials</a></li>
                     <li class="col"><a href="./music" class="music" style="color: var(--main-color-black);">Music</a></li>
                     <!-- <li class="col"><a href="">Stills</a></li> -->
@@ -321,36 +310,3 @@ export function offcanvasActiveItem(){
 }
 
 
-// NO USAR
-
-function touchMobile(item){
-    //console.log("TOCADO")
-    let h2 = document.querySelector(`#${item}`)
-    h2.preventDefault()
-    h2.style.opacity = "1";
-}
-// Titulos de proyectos en mobile
-function titulosMobile(){
-    //console.log("funciona la fx mobile")
-    const titulosMobile = document.querySelectorAll(".project-title")
-    titulosMobile.forEach((titulo)=>{
-        //console.log("funciona el foreach")
-        /* var hammertime = new Hammer(titulo);
-        hammertime.on('swipeleft', function(e) {
-            // Muestra la siguiente imagen
-            //console.log("tocó titulo")
-            touchMobile(titulo)
-        }) */;
-    })
-    
-    /* titulosMobile.forEach((titulo)=>{
-        var hammertime = new Hammer(titulo);
-        hammertime.on('swipeleft', function(e) {
-            // Muestra la siguiente imagen
-            //console.log("tocó titulo")
-            touchMobile(titulo)
-        });
-    }) */
-    /* //console.log("toco título")
-    titulo.addEventListener('touchstart', touchMobile(titulo)) */
-}
