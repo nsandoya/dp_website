@@ -5,6 +5,7 @@ export function init_banner(){
     const init_banner_lg = document.querySelector(".init_banner_lg")
 
     if(window.innerWidth <= 768){
+        console.log(window.innerWidth)
         setTimeout(()=>{
             //banner.classList.remove("init_banner")
             init_banner_sm.classList.add("init_banner_close")
