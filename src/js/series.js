@@ -17,67 +17,67 @@ stills.classList.add("n-active-offcanvas")
 const fotosLista = [
     new Foto({
         id: "1",
-        //name: "mep_1",
+        name: "mep_1",
         /* year: 2024,
         place: "Daule" */
     }),
     new Foto({
         id: "2",
-        //name: "mep_2",
+        name: "mep_2",
         /* year: 2023,
         place: "Tena" */
 
     }),
     new Foto({
         id: "3",
-        //name: "mep_3",
+        name: "mep_3",
         /* year: 2022,
         place: "Riobamba" */
 
     }),
     new Foto({
         id: "4",
-        //name: "mep_4",
+        name: "mep_4",
         /* year: 2021,
         place: "Cuenca" */
 
     }),
     new Foto({
         id: "5",
-        //name: "mep_5",
+        name: "mep_5",
         /* year: 2021,
         place: "Quito" */
 
     }),
     new Foto({
         id: "6",
-        //name: "mep_6",
+        name: "mep_6",
         /* year: 2023,
         place: "Sao Paulo" */
 
     }),
     new Foto({
         id: "7",
-        //name: "mep_7",
+        name: "mep_7",
         /* year: 2018,
         place: "Guayaquil" */
 
     }),
     new Foto({
         id: "8",
-        //name: "mep_8",
+        name: "mep_8",
         /* year: 2022,
         place: "Chicago" */
     }),
     new Foto({
         id: "9",
-        //name: "mep_9",
+        name: "mep_9",
         /* year: 2020,
         place: "Guayaquil" */
     }),
     /* new Foto({
         id: "10",
-        //name: "por_un_momento",
+        name: "por_un_momento",
 
     }), */
 ]
@@ -88,7 +88,7 @@ function subirFotos(fotosLista, numeroDeFotos){
     for(let i = 1; i<=numeroDeFotos; i++){
         let foto = new Foto({
             id: i,
-            //name: `mep_${i}`
+            name: `mep_${i}`
         })
         fotosLista.push(foto)
     }
