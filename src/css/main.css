@@ -958,6 +958,7 @@ footer{
 @media (max-width: 520px){
     .init_banner_sm{
         img{
+            max-width: 100% !important;
             position: relative;
             bottom: 3% !important;
         }
