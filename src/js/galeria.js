@@ -21,7 +21,7 @@ export class Foto{
         this.url = `../src/img/journal/${this.id}_${this.tag}.webp`
     }
     aggUrlSeries(){
-        this.url = `../src/img/mirada_en_pausa/${this.name}.webp`
+        this.url = `../src/img/mirada_en_pausa/${this.name}_${this.id}.webp`
     }
 }
 export class Project{
