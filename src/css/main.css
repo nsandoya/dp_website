@@ -572,6 +572,7 @@ footer{
 /* ESTE ES EL QUE ACTÚA SOBRE LOS TÍTULOS */
 .img-container{
     h2{
+        font-size: 2.5rem !important;
         opacity: 0 !important;
         transition: all 0.25s cubic-bezier(.55,.06,.68,.19) !important;
     }
