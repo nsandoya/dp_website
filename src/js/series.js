@@ -99,6 +99,7 @@ subirFotos(fotosListaAct, 32)
 // Añadir urls a c/foto
 fotosListaAct.forEach((foto)=>{
     foto.aggUrlSeries()
+    console.log("url de foto", foto.url)
 })
 // Crear galería
 const galeria = new Galeria({
