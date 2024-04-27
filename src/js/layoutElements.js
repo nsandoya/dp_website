@@ -111,7 +111,7 @@ export function navbarResponsive(){
                 
                 <div class="row">
                 <!-- <span class="navbar-toggler-icon"></span> -->
-                <a href="./index" class="d-md-none col-6 text-start">
+                <a href="/" class="d-md-none col-6 text-start">
                 <h1 class="display-5 d-inline-block  mb-0 text-uppercase mb-2 pe-0 text-start" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)">DP</h1>
                 </a>
 
@@ -185,7 +185,7 @@ export function navbarStillsResponsive(){
                     <h1 class="fs-3 text-uppercase mb-4 mb-md-2 pe-0 text-end" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)"><i class="bi bi-list" style="color:var(--main-color-yellow)"></i></h1>
                 </button>
                 <!-- Botón que dirige al Home -->
-                <a href="./index">
+                <a href="/">
                     <button class="d-none d-md-inline-block col border-0 pe-0" type="button" style="background-color: transparent;">
                     <h1 class="fs-3 text-uppercase mb-4 mb-md-2 pe-0 text-end" style="font-family: 'BDSans-Black'; font-weight: lighter; line-height:1em; color: var(--main-color-yellow)">DP</h1>
                     </button>
