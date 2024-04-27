@@ -958,9 +958,12 @@ footer{
 }
 
 @media (max-width: 520px){
+    .init_banner_lg{
+        display: none !important;
+    }
     .init_banner_sm{
+        max-width: 100% !important;
         img{
-            /* max-width: 100% !important; */
             position: relative;
             bottom: 3% !important; 
         }
