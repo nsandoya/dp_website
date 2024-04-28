@@ -1,6 +1,32 @@
 // Generar banner inicial
+document.addEventListener("DOMContentLoaded", function() {
+    const init_banner_sm = document.querySelector(".init_banner_sm")
+    const init_banner_lg = document.querySelector(".init_banner_lg")
 
-export function init_banner(){
+    function adjustBannerSize() {
+        if(document.documentElement.clientWidth <= 768){
+            setTimeout(()=>{
+                init_banner_sm.classList.add("init_banner_close")
+                init_banner_lg.classList.remove("init_banner_close")
+            }, 950)
+        }else{
+            setTimeout(()=>{
+                init_banner_lg.classList.add("init_banner_close")
+                init_banner_sm.classList.remove("init_banner_close")
+            }, 950)
+        }
+    }
+
+    // Ajusta el tamaño del banner tan pronto como se carga la página
+    adjustBannerSize();
+
+    // Ajusta el tamaño del banner cada vez que se redimensiona la ventana
+    window.addEventListener('resize', adjustBannerSize);
+    
+});
+
+
+/* export function init_banner(){
     const init_banner_sm = document.querySelector(".init_banner_sm")
     const init_banner_lg = document.querySelector(".init_banner_lg")
 
@@ -34,7 +60,7 @@ export function init_banner(){
         }
     })
     
-}
+} */
 
 
 // Submenu responsive
