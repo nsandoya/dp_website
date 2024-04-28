@@ -4,8 +4,8 @@ export function init_banner(){
     const init_banner_sm = document.querySelector(".init_banner_sm")
     const init_banner_lg = document.querySelector(".init_banner_lg")
 
-    if(window.innerWidth <= 768){
-        console.log(window.innerWidth)
+    if(document.documentElement.clientWidth <= 768){
+        console.log(document.documentElement.clientWidth)
         setTimeout(()=>{
             //banner.classList.remove("init_banner")
             init_banner_sm.classList.add("init_banner_close")
@@ -21,7 +21,7 @@ export function init_banner(){
     }   
 
     window.addEventListener('resize', ()=>{
-        if(window.innerWidth <= 768){
+        if(document.documentElement.clientWidth <= 768){
             setTimeout(()=>{
                 init_banner_sm.classList.add("init_banner_close")
                 init_banner_lg.classList.remove("init_banner_close")
