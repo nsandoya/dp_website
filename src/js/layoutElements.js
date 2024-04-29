@@ -18,10 +18,10 @@ export function adjustBannerSize() {
     }
  
     // Ajusta el tamaño del banner tan pronto como se carga la página
-    adjustBannerSize();
+    //adjustBannerSize();
 
     // Ajusta el tamaño del banner cada vez que se redimensiona la ventana
-    window.addEventListener('resize', adjustBannerSize);
+    //window.addEventListener('resize', adjustBannerSize);
   
 
 export function init_banner(){
@@ -35,7 +35,7 @@ export function init_banner(){
             init_banner_sm.classList.add("init_banner_close")
             //banner.innerHTML=""
         }, 950)
-    }else{
+    }else if (document.documentElement.clientWidth > 768){
         setTimeout(()=>{
             //banner.classList.remove("init_banner")
             init_banner_lg.classList.add("init_banner_close")
@@ -44,7 +44,7 @@ export function init_banner(){
 
     }   
 
-    /* window.addEventListener('resize', ()=>{
+    /*document.documentElement.clientWidth.addEventListener('resize', ()=>{
         if(document.documentElement.clientWidth <= 768){
             setTimeout(()=>{
                 init_banner_sm.classList.add("init_banner_close")
