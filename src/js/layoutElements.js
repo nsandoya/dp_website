@@ -1,7 +1,7 @@
-// Calcula la altura de la ventana gráfica
+/* // Calcula la altura de la ventana gráfica
 let vh = window.innerHeight * 0.01;
 // Establece la propiedad --vh en el documento
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+document.documentElement.style.setProperty('--vh', `${vh}px`); */
 
 // Generar banner inicial    
 export function adjustBannerSize() {
@@ -47,7 +47,7 @@ export function init_banner(){
 
     }   
 
-    /*document.documentElement.clientWidth.addEventListener('resize', ()=>{
+    /* document.documentElement.clientWidth.addEventListener('resize', ()=>{
         if(document.documentElement.clientWidth <= 768){
             setTimeout(()=>{
                 init_banner_sm.classList.add("init_banner_close")
