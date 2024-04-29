@@ -44,7 +44,7 @@ export function init_banner(){
 
     }   
 
-    window.addEventListener('resize', ()=>{
+    /* window.addEventListener('resize', ()=>{
         if(document.documentElement.clientWidth <= 768){
             setTimeout(()=>{
                 init_banner_sm.classList.add("init_banner_close")
@@ -56,7 +56,7 @@ export function init_banner(){
                 init_banner_sm.classList.remove("init_banner_close")
             }, 950)
         }
-    })
+    }) */
     
 } 
 
