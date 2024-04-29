@@ -47,8 +47,8 @@ export function init_banner(){
 
     }   
 
-    document.documentElement.clientWidth.addEventListener('resize', ()=>{
-        if(document.documentElement.clientWidth <= 768){
+    window.addEventListener('resize', ()=>{
+        if(window.innerWidth <= 768){
             setTimeout(()=>{
                 init_banner_sm.classList.add("init_banner_close")
                 init_banner_lg.classList.remove("init_banner_close")
