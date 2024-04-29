@@ -1,8 +1,10 @@
 import { getProjectGallery } from "./allProjects.js"
-import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem} from "./layoutElements.js"
+import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem, adjustBannerSize} from "./layoutElements.js"
 
-
-init_banner()
+document.addEventListener("DOMContentLoaded", function() {
+    //adjustBannerSize()
+    init_banner()
+})
 
 localStorage.setItem('projectsCategory', "narrative") 
 
