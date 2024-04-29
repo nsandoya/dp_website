@@ -221,7 +221,7 @@ a{
 }
 
 .init_banner_sm, .init_banner_lg{
-    z-index: 3;
+    z-index: 2000;
     /* width: 100%;
     max-width: 100% !important; */
     height: 100%;

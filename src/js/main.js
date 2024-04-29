@@ -6,10 +6,10 @@ let vh = window.innerHeight * 0.01;
 // Establece la propiedad --vh en el documento
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-document.addEventListener("DOMContentLoaded", function() {
+/* document.addEventListener("DOMContentLoaded", function() {
     //adjustBannerSize()
-    init_banner()
-})
+}) */
+init_banner()
 
 localStorage.setItem('projectsCategory', "narrative") 
 
