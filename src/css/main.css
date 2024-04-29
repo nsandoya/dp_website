@@ -202,14 +202,14 @@ a{
 .n-active-offcanvas{
     color: var(--main-color-black) !important
 }
-/* .nv-sec{
-    a{
-        color: var(--main-color-golden)
-    }
-} */
 
 .openModal:hover{
     cursor: pointer !important;
+}
+
+
+.init_banner_sm, .init_banner_lg{
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .init_banner_lg{

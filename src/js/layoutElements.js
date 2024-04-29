@@ -1,6 +1,9 @@
-// Generar banner inicial
+// Calcula la altura de la ventana gráfica
+let vh = window.innerHeight * 0.01;
+// Establece la propiedad --vh en el documento
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    
+// Generar banner inicial    
 export function adjustBannerSize() {
          const init_banner_sm = document.querySelector(".init_banner_sm")
          const init_banner_lg = document.querySelector(".init_banner_lg")
