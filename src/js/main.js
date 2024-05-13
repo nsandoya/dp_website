@@ -1,5 +1,5 @@
 import { getProjectGallery } from "./allProjects.js"
-import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem, adjustBannerSize} from "./layoutElements.js"
+import { init_banner, dynamicFooter, ddMenuMobile, navbarResponsive, offcanvasActiveItem} from "./layoutElements.js"
 
 // Calcula la altura de la ventana gráfica
 let vh = window.innerHeight * 0.01;

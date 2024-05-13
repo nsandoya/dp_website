@@ -114,7 +114,7 @@ export function ddMenuMobile(){
 }
 navbarStillsResponsive()
 
-dynamicFooter()
+//dynamicFooter()
 
 navbarStillsResponsive()
 
