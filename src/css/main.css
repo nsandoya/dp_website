@@ -199,6 +199,9 @@ a{
 .n-active{
     color: var(--main-color-yellow) !important
 }
+.n-active-contact{
+    color: var(--main-color-black) !important
+}
 .n-active-offcanvas{
     color: var(--main-color-black) !important
 }
@@ -593,6 +596,12 @@ footer{
 .contact-body{
     background-size: cover; 
     background-repeat: no-repeat;
+    h5{
+        color: var(--main-color-white)
+    }
+    p{
+        color: var(--main-color-black)
+    }
 }
 
 .rrss-projects a{ 
