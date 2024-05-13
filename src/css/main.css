@@ -495,13 +495,15 @@ dialog{
 .contact-grid{
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 25% 1fr 20%;
 }
 
 .contact-items{
     margin: auto 0;
     padding-inline: 5rem;
-    padding-right: 3rem
+    /* max-height: 60%; */
+   /*  padding-right: 3rem */
+
 }
 
 footer{
@@ -715,7 +717,7 @@ footer{
 
     .contact-grid{
         display: grid;
-        grid-template-columns: 1fr 1fr !important;
+        grid-template-columns: 0% 1fr 0% !important;
     }
 }
 
@@ -881,7 +883,7 @@ footer{
 
     .contact-grid{
         display: grid;
-        grid-template-columns: 21% 1fr !important;
+        grid-template-columns: 1fr !important;
     }
 
     .rrss-projects a{
@@ -962,6 +964,9 @@ footer{
     .contact-items{
         padding-inline: 0;
         padding-right: 3rem;
+        padding-left: 3rem !important;
+        padding-top: 1rem !important;
+        grid-template-columns: 25% 1fr 25%;
     }
     
 }
