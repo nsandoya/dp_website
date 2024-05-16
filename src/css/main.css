@@ -141,12 +141,21 @@ a{
 
 }
 .nav-bg, .navbar{
-
     a:hover{
         color: var(--main-color-yellow) !important;   
-
     }
 }
+.contact-e{
+    a:hover{
+        color: var(--main-color-black) !important;   
+    }
+    .dropdown-menu{
+        a:hover{
+            color: var(--main-color-yellow) !important;   
+        }
+    }
+}
+
 
 .offcanvas{
     background-color: var(--main-color-yellow);
@@ -605,7 +614,8 @@ footer{
         color: var(--main-color-white)
     }
     p{
-        color: var(--main-color-black)
+        color: var(--main-color-white)
+
     }
 }
 

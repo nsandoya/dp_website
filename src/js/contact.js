@@ -11,7 +11,7 @@ export function navbarStillsResponsive(){
         <nav class="navbar bg-white navbar-expand-md fixed-top me-md-4" style="height: 50px;z-index: 1;">
         <div class="container-fluid">
             <div class="container-fluid">
-            <div class="row">
+            <div class="row contact-e">
                 <div class="col-lg-2 col-md-0"></div>
                 <div class="col-lg-7 col-md-9 text-center">
                 <ul class="row collapse navbar-collapse align-text-center text-uppercase" style="color: var(--main-color-golden) !important; margin-bottom:0; margin-top:0.3rem">
