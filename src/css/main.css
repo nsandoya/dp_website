@@ -147,7 +147,7 @@ a{
 }
 .contact-e{
     a:hover{
-        color: var(--main-color-black) !important;   
+        color: var(--main-color-yellow) !important;   
     }
     .dropdown-menu{
         a:hover{
