@@ -530,6 +530,9 @@ footer{
         font-family: 'Roboto-Light';
         font-size: 0.9rem;
     }
+    .mailto{
+        color: var(--main-color-black) !important
+    }
 }
 
 .footer-text-initial{
