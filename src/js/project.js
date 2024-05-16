@@ -6,7 +6,8 @@ navbarStillsResponsive()
 offcanvasActiveItem()
 
 
-const titleProject = document.querySelector(".projectTitle")
+//const titleProject = document.querySelector(".projectTitle")
+const titleProject = document.querySelector("#titulo")
 const prev = document.querySelector("#prev")
 const next = document.querySelector("#next")
 
@@ -52,7 +53,7 @@ ddMenuMobile()
 const videoContainer = document.querySelector("iframe")
 function renderVideo(){
     let project = localStorage.getItem('project')
-    titleProject.innerText = project
+    //titleProject.innerText = project
     
     // Obtén los proyectos anterior y siguiente
     let idPrev = parseInt(itemID) > 0 ? parseInt(itemID) - 1 : prLista.length-1 ;
@@ -75,6 +76,11 @@ function renderVideo(){
 
     let currentProject = prLista.find((item)=>item.id == itemID)
     let videoURL = currentProject.urlvideo
+
+    // Esta parte permite insertar el nombre del proyecto en el título responsive, usando la etiqueta <br> (sin que aparezca literalmente en el texto)
+    titleProject.innerHTML = ""
+    titleProject.insertAdjacentHTML("afterbegin", `<h2 class="d-sm-inline-block d-md-none projectTitle  text-uppercase fs-5 " style="font-family: 'BDSans-Black'; color: var(--main-color-golden); ">${currentProject.title}</h2>`) 
+
     //console.log("video container", videoContainer)
     
     videoContainer.src = videoURL

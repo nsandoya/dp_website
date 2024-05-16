@@ -81,7 +81,7 @@ projects.forEach(
     (project) => {
         project.addEventListener('click', ()=>{
             window.location.href = "./projects-narrative.html"
-        }/* , {passive: true} */)
+        })
     }
 )
 

@@ -37,7 +37,7 @@ export class Project{
     }
 
     addUrl(){
-        this.url = `../src/img/${this.name}.webp`
+        this.url = `../src/img/${this.name}.png`
     }
 }
 
@@ -71,9 +71,11 @@ export class ProjectGallery{
                 contenedor.innerHTML += `
                     <div id=${project.id} class="project-div project img-fluid ${claseAux} p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh;">
                         <div class="project-title-gallery container-fluid  align-items-center justify-content-center" style="display: flex; height: 100%; ">
-                            <h2 class="project-title no-display-title row mb-3 ms-0 ms-md-3 text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; font-size: 2.5rem; color: var(--main-color-white);" data-idProject='${project.id}' >
+                            
+                                <h2 class="project-title no-display-title row mb-3 ms-0 ms-md-3 text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; font-size: 2.5rem; color: var(--main-color-white);" data-idProject='${project.id}' >
+                            
                                 ${project.title}
-                            </h2>
+                                </h2>
                             
                         </div>
                     </div>

@@ -178,6 +178,7 @@ export function navbarResponsive(){
 }
 
 export function navbarStillsResponsive(){
+    //console.log("Nombre proj", pageTitle)
     header.innerHTML = `
         <nav class="navbar bg-white navbar-expand-md fixed-top me-md-4" style="height: 50px;z-index: 1;">
         <div class="container-fluid">
@@ -206,8 +207,8 @@ export function navbarStillsResponsive(){
                 </div>
                 <div class="row col-lg-3 col-md-3 text-end">
                 <section id="titulo" class="col-6 text-start ps-3">
-                    <h2 class="d-sm-inline-block d-md-none projectTitle  text-uppercase fs-5 " style="font-family: 'BDSans-Black'; color: var(--main-color-golden);">${pageTitle}</h2>
                 
+                    
                 </section>
                 <!-- Botón que abre el offcanvas menu -->
                 <button class="d-sm-inline-block d-md-none col border-0 pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation" style="background-color: transparent;">
