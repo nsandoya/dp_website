@@ -11,7 +11,7 @@ const narrative = new ProjectGallery(
 // Generar galería de proyectos
 const commercial = new ProjectGallery(
     {
-        categoria: "Commercial"
+        categoria: "Commercials"
     }
 )
 // Generar galería de proyectos
@@ -217,7 +217,7 @@ export function getProjectsList(projectsListName){
         case "narrative":
             projectsList = narrative.projects
             break;
-        case "commercial":
+        case "commercials":
             projectsList = commercial.projects
             break;
         case "music":
