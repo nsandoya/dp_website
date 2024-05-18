@@ -881,7 +881,7 @@ footer{
 
     .img-container h2{ 
         opacity: 0 !important;
-        font-size: 2rem !important;
+        font-size: 1.8rem !important;
         justify-self: center !important;
         text-align: center !important;
         margin: 0 !important;
@@ -943,7 +943,7 @@ footer{
     }
 
     .project-div{
-        height: 30vh !important;
+        height: 25vh !important;
         
     }
     
