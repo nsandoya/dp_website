@@ -80,7 +80,7 @@ const projects = document.querySelectorAll(".project")
 projects.forEach(
     (project) => {
         project.addEventListener('click', ()=>{
-            window.location.href = "./projects-narrative.html"
+            window.location.href = "./projects-narrative"
         })
     }
 )
