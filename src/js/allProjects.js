@@ -76,7 +76,7 @@ const commercialProjectsList = [
         urlvideo: "https://player.vimeo.com/video/938422142?h=22278db60b"
     }),
     new Project({
-        name: "5_Supermaxi",
+        name: "5_supermaxi",
         title: "Supermaxi",
         urlvideo: "https://player.vimeo.com/video/945389390?h=504912e306"
     }),

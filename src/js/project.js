@@ -79,6 +79,11 @@ function renderVideo(){
 
     // Esta parte permite insertar el nombre del proyecto en el título responsive, usando la etiqueta <br> (sin que aparezca literalmente en el texto)
     titleProject.innerHTML = ""
+    let t = document.title
+    /* if(currentProject.title != "Journal" || currentProject.title != "Series"){
+        console.log("pag",currentProject.title)
+        titleProject.insertAdjacentHTML("afterbegin", `<h2 class="d-sm-inline-block d-md-none projectTitle  text-uppercase fs-5 " style="font-family: 'BDSans-Black'; color: var(--main-color-golden); ">${t}</h2>`) 
+    } */
     titleProject.insertAdjacentHTML("afterbegin", `<h2 class="d-sm-inline-block d-md-none projectTitle  text-uppercase fs-5 " style="font-family: 'BDSans-Black'; color: var(--main-color-golden); ">${currentProject.title}</h2>`) 
 
     //console.log("video container", videoContainer)
