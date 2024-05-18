@@ -62,14 +62,14 @@ export class ProjectGallery{
                 //console.log(project)
                 let id = project.id
                 let claseAux = ""
-                if(project.title.toLowerCase() === "por un momento" | project.title.toLowerCase() === "back to las maravillas") {
+                if(project.title.toLowerCase() === "por un momento" || project.title.toLowerCase() === "back to las maravillas") {
                     claseAux = "pum"
                 }else{
                     claseAux = ""
                 }
 
                 contenedor.innerHTML += `
-                    <div id=${project.id} class="project-div project img-fluid ${claseAux} p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 50vh;">
+                    <div id=${project.id} class="project-div project img-fluid ${claseAux} p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 100vh;">
                         <div class="project-title-gallery container-fluid  align-items-center justify-content-center" style="display: flex; height: 100%; ">
                             
                                 <h2 class="project-title no-display-title row mb-3 ms-0 ms-md-3 text-center text-uppercase display-1" style="font-family: 'BDSans-Black'; font-size: 2.5rem; color: var(--main-color-white);" data-idProject='${project.id}' >
