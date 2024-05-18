@@ -29,18 +29,18 @@ const narrativeProjectsList = [
         urlvideo: "https://player.vimeo.com/video/938401083?h=7b78ab705f"
     }),
     new Project({
-        name: "2_long_legged_nuria",
+        name: "2_long_legged_nuria_2",
         title: "Long-legged Nuria",
         urlvideo: "https://player.vimeo.com/video/938409349?h=2f7eaf0e8c"
         
     }),
     new Project({
-        name: "3_don_goyo_feature",
+        name: "3_don_goyo_feature_2",
         title: "Don Goyo Feature",
         urlvideo: "https://player.vimeo.com/video/938413044?h=7ce4f8437c"
     }),
     new Project({
-        name: "4_las_fotos_del_obrero",
+        name: "4_las_fotos_del_obrero_2",
         title: "Las Fotos del Obrero",
         urlvideo: "https://player.vimeo.com/video/946381418?h=37c4ccda6f"
     }),
@@ -132,7 +132,7 @@ commercial.addProjects(...commercialProjectsList)
 // Añadir listas de proyectos a cada galeria
 const musicProjectsList = [
     new Project({
-        name: "1_por_un_momento",
+        name: "1_por_un_momento_2",
         title: "Por un momento",
         urlvideo: "https://player.vimeo.com/video/942527322?h=bbcc11900f"
     }),
