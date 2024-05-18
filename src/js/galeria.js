@@ -62,11 +62,11 @@ export class ProjectGallery{
                 //console.log(project)
                 let id = project.id
                 let claseAux = ""
-                /* if(project.title.toLowerCase() === "por un momento") {
+                if(project.title.toLowerCase() === "por un momento" | project.title.toLowerCase() === "back to las maravillas") {
                     claseAux = "pum"
                 }else{
                     claseAux = ""
-                } */
+                }
 
                 contenedor.innerHTML += `
                     <div id=${project.id} class="project-div project img-fluid ${claseAux} p-0 align-items-end img-container img-2" style="background-image: url(${project.url}); height: 50vh;">
