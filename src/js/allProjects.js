@@ -56,7 +56,7 @@ narrative.addProjects(...narrativeProjectsList);
 // Añadir listas de proyectos a cada galeria
 const commercialProjectsList = [
     new Project({
-        name: "1_bco_gye_1ero_la_tri",
+        name: "1_bco_gye_1ero_la_tri_2",
         title: "Banco Guayaquil <br> Primero la Tri",
         urlvideo: "https://player.vimeo.com/video/668456226?h=fc0202663b"
     }),
